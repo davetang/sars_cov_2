@@ -37,9 +37,10 @@ Several additional functions are also provided:
 * SARS-CoV-2 - https://www.ncbi.nlm.nih.gov/nuccore/MN908947
 
 ```bash
+mkdir raw
+
 efetch -db sequences -format genbank -id MN908947 > raw/MN908947.genbank
 efetch -db sequences -format fasta -id MN908947 > raw/MN908947.fa
-
 efetch -db sequences -format fasta_cds_aa -id MN908947
 ```
 
@@ -80,11 +81,13 @@ script/fasta_stats.pl -f raw/coronavirus_20200301.fa | gzip > result/coronavirus
 Create BLAST database.
 
 ```bash
+mkdir db
+
 makeblastdb -dbtype nucl \
-            -in ../raw/coronavirus_20200301.fa \
+            -in raw/coronavirus_20200301.fa \
             -input_type fasta \
             -title coronavirus_20200301 \
-            -out coronavirus_20200301
+            -out db/coronavirus_20200301
 
 Building a new DB, current time: 03/01/2020 19:25:30
 New DB name:   /Users/dtang/github/sars_cov_2/db/coronavirus_20200301
@@ -137,6 +140,9 @@ script/parse_outfmt7.pl -i result/MN908947_blast.txt -p 80 -l 10000 -f raw/coron
 ```bash
 script/extract_fasta.pl -i raw/wanted.txt -f raw/coronavirus_20200301.fa > raw/wanted.fa
 clustalw -infile=raw/wanted.fa
+
+script/extract_fasta.pl -i raw/MN908947_MN996532.txt -f raw/coronavirus_20200301.fa > raw/MN908947_MN996532.fa
+clustalw -infile=raw/MN908947_MN996532.fa
 ```
 
 ## Links
