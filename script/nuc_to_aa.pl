@@ -2,6 +2,7 @@
 
 use strict;
 use warnings;
+use lib "/Users/dtang/github/sars_cov_2/script";
 use BeginPerlBioinfo;
 use Getopt::Std;
 
