@@ -1,0 +1,10 @@
+name: sars_cov_2
+channels:
+  - bioconda
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - entrez-direct
+  - blast
+  - clustalw

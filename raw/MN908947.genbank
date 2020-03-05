@@ -1,0 +1,1852 @@
+Seq-entry ::= set {
+  class nuc-prot,
+  descr {
+    source {
+      genome genomic,
+      org {
+        taxname "Severe acute respiratory syndrome coronavirus 2",
+        db {
+          {
+            db "taxon",
+            tag id 2697049
+          }
+        },
+        orgname {
+          name virus "Severe acute respiratory syndrome coronavirus 2",
+          attrib "specified",
+          mod {
+            {
+              subtype isolate,
+              subname "Wuhan-Hu-1"
+            },
+            {
+              subtype nat-host,
+              subname "Homo sapiens"
+            },
+            {
+              subtype gb-acronym,
+              subname "SARS-CoV-2"
+            },
+            {
+              subtype old-name,
+              subname "Wuhan seafood market pneumonia virus"
+            }
+          },
+          lineage "Viruses; Riboviria; Nidovirales; Cornidovirineae;
+ Coronaviridae; Orthocoronavirinae; Betacoronavirus; Sarbecovirus",
+          gcode 1,
+          div "VRL"
+        }
+      },
+      subtype {
+        {
+          subtype country,
+          name "China"
+        },
+        {
+          subtype collection-date,
+          name "Dec-2019"
+        }
+      }
+    },
+    pub {
+      pub {
+        pmid 32015508,
+        article {
+          title {
+            name "A new coronavirus associated with human respiratory disease
+ in China."
+          },
+          authors {
+            names std {
+              {
+                name name {
+                  last "Wu",
+                  first "F",
+                  initials "F."
+                },
+                affil str "Shanghai Public Health Clinical Center & School of
+ Public Health, Fudan University, Shanghai, China."
+              },
+              {
+                name name {
+                  last "Zhao",
+                  first "S",
+                  initials "S."
+                },
+                affil str "Department of Pulmonary and Critical Care Medicine,
+ The Central Hospital of Wuhan, Tongji Medical College, Huazhong University of
+ Science and Technology, Wuhan, 430014, China."
+              },
+              {
+                name name {
+                  last "Yu",
+                  first "B",
+                  initials "B."
+                },
+                affil str "Wuhan Center for Disease Control and Prevention,
+ Wuhan, Hubei, China."
+              },
+              {
+                name name {
+                  last "Chen",
+                  first "Y",
+                  initials "Y.M."
+                },
+                affil str "Shanghai Public Health Clinical Center & School of
+ Public Health, Fudan University, Shanghai, China."
+              },
+              {
+                name name {
+                  last "Wang",
+                  first "W",
+                  initials "W."
+                },
+                affil str "Department of Zoonosis, National Institute for
+ Communicable Disease Control and Prevention, Chinese Center for Disease
+ Control and Prevention, Changping, Beijing, China."
+              },
+              {
+                name name {
+                  last "Song",
+                  first "Z",
+                  initials "Z.G."
+                },
+                affil str "Shanghai Public Health Clinical Center & School of
+ Public Health, Fudan University, Shanghai, China."
+              },
+              {
+                name name {
+                  last "Hu",
+                  first "Y",
+                  initials "Y."
+                },
+                affil str "Department of Pulmonary and Critical Care Medicine,
+ The Central Hospital of Wuhan, Tongji Medical College, Huazhong University of
+ Science and Technology, Wuhan, 430014, China."
+              },
+              {
+                name name {
+                  last "Tao",
+                  first "Z",
+                  initials "Z.W."
+                },
+                affil str "Department of Pulmonary and Critical Care Medicine,
+ The Central Hospital of Wuhan, Tongji Medical College, Huazhong University of
+ Science and Technology, Wuhan, 430014, China."
+              },
+              {
+                name name {
+                  last "Tian",
+                  first "J",
+                  initials "J.H."
+                },
+                affil str "Wuhan Center for Disease Control and Prevention,
+ Wuhan, Hubei, China."
+              },
+              {
+                name name {
+                  last "Pei",
+                  first "Y",
+                  initials "Y.Y."
+                },
+                affil str "Shanghai Public Health Clinical Center & School of
+ Public Health, Fudan University, Shanghai, China."
+              },
+              {
+                name name {
+                  last "Yuan",
+                  first "M",
+                  initials "M.L."
+                },
+                affil str "Department of Pulmonary and Critical Care Medicine,
+ The Central Hospital of Wuhan, Tongji Medical College, Huazhong University of
+ Science and Technology, Wuhan, 430014, China."
+              },
+              {
+                name name {
+                  last "Zhang",
+                  first "Y",
+                  initials "Y.L."
+                },
+                affil str "Shanghai Public Health Clinical Center & School of
+ Public Health, Fudan University, Shanghai, China."
+              },
+              {
+                name name {
+                  last "Dai",
+                  first "F",
+                  initials "F.H."
+                },
+                affil str "Shanghai Public Health Clinical Center & School of
+ Public Health, Fudan University, Shanghai, China."
+              },
+              {
+                name name {
+                  last "Liu",
+                  first "Y",
+                  initials "Y."
+                },
+                affil str "Shanghai Public Health Clinical Center & School of
+ Public Health, Fudan University, Shanghai, China."
+              },
+              {
+                name name {
+                  last "Wang",
+                  first "Q",
+                  initials "Q.M."
+                },
+                affil str "Shanghai Public Health Clinical Center & School of
+ Public Health, Fudan University, Shanghai, China."
+              },
+              {
+                name name {
+                  last "Zheng",
+                  first "J",
+                  initials "J.J."
+                },
+                affil str "Shanghai Public Health Clinical Center & School of
+ Public Health, Fudan University, Shanghai, China."
+              },
+              {
+                name name {
+                  last "Xu",
+                  first "L",
+                  initials "L."
+                },
+                affil str "Shanghai Public Health Clinical Center & School of
+ Public Health, Fudan University, Shanghai, China."
+              },
+              {
+                name name {
+                  last "Holmes",
+                  first "E",
+                  initials "E.C."
+                },
+                affil str "Marie Bashir Institute for Infectious Diseases and
+ Biosecurity, School of Life and Environmental Sciences and School of Medical
+ Sciences, The University of Sydney, Sydney, Australia."
+              },
+              {
+                name name {
+                  last "Zhang",
+                  first "Y",
+                  initials "Y.Z."
+                },
+                affil str "Shanghai Public Health Clinical Center & School of
+ Public Health, Fudan University, Shanghai, China.
+ zhangyongzhen@shphc.org.cn.; Department of Zoonosis, National Institute for
+ Communicable Disease Control and Prevention, Chinese Center for Disease
+ Control and Prevention, Changping, Beijing, China. zhangyongzhen@shphc.org.cn."
+              }
+            },
+            affil str "Shanghai Public Health Clinical Center & School of
+ Public Health, Fudan University, Shanghai, China."
+          },
+          from journal {
+            title {
+              iso-jta "Nature",
+              ml-jta "Nature",
+              issn "1476-4687",
+              name "Nature"
+            },
+            imp {
+              date std {
+                year 2020,
+                month 2,
+                day 3
+              },
+              language "eng",
+              prepub in-press,
+              pubstatus aheadofprint,
+              history {
+                {
+                  pubstatus received,
+                  date std {
+                    year 2020,
+                    month 1,
+                    day 7
+                  }
+                },
+                {
+                  pubstatus accepted,
+                  date std {
+                    year 2020,
+                    month 1,
+                    day 28
+                  }
+                },
+                {
+                  pubstatus other,
+                  date std {
+                    year 2020,
+                    month 2,
+                    day 5,
+                    hour 6,
+                    minute 0
+                  }
+                },
+                {
+                  pubstatus pubmed,
+                  date std {
+                    year 2020,
+                    month 2,
+                    day 6,
+                    hour 6,
+                    minute 0
+                  }
+                },
+                {
+                  pubstatus medline,
+                  date std {
+                    year 2020,
+                    month 2,
+                    day 6,
+                    hour 6,
+                    minute 0
+                  }
+                }
+              }
+            }
+          },
+          ids {
+            pubmed 32015508,
+            doi "10.1038/s41586-020-2008-3",
+            pii "10.1038/s41586-020-2008-3",
+            other {
+              db "ELocationID doi",
+              tag str "10.1038/s41586-020-2008-3"
+            }
+          }
+        }
+      }
+    },
+    pub {
+      pub {
+        sub {
+          authors {
+            names std {
+              {
+                name name {
+                  last "Wu",
+                  first "Fan",
+                  initials "F."
+                }
+              },
+              {
+                name name {
+                  last "Zhao",
+                  first "Su",
+                  initials "S."
+                }
+              },
+              {
+                name name {
+                  last "Yu",
+                  first "Bin",
+                  initials "B."
+                }
+              },
+              {
+                name name {
+                  last "Chen",
+                  first "Yan-Mei",
+                  initials "Y.-M."
+                }
+              },
+              {
+                name name {
+                  last "Wang",
+                  first "Wen",
+                  initials "W."
+                }
+              },
+              {
+                name name {
+                  last "Hu",
+                  first "Yi",
+                  initials "Y."
+                }
+              },
+              {
+                name name {
+                  last "Song",
+                  first "Zhi-Gang",
+                  initials "Z.-G."
+                }
+              },
+              {
+                name name {
+                  last "Tao",
+                  first "Zhao-Wu",
+                  initials "Z.-W."
+                }
+              },
+              {
+                name name {
+                  last "Tian",
+                  first "Jun-Hua",
+                  initials "J.-H."
+                }
+              },
+              {
+                name name {
+                  last "Pei",
+                  first "Yuan-Yuan",
+                  initials "Y.-Y."
+                }
+              },
+              {
+                name name {
+                  last "Yuan",
+                  first "M",
+                  initials "M.L."
+                }
+              },
+              {
+                name name {
+                  last "Zhang",
+                  first "Yu-Ling",
+                  initials "Y.-L."
+                }
+              },
+              {
+                name name {
+                  last "Dai",
+                  first "Fa-Hui",
+                  initials "F.-H."
+                }
+              },
+              {
+                name name {
+                  last "Liu",
+                  first "Yi",
+                  initials "Y."
+                }
+              },
+              {
+                name name {
+                  last "Wang",
+                  first "Qi-Min",
+                  initials "Q.-M."
+                }
+              },
+              {
+                name name {
+                  last "Zheng",
+                  first "Jiao-Jiao",
+                  initials "J.-J."
+                }
+              },
+              {
+                name name {
+                  last "Xu",
+                  first "Lin",
+                  initials "L."
+                }
+              },
+              {
+                name name {
+                  last "Holmes",
+                  first "E",
+                  initials "E.C."
+                }
+              },
+              {
+                name name {
+                  last "Zhang",
+                  first "Yong-Zhen",
+                  initials "Y.-Z."
+                }
+              }
+            },
+            affil std {
+              affil "Fudan University",
+              div "Shanghai Public Health Clinical Center & School of Public
+ Health",
+              city "Shanghai",
+              country "China"
+            }
+          },
+          medium email,
+          date std {
+            year 2020,
+            month 1,
+            day 5
+          }
+        }
+      }
+    },
+    user {
+      type str "BankItOriginalInputSource",
+      data {
+        {
+          label str "file_name",
+          data str "Wuhan-Hu-1-single.fasta"
+        },
+        {
+          label str "id_blob",
+          data str "108853736"
+        },
+        {
+          label str "input_route",
+          data str "UploadedFile"
+        },
+        {
+          label str "nuc_format",
+          data str "fasta"
+        },
+        {
+          label str "parse_datetime",
+          data str "2020-01-05T02:58:51.395596"
+        },
+        {
+          label str "partition",
+          data str "1"
+        },
+        {
+          label str "rid",
+          data str ""
+        }
+      }
+    },
+    user {
+      type str "StructuredComment",
+      data {
+        {
+          label str "StructuredCommentPrefix",
+          data str "##Assembly-Data-START##"
+        },
+        {
+          label str "Assembly Method",
+          data str "Megahit v. V1.1.3"
+        },
+        {
+          label str "Sequencing Technology",
+          data str "Illumina"
+        },
+        {
+          label str "StructuredCommentSuffix",
+          data str "##Assembly-Data-END##"
+        }
+      }
+    },
+    update-date std {
+      year 2020,
+      month 2,
+      day 11
+    }
+  },
+  seq-set {
+    seq {
+      id {
+        genbank {
+          accession "MN908947",
+          version 3
+        },
+        gi 1798172431
+      },
+      descr {
+        title "Severe acute respiratory syndrome coronavirus 2 isolate
+ Wuhan-Hu-1, complete genome.",
+        molinfo {
+          biomol genomic,
+          completeness complete
+        },
+        user {
+          class "1.0",
+          type str "AutodefOptions",
+          data {
+            {
+              label str "UseLabels",
+              data bool TRUE
+            },
+            {
+              label str "LeaveParenthetical",
+              data bool TRUE
+            },
+            {
+              label str "SpecifyNuclearProduct",
+              data bool TRUE
+            },
+            {
+              label str "MaxMods",
+              data int 0
+            },
+            {
+              label str "FeatureListType",
+              data str "Complete Genome"
+            },
+            {
+              label str "MiscFeatRule",
+              data str "Delete"
+            },
+            {
+              label str "HIVRule",
+              data str "WantBoth"
+            },
+            {
+              label str "ModifierList",
+              data fields {
+                {
+                  label str "OrgMods",
+                  num 1,
+                  data strs {
+                    "isolate"
+                  }
+                }
+              }
+            }
+          }
+        },
+        user {
+          type str "OriginalID",
+          data {
+            {
+              label str "GenBank",
+              data str "gb|MN908947|"
+            }
+          }
+        },
+        create-date std {
+          year 2020,
+          month 1,
+          day 12
+        }
+      },
+      inst {
+        repr raw,
+        mol rna,
+        length 29903,
+        strand ss,
+        seq-data ncbi2na '3C0AFCC5F54AC1014141FD8DDFB237BDDC0607F00DEEE9ED1DA7
+939F2E47464B30F0C1C3C7B6F84A118B076DCDF7929E7C6BF6D6EF9258D3491372BF6D6AEE1602
+B08E8897ED5EBF41880111B5074BF97BFC4AF661B9DB1BA7FA21D6E8A2B7CD2291B4137C08E91F
+BA7CB20BE0029BFE5D07E0495CEEF4D01BDA39D81E45D3AD3BCEBE27AC920760A4F4B1ADB2EB88
+47EBB5FB574EEA60314BA7C590AF7DF6C206B0C0A27AE94CBC69963702D3F87CA6189FA478D7CE
+08FF42007A04701324BAEF15B81D39B89F068AA4C47673B63041F7BA578E9C577E2E4F0217DC91
+B9EB027D391FED6041E87F3E11C22ABB31E796E04E24E03E7EB11A06F780227383E4845FF80F03
+E90203F845F43AA0ED40FFB3F57C0F530D0873D050ABE008009F8E9FCEAC83D8DEDCD4BE6D140E
+0E4140EE5FD0774E0BB8D3EEB807D3A486A63FEF0251F983FEE91E20FE1C082B9471FBAF1F1540
+39EFBC03F3ED493B443D20B285E24CB7E58314C3837A7E0053DF6C2AEB6473E5FE8A7BBBDDF3BE
+BE53042EE5CFABD46E726704CAFB05312BBEFA20AF582B7C38417DF80C75002202D04D0CFBEB87
+F01F0E088D94F3FE937FF79F510B9FFBA01EE02BFA3CC093D0103EF835EEB0FF02F100A009C002
+B97A0CFAE0480D0C78B5DFCE4FE4D229E76EFB18D0FF756477E01E7403DEE6EFF120A59CC10C72
+3A0FD12CF478874F8E738EF44DE3FA71C10DCBEC3A5C4F12BAEFBD2F87D92E9C1C137FA47BF380
+074056D7E3E9F8220BF0A0AEC8BF7C886BEA03EF03F37417B9FB80FB6BA103ED17B90280F0A22E
+F484F7F09FB0303FFA7FBB9E1DCD3CFAE89C07C097E0FCAE013FB464740A8FB1202EEF03522080
+7A5C74E5DC02550080F37DF22A2011F54482EF048A0BEDF801EB8FC414F204171CB827BE09D4FA
+FAC452FECF06A7CEF9D80D0211200B1EE57E45C338EB0404317D11D029AE45040AF1FFAE3847B8
+C82E42BC422EE0CD1FF81F8E028F8C0B1F0E20B9DE5CC4BE076B120B038BD97BBEE9239ED3001F
+E414B3783C7C451EA4F8FC8E2E8B3A7131C7CFE38B7AE2FC0FA7D133B3EF7F715D48E28E0820AE
+3EE08208BF894D074338B3AC78238F142B017FA0FEB947DE79DF4178208908208FAF238E32D040
+7BEB4108692E28434841C73D010FBE2BD05D0F223A07C452FBD21CF82E0CBFCBAF3F007C7843B3
+13C00E484FBA0827002B00504BAFBC39250EFC5F013A28AEF92897C0C29C704394E42F8378E3C4
+C9C70E851F02EAEB2FBBFC2684437E7011EDF4EFB69503BC102B8213D07DF08B9F3803FC349182
+F71F914F3CD27ACFFEB9E15CC4F7F08BFBB231EF6440EDC7C9EDFE30037738407EFD09FFE80E08
+B80242F81008D9E23D702282F094FCC1E02C05F4BE04880108E30803409FBBE082F1041DE8201C
+2F5D12007EF1FCCF84F0E90DF4D48F79477EF2E13E1347F7C0808E753332EAE3BEF422AEFF079E
+EBCC5C70029EBA471E039C9809FE200B941210F33051F15AB4ABF03AF11EC8A290212E7C00BB00
+B97FC4F714DCF3770E209080F7E81EFDFA0FE62039F913920804640F0E5EDEEE80702532FD0731
+26C0CC2ACF00C422AEEBE3CEB9C8FF1FF114B0041EC9B47CD0447C18DC0E01DFBC43947E9CEC11
+3A7C0FE8209E76B3388DDD02E52712FDEFDF45E39EF126CC3AF37C7DF7DC01178204FF3E014DD1
+F9EBD73023EB5CF7A10DC441CACC83F7C222B8C02ECCF11CB0D7144F51723AE0BCD17F8437C211
+F7F7F8882E2873C2BBF104B2104F05D44642FBA13B4384CE8412FEB507CFE8E89E3BC700C0174C
+3D1382B004FF3BFC5C38E11DC6EF8A7FE2C714441E35CBFDEACAC4ED24F03447002E80C5442F0E
+BF07DCF03A923041EF37E51E4FBC11D410322F82FC35179DC4239F3C4890A9EB8279C1FFB91F37
+C971EC3084B2B8BCAE3BC880438BC7EFD04E50FC8F7E4022DF81BAEEC01FBA104921057C2AEC82
+7BCEC4EA447F7CE043F080AEF48C5FB1BBAC0427100CDCB104A2D17FEF38ED245179D2CE07C24E
+B13F1FB9CB8B11EB0F14BBAD1CC04CC1F70201FECF9321AE7F1F102D7483102B5CF1A3BFDC4080
+12F110414C014BC7CC0FA3AEFBFB1203E15C2FA10F3CC20210F7CFD1224143E37EC501414CD406
+427D8C3FC2FECEE30CD03F9E38FC052F07AF30805E7D0889F02F13FF5787C0EB8EEBA73E3CC047
+1115DFF080A2703EF130173EFE93BC10E41C30251B30140C5EBB31BEDFE8910052F804D03DBF8E
+C782D228664A83A30DF97982370052DDE082CBA00D714C48086F7E2EC3B801C582FB2884F31F01
+49030CBF003C4822BE94448DC3A79F3B210F72DF1CF0805C383CDC8B3CAFE0057E71D3AFC9E7BC
+32ED5FA8C73270F39C25FF7C102FBCB1071C132F11AEFC05BBFB1C3CCE5F3F7F1FCF9C43EEC7FC
+720B103DC83C09373961C73240831EF08BB6B03FEDC8A7D3F0F3F82D170FFDC078C0CF30FEBFF1
+CF0BBF972BDFC371D059E7F2BBFC3B70FCA4E5F7C7B1EBC48829CFE0771C3B473E4171EC7AF731
+7ECBBFB7CBAFC8F7F211735F7F201CC40F14FD37FC0EA3F079FFA7CBE48BAFFE9333DFF472BFF7
+3B1FA3E9E434E43EFFD273FE4B13FCF2C3DFA7CEEBC30F0DFB103A558FD273AF20EC4DF7F934FF
+3CECE802F3B93BEC86BEC3D341FB38EEF101B0C890422D83B1073EF0EBBC82B5FF3B739C3A2B02
+9FF901C443E83EEF0FB8C4F7B9EB2C4FCF2E382F98887ED1C4BF00850C0D71E14B7DF136F8CBBC
+4B820EBD4D4DFC7F8C09EB4021F38084F77774FFBC1F2105E2270C11C0AF4F973C3BCCBFF8EB03
+403B820D37900D26DEFC712D27CEED05CC7BC7234A4F2EDE3BEB8CB9A0BE4BC03BF8E7C6F0C6FF
+4D07FC1B143A001D00472F9079209E07E4083BB5F210EDF371FF3F4927690ABFBE3D23B201C08E
+FBE0EDF03ED1343784C82F1E98CBEC307339D173040BE004E1156E17EB9FB3E1ECB99B4CF0E64A
+C9002D104F9FE33A06F023F4ED3EDE041C60040C6CB9E70020C1F17FC2F84EE41C7210BEF0EFB0
+41023247C2AEB00FBC30FAF824BC3C0BC47EEF5FFEF9E73FDCFC3045EF4ED3B70131E1FF42E034
+CA310A73E3AEBB476E1324DC48C7EFF9C10139E3FE113AFC949BAEB2F31C38409F953E3E792D30
+4220BABFEDB97AFE5E918CF191070EB87FF93F7C5C8BFF2E4BEB04DEF1114D007CC8B11E1FE413
+49FBBFE9E783B10FFC08E7DEB094B14CFBCE3143B1C82BDEF9F380BF195E111BCEE74E8E9DCF3D
+0FD7045C5F82BDEF22EB041FF8F78B1ECA4691FB808D209EBBFBB371CBAC8EAC7C10E3CF1237F1
+4A2FF7BAEC8E7B03F1F1C33BF11470F4173EB9FE84CD24DCCB27AEB3EC9CDB2C1397E5C73FCE2B
+F2089FFAE0C4B4ECBE5FC31FC73D7CED3D1EC77BF0452FC74F7C5EBBF3DEF3F1FB1F84FF37C70E
+3BF7FFC9133D2E8EBCEF445FCB17F7A3043E7CCD3FB3F51024FDCFAF7F2C3C5C0886ECB7F0EBBF
+5FCB1FF8209E67B917FFBC0C080ECDC0BE6CB8EE73C5DF190CC3231F277F30C2C42CFF2E890E8C
+41C9C488279FBED37640A774387D2C1D2BDE3BDFC50514405DCD1749EFF922EBFC800E93D537AC
+0BE2AFB3AC42C1FBAC41C47C1ADFE9F8E1B2FC7B5084EE37917782139F0570F3823F1D3DB0B70D
+30FDFAC4A7AC3BD074ABCFA13DCE403EEC7C27C2BE31250D70845C2CC2FEF64F414A121FFD2EF2
+7EF10EBD14DEBBF143B9CE2950FD1CF0ABD3D7C3AF4EEB2EFAFF04C8F387BB77FFBC4E4533A0F1
+41E8BD39E9121F20AC1FF3A17FEF84A404910927AC68441CF12F0EFF27EBEC679EF303A212BAFD
+D0D8FC51077C387F05FBA7382C43CE05DC110853BE131CA177F79D01E83E5BFC8CEEE7D3C020F1
+E403ACE0E86C533EACB9FCF208E0FC45FF8EFBC8439D2BBC7F502E4B80204342AC4451EBEF1D10
+FF87D1FF2FF2D48B1D0EB7FBDFFFFB380397FF17FE73AB3CF9CEDE7FE438EFED01309393F77BFB
+FFBC5F77E51EC9F3FC33ADCCE5E72FAB8E6CF384EBE8CEBE31CBFB7AFF09C021EEF3B39349ECBB
+C70D7CE124207BB38E3AE7288BBA11F383B7E11DBF302FCF3AC39FC8D094FD4EEA77CC377BC7DC
+1C74AECBC41ED3BFFA522B3EFFCEEEF8B3E573FDF4C1EB0C47D2ECC39CBF3EFDF29CFFEC7EF1FE
+977FEFC741671FC87877EBBF38F1F2FDC44A2FC8CCE0F44A871D51508324C8E5F407413C0FBEAE
+FAE9017ECD02C947B12DC03B48EC0B9134B2DF1DD2FF9041D22C834D3703EEA743BB52F110E13D
+DF270231C7825FE000EBF471FDEFF9FD4E4AB9EC84C0427FB82039E8412A417C427325D22FCBD5
+F534CE49FF9C79D0827CE24A7BE70EB8F782FBDF002F820B7F83BA703783F85B8E494E41B0BE80
+23A78D09CE1503B30129C8DE28422A402F1CB9CE48439FF4739F202FA30E391D0413CD0439088E
+BEEF57E04C3177C412494070EBED314873044CC00C6EE3AC413F1F393493EEA03504AFB239232C
+03EF41F2E03CB3A10F45C3F24E977CFB049FC2A50F79ED03C4830E27CB5EF91C6123B7EE796B1C
+44079F91E38439BC9F1C411040A8ACAFEC7E47BCD63F128FE03A9C8F5708B8E81EB1CDCC481E81
+45FB2BFBC48445C0AD702E0B3F31FCF028F0105C0C8ACEB1FACBF27944B1B7109EB0E4120B9794
+3D07B3CDFDEE7FE7B239E7027C408F37272EAA1050D1C3EEF08EFBB1111EB1EB4A4304BC45A094
+33A3420D7FAEB936EFB7B1E5BE513234D40D7028FFB87C02B0B3B10317107EE70E15EEAFF11F00
+112DEC5B79ACEE80AF3A7B2FB8D075981539F4B49E3910DBFF01ABF9AEC2E495B7C45B9A44A472
+C78EDB312A7FE13710E302C9EBFE703D7001C3EFB67D4200A1823843F0F8F7C7FB2F088447F770
+7141382010FCC3F1F0A3ED49EF9C04E1F7F0BF20C86B84EB144CCD1B41B7C703110E92176DCE7F
+0A4FF8E0AC3EE113C02031FB44C43EFB8E38F3F4300287ACE3FEC80152333C66CC6507CAE06EC6
+509FEF0012C43DEE394E6039EB3EFAEC784F230D08DD0EB07ACE3F6B8FD31014652B2E8BD7BEC8
+F7CF3D3EF0E5CCF05F852A7F07922D13BE11E1F04097C4F0BA8FEF00CE1F468222BC01DFE16F3F
+C0CFA8D21314540FBBC1EFE8E12393DE4FB901FC3BFCF7712EF545C42FFA1472E20033FBE3AEF5
+3FB2FD07A3147D22272BBEC4C34A3B01F1327721F2FF0A0F1FBB39E78579CE4679F7AC373C7230
+191C6E7FD2C9E47C7043BE7FD01ED015AC3FC1021F7387F9EEDC2AFDFC28282F7BE0F0047DF7F9
+D28EB0E79CD263CE1C736F30DC5043BB8CD21071CFECBE0BEF8C2C7F8FBC63AE9ECF0E7050B4DB
+4105C840D27AFF53F0C0EAB0A721FCF38F438BCE28D08E47FD9331006C3B4D5C730740E0DF0B39
+4F2E4083227645B27AEDDCDECB1CE143212FD3400F3E0343259472289C7B2C3E810903DCEBAFA4
+413BC007BF32E3B2005745F3ABEA3CD703B8C894E5C139F20F3A5D1FBDF9D9013106EFB27ED116
+FDCC8F270E2EE742CF8B80EB4EEE9AF4733BC052BA05D34A239441E7CE70CBBFF04FED09ED1A50
+EF0E47FCDC78EB0403E58C2CED643F104487F38BB773203223BE1121FEE0E2FF1933F9B013F743
+8E31DDE18E7BEEEFD0C91F393742B72E9C930207F0B4BDFCF34010EFFCEDE0900EFA1E21E17C70
+285D383FE7741310E72F012AE38F3BB17D7C548D4D0835CAA5A7BFEC8E336C0048EB11F38F81AF
+6EDFC9CC8E7C547C70135C34A2CE78EDFD3FB1F10C4C2027138E2F04A113BC84ECF7BCE7C70E30
+47D0ACFA8178BFCE29CEC4459312DF129EFAA7EEF7F90F4487D3C23BAE7E4C6C853DF3BEC0E7BC
+614ED3341344C0F2DFB7BC35B3BF90E752BEE3B448EE1D07F1F28ACE273CFB0344C05153CBFD4F
+BB9C3A10BFFAFCCC00C4EEFAC98C3BC787F0E43E413B87A1039EB8F13FC9C117B1E021D09FFE49
+2019D0271E2884FC07B7CEB3E71EC6E0B9EDE1220F137F4EA0BEB01721451F0580F3B7F1EBCDBB
+070012C0B103288B117F800AE1CEB8E7BEFC58AC4107C40F03BEB8F3FEE784D1312C394F0B9171
+1CB94422473BC83C7A7CC5411D0CDD238BFDC90EF903CD00AFACE402CF711D4A8517AC7AC22D3F
+E73E9727771C57DE764CBB3127E774E59EF8E473B88293C033F9732303B2C83CC5E46E76EC8BBF
+E303D02E0F413C812CEDFFB1EC0E4F978861248CCBEDFE380FD0E9440F38FE2EFB43948F1B9C24
+73BB13E98579D0F17914644F9C1C2A44720520CFD0F4BBB21F3801CCAD484EF5DA07EDA6FB5E78
+0FBE11EE2E7FAFCE30C27C09130210349D0E7F00EFF30ABBCD1938EFD3790F04A510329BAC220F
+5F11B0579FA2009EDFCFD17CC3D120E7B25D023FEA1C507407BE3D344A9D20CE1CED33D1D01478
+049D1DFB0EC048FC3BE73C522402CA4C7F930EDE32217F3842F90FC42DF80F51B283BA41FC4278
+03B04A1DFC08FB2C2B0D1EAF135C44A45C445D2EF84703D00782BF3BBE1317A4C5C284E1732087
+4DDCE3ABFC0383CD0BC3AF15C13BF3456608273084EC6E4E8FA7D8ED8AAED39C72209EFAC50FC5
+FC49CAFFDC4AEF05CBE7B1712BCEF8C45C30C48FFD48BCB9C05165E88D0FC045D3147CEC40A1F5
+FA0ECB9B3023EC40EF0B8447C00DDDE122DB3FB7CEA44E9FE2F84DCE0B3FEE00CA1789917BEDCE
+E321B944E7FD479F4847CE5EFA4D3DCFA3F8F1B730D6FCE3E3BD043AAFF12B05C4090538DECFB4
+2D4EB0E44EC9CBEE390D3872BB727B518B9FEF09BBE1E873E0CD730FAE381E08F0E69FB202BD04
+4EBEF02793CF24840F54BDF4613EB0570273C2EEC5D09E3B20E82F738E4497ECB8409F300C820F
+3DCF7CE5113DE103D123AECE5CFFA0F90ED8C8CD79C3D4FBFB23F84722E73705F07E5EBEE3AE92
+FECEC0C04E4F511149FF8C02E7FEF0FC010F14FFDCF1DE12D4EE2DD3A0042CBB48CC8F3B14702D
+E71BB3046F90FCAEB9EDEC84D39C38B123ECDD8E7CC138E3749E9FC9FBABF1010FE31F305DE811
+FF1087D22FC803BA7FC3BEC0C2A11FE3A104AB82C52FDCD3C3047BF1100BE3AEF8EC83EFE00C01
+04F17BC3B24FE27FA9C26413C052C522B8031D0C3FABBA13E79C31EE37A8710088E75244CCDC73
+EBBFBDCE1E13250805078063FB914747B7FFE3AC8BE3AD0B21F3F20395B0EBBDF3C482B2EF02BF
+10537B2B5404272DF0E8B44F0FA2096C0044BD0F3CC202F8EBBED410F17807C7F1D22C80FC420F
+C054A2D03A03E3F7C83C9CE8E0F4F81ACC0F20A7397D81336FCE88FF2D32D2F2BAFC4DC78FA1C9
+C06FF0A0D17FE0F208FF3D73A12C4BC0073F4C12399012BD370BBBBBDEF3E3F3C7E38FFBE030C0
+35423F37B2FDC2BED02E1CF8731203F4FCE7FAEC08E94EC804FF1500F10DCB426E905ABBE73970
+DFC4039020E73C802EE17D00F3AE32E413C5C0A4C38E0ED900CC741EED0CFC044F04F27B15CC33
+88BCC4FFAE7AF78C0A2F914AC49EFF084BAF971AB19E7ED8F48DF0E1FEDDE3923D07F8FAE3EE41
+EC4C49C303A8DD3CF2E33B1857087003BC40200E1DC08ABFFD1F13FBABF3104027277E8AF5BA73
+02304813DFA0E78DFCC274EA11F64EBA125FEF1C3B839B4D37824FFC3E8EC3CDFA40519810323A
+F3B4E4E40F133FE8A0C40D43D2FB7D73DFCFE138B03F55F03C2AB1E7BCEDFC020AD03438CE3FCD
+DF7CB02B21F30F22004122FBCFDCB8EF7EF041C06043BFBFF7EFF3E51CB772D2EEF0DF10520743
+C5579311C3DFD11BAEFCF15E102FF48D74BFC4F41D287EF7C5FDFF50EF1FAF539CC4EDDEA143AC
+708AFE3057B5C53F0E3AEFCFF9F51E20B704C308A7A3FFAC71FC8F60854B571F3EF0C19C70EFBC
+F02DEE0FD0FFB0E353FFABBF3C510010402FA3A02E2F48BF3DCB9830F91FF833B77497FDF3A17E
+0A004AB0FD0037CA83FBBF0833E3AF3FC0333DC24465CF0FCB9B8DD5D2AFFDA7F2053EB23F9432
+B3C13472BF407F1F9FC4C82F3F875EB8F7DF4AFA127AE7927CF3BABCDF417287FDCF00CC3803A0
+53C48E7B21EE47E15DDD20102EC6F80D7D1EC800A0DCD01F707F22D414120DCFBC8FD70CF101FB
+95FFAE0BFF065148FE4DEFCE7E8128220D241EEF9E3CF7B5CCC3D64D3FD47FC2EF3A2EDD71C0F0
+38DDE7F1C3B73923D3FB0F22B8E0B4840D9D4A901E808F9E3CC3CC0F148E3FC4A79BCC9FA0F704
+37E3DC2BEBAC3CC3C5ECC8FBF282DC37405FF8888CFD0780DCD296B2445FB0EBBE0AFF0FBC7F5F
+C434CEBF505470EBBEBC5053122CB2C7F7FE07DC4E45241EFEE85C00B71C3FAF00103BB43F41F4
+3AFC12912BBDF1E2DC1002FDE5FD410FE92213E78471E39ED6E351211F88F7E13C453BDFFAEBB4
+BBCC114A040C7DC14AF9EF7F34A3BC1E4482D5EF9CF4E48D07C75C7E9BBF3DC4AF70EFFD011B92
+9EFC32A9E04ED041D338BB84C54FAE4ACCE672F34874870F75DA6A46CBB272D0D4D3E5C473B47E
+B9200F4BE7C770C1DCF94C5440FF1CF2EF14480F714BB7385084D2C8FB10EC4FEEB8F41E0E490D
+FFBE433A4BFFB110F016E7F07A0C9EF810840045420BFF910B4040FC4011450F023FEBAFF0FFD1
+033C5235340142422B4FCF82371FF4102E11F9239E9F4D010CEB8F97EB8CF9E722174FEE4402FC
+1A5F1EFF945FE7448E038F9D0C47DE47BC9AB10D1F7AFA17FAE4AE793C40C53F9CE40E9F32BF0E
+B3E8BC4483BDDCE205003E3E5050FC32E73E900F421D1FDF51242E47E801F423BAD0500E4427F0
+119FBC041F2750FFAE43F42EFF038CD7F46DF840BE29E0B903E32BE344A487D02FE484CEE1D043
+C3C89E480D227DE70DF9E71C03B48BBB1FA10D0022F8FFEE80A9CD37CED7D5D2D245D3AECB7DF9
+3B87CED5E4420081F441E75E53FB4E3A00911FD76E0AEDFEFD03A4447AFEC110283FF381440D3C
+7121044FEEDEB07B8EFB0CA0FB41044BF38D7F905E0F21D3D0A28BC8C0CFF0834C4D148EF8FCAE
+1377A4F0E7D2FB013D00203E165D0E2BE5083F0383774D8DD4207E80B3892CCC03A53AC4FE9CAF
+F327A7E3E532C3AE10F39FE7B3852F9ECBEDD0A9EFBDFBA35E7903F8E0861DE252E740A2D03C4F
+1130181F3A3FBF38837D10FA07B07F8242B80D0A39C75F48FFBD99C7906316310974757F68E9F3
+EFA6F91F7E7BFF4899F500D305740088E907247750ABBD1FEFE41F9EFBEFEC12FC7445FF9DBE79
+E97E0957FDDCDFCE7F2DC7DF922CC07FB0830C38A7FA7F9E80E5BD40054F1FCE3941CFF7F9E931
+C3EF1873ECC5F10CBB07DF43ED3C7D2B8E91042D73F781387148FAEBCC7800EA0DE8B0087BBECF
+112F1F47D21CF149EC741D0F8B1211EBBE04EF17DF4DC4300FBE38978204ED40F444361AF4D68B
+EF0D4B0E8143F38E05861871C9B97FB09109E38B181F3B1D3DBF682212B1BC32F0C9B1F7FF7E7F
+6EB3DF9CBC472535F1E67D8FBB9B1E790CFBC1B8B7EC017DFFC6FC776EF003783DF722F5E37DEB
+70181C0CF33CBFF7BFA07F0FF253A48F506B1CF16F8227C009D7E043A05CB0CAFD73D7C4E8FEDF
+710FE5CE504A0CAFFECCC3C2F0FF5DE9EF3A52C1FC9FBFEE7E79EFC48303E8D16BA0F9CD90E9FB
+7ECA7E3BA749C7D3E7DFD21EFE66C66F53BAD3D0D480704F7DD06E51D4E91CF7852167DC80B81D
+B0DA27B8D7DBA137DB3E7A114DCA19EE134285E5C080D1EF9C4D1819FDF3C40FA89F649BB24AE1
+D2BFE79312D9C4A3E907303C044853D4B24B8433E7F9FB12C2E1048EFD376F87F4AF1CC92233C7
+0F3CE287FC0BF53FA0DF8F134C05D30F003F370B4707883033DD0F238224143A23E3C0604E00F3
+DFF7E91E3047671FB89FCD1C508BBBC8AC412C7FC0205F9DF7A04C62A43D14FD35DC9E3040FE47
+87E7F24743F9FF9FB5E1A6C011B734BC6E5234BF45C07BD34842282F4207F1DD43FF7CFBE690CB
+BF3047F9F44740202120E3E07F4F0F87DCFEE7FF25FDE73D7EFF0F39F3CDFFAF747E07908D30E0
+1FB465C0604E03F7EFF7CA0D3441EC9E4FD1420ECBF12D3B1D04D0533B2F8E15BB5CF47DCF703A
+CCF22CA27200D245FC3E0FB9BA38A7AF703454F4B136336B0F312FD7BF17FC43C3E5281703EACB
+7ECB9BEF6F73821FFC8B34E1BDBBEFF23F4DC06040700EDE30E85500D260391564F1BFAE85748F
+41E92C1483A2064BAA66340106DA550AFC5430C79B7EBD167747413A428217C0F57628429BD43C
+114324B5238503E9C716089C52183DBAEB86B00E02374B508EB3F71C5CA07A94827A1F573AE704
+086934CEAF9078A897E0C45008D13E91590D79C10E790DB9C41F5D0A0413E500A7DC6482A248A6
+92D0977DDBD74D1B2D904BD080F41D4A492CAA07DD79C83A7A43A6B8E79DF9FE79E7E123E0527E
+22403B7AC0A50410429407B47080DE79E29F70825DA4006C7947024C43B04427F6921BAD481015
+0A03FEA85281C3484281E3C404FA5903E443F955267D26F7DA0ED993E93A0B445F6A06EBE17112
+B94D03E8E1023503F408D0B4FF9E0C24CF864C4013D5141225C00A10020829E3807425F1648848
+2012407B877DF5E7923FA38FDD4043E410D4E24B9E1D074A5C074E485110A48EA73301BFD9FF5B
+F18CCCB71DFB920E0F76C1C4C910B23B2F07F0DD132437F0D2EEC13CA8A1F80894513FD1629466
+8B18D8BB12E0439CA889E5CCE822570EEC03C3FCB2E73553B8FF0C9F7CA20E1000000000000000
+00'H,
+        hist {
+          replaces {
+            date std {
+              year 2020,
+              month 1,
+              day 17
+            },
+            ids {
+              gi 1796487982
+            }
+          }
+        }
+      },
+      annot {
+        {
+          data ftable {
+            {
+              id local id 1,
+              data gene {
+                locus "orf1ab"
+              },
+              location int {
+                from 265,
+                to 21554,
+                strand plus,
+                id gi 1798172431
+              }
+            },
+            {
+              id local id 3,
+              data gene {
+                locus "S"
+              },
+              location int {
+                from 21562,
+                to 25383,
+                strand plus,
+                id gi 1798172431
+              }
+            },
+            {
+              id local id 5,
+              data gene {
+                locus "ORF3a"
+              },
+              location int {
+                from 25392,
+                to 26219,
+                strand plus,
+                id gi 1798172431
+              }
+            },
+            {
+              id local id 7,
+              data gene {
+                locus "E"
+              },
+              location int {
+                from 26244,
+                to 26471,
+                strand plus,
+                id gi 1798172431
+              }
+            },
+            {
+              id local id 9,
+              data gene {
+                locus "M"
+              },
+              location int {
+                from 26522,
+                to 27190,
+                strand plus,
+                id gi 1798172431
+              }
+            },
+            {
+              id local id 11,
+              data gene {
+                locus "ORF6"
+              },
+              location int {
+                from 27201,
+                to 27386,
+                strand plus,
+                id gi 1798172431
+              }
+            },
+            {
+              id local id 13,
+              data gene {
+                locus "ORF7a"
+              },
+              location int {
+                from 27393,
+                to 27758,
+                strand plus,
+                id gi 1798172431
+              }
+            },
+            {
+              id local id 15,
+              data gene {
+                locus "ORF8"
+              },
+              location int {
+                from 27893,
+                to 28258,
+                strand plus,
+                id gi 1798172431
+              }
+            },
+            {
+              id local id 17,
+              data gene {
+                locus "N"
+              },
+              location int {
+                from 28273,
+                to 29532,
+                strand plus,
+                id gi 1798172431
+              }
+            },
+            {
+              id local id 19,
+              data gene {
+                locus "ORF10"
+              },
+              location int {
+                from 29557,
+                to 29673,
+                strand plus,
+                id gi 1798172431
+              }
+            },
+            {
+              id local id 21,
+              data imp {
+                key "5'UTR"
+              },
+              location int {
+                from 0,
+                to 264,
+                strand plus,
+                id gi 1798172431
+              }
+            },
+            {
+              id local id 22,
+              data imp {
+                key "3'UTR"
+              },
+              location int {
+                from 29674,
+                to 29902,
+                strand plus,
+                id gi 1798172431
+              }
+            }
+          }
+        }
+      }
+    },
+    seq {
+      id {
+        genbank {
+          accession "QHD43415",
+          version 1
+        },
+        gi 1791269089
+      },
+      descr {
+        title "orf1ab polyprotein [Severe acute respiratory syndrome
+ coronavirus 2]",
+        molinfo {
+          biomol peptide,
+          completeness complete
+        },
+        user {
+          type str "OriginalID",
+          data {
+            {
+              label str "GenBank",
+              data str "gb|QHD43415.1|"
+            }
+          }
+        },
+        create-date std {
+          year 2020,
+          month 1,
+          day 12
+        }
+      },
+      inst {
+        repr raw,
+        mol aa,
+        length 7096,
+        seq-data ncbieaa "MESLVPGFNEKTHVQLSLPVLQVRDVLVRGFGDSVEEVLSEARQHLKDGTCG
+LVEVEKGVLPQLEQPYVFIKRSDARTAPHGHVMVELVAELEGIQYGRSGETLGVLVPHVGEIPVAYRKVLLRKNGNKG
+AGGHSYGADLKSFDLGDELGTDPYEDFQENWNTKHSSGVTRELMRELNGGAYTRYVDNNFCGPDGYPLECIKDLLARA
+GKASCTLSEQLDFIDTKRGVYCCREHEHEIAWYTERSEKSYELQTPFEIKLAKKFDTFNGECPNFVFPLNSIIKTIQP
+RVEKKKLDGFMGRIRSVYPVASPNECNQMCLSTLMKCDHCGETSWQTGDFVKATCEFCGTENLTKEGATTCGYLPQNA
+VVKIYCPACHNSEVGPEHSLAEYHNESGLKTILRKGGRTIAFGGCVFSYVGCHNKCAYWVPRASANIGCNHTGVVGEG
+SEGLNDNLLEILQKEKVNINIVGDFKLNEEIAIILASFSASTSAFVETVKGLDYKAFKQIVESCGNFKVTKGKAKKGA
+WNIGEQKSILSPLYAFASEAARVVRSIFSRTLETAQNSVRVLQKAAITILDGISQYSLRLIDAMMFTSDLATNNLVVM
+AYITGGVVQLTSQWLTNIFGTVYEKLKPVLDWLEEKFKEGVEFLRDGWEIVKFISTCACEIVGGQIVTCAKEIKESVQ
+TFFKLVNKFLALCADSIIIGGAKLKALNLGETFVTHSKGLYRKCVKSREETGLLMPLKAPKEIIFLEGETLPTEVLTE
+EVVLKTGDLQPLEQPTSEAVEAPLVGTPVCINGLMLLEIKDTEKYCALAPNMMVTNNTFTLKGGAPTKVTFGDDTVIE
+VQGYKSVNITFELDERIDKVLNEKCSAYTVELGTEVNEFACVVADAVIKTLQPVSELLTPLGIDLDEWSMATYYLFDE
+SGEFKLASHMYCSFYPPDEDEEEGDCEEEEFEPSTQYEYGTEDDYQGKPLEFGATSAALQPEEEQEEDWLDDDSQQTV
+GQQDGSEDNQTTTIQTIVEVQPQLEMELTPVVQTIEVNSFSGYLKLTDNVYIKNADIVEEAKKVKPTVVVNAANVYLK
+HGGGVAGALNKATNNAMQVESDDYIATNGPLKVGGSCVLSGHNLAKHCLHVVGPNVNKGEDIQLLKSAYENFNQHEVL
+LAPLLSAGIFGADPIHSLRVCVDTVRTNVYLAVFDKNLYDKLVSSFLEMKSEKQVEQKIAEIPKEEVKPFITESKPSV
+EQRKQDDKKIKACVEEVTTTLEETKFLTENLLLYIDINGNLHPDSATLVSDIDITFLKKDAPYIVGDVVQEGVLTAVV
+IPTKKAGGTTEMLAKALRKVPTDNYITTYPGQGLNGYTVEEAKTVLKKCKSAFYILPSIISNEKQEILGTVSWNLREM
+LAHAEETRKLMPVCVETKAIVSTIQRKYKGIKIQEGVVDYGARFYFYTSKTTVASLINTLNDLNETLVTMPLGYVTHG
+LNLEEAARYMRSLKVPATVSVSSPDAVTAYNGYLTSSSKTPEEHFIETISLAGSYKDWSYSGQSTQLGIEFLKRGDKS
+VYYTSNPTTFHLDGEVITFDNLKTLLSLREVRTIKVFTTVDNINLHTQVVDMSMTYGQQFGPTYLDGADVTKIKPHNS
+HEGKTFYVLPNDDTLRVEAFEYYHTTDPSFLGRYMSALNHTKKWKYPQVNGLTSIKWADNNCYLATALLTLQQIELKF
+NPPALQDAYYRARAGEAANFCALILAYCNKTVGELGDVRETMSYLFQHANLDSCKRVLNVVCKTCGQQQTTLKGVEAV
+MYMGTLSYEQFKKGVQIPCTCGKQATKYLVQQESPFVMMSAPPAQYELKHGTFTCASEYTGNYQCGHYKHITSKETLY
+CIDGALLTKSSEYKGPITDVFYKENSYTTTIKPVTYKLDGVVCTEIDPKLDNYYKKDNSYFTEQPIDLVPNQPYPNAS
+FDNFKFVCDNIKFADDLNQLTGYKKPASRELKVTFFPDLNGDVVAIDYKHYTPSFKKGAKLLHKPIVWHVNNATNKAT
+YKPNTWCIRCLWSTKPVETSNSFDVLKSEDAQGMDNLACEDLKPVSEEVVENPTIQKDVLECNVKTTEVVGDIILKPA
+NNSLKITEEVGHTDLMAAYVDNSSLTIKKPNELSRVLGLKTLATHGLAAVNSVPWDTIANYAKPFLNKVVSTTTNIVT
+RCLNRVCTNYMPYFFTLLLQLCTFTRSTNSRIKASMPTTIAKNTVKSVGKFCLEASFNYLKSPNFSKLINIIIWFLLL
+SVCLGSLIYSTAALGVLMSNLGMPSYCTGYREGYLNSTNVTIATYCTGSIPCSVCLSGLDSLDTYPSLETIQITISSF
+KWDLTAFGLVAEWFLAYILFTRFFYVLGLAAIMQLFFSYFAVHFISNSWLMWLIINLVQMAPISAMVRMYIFFASFYY
+VWKSYVHVVDGCNSSTCMMCYKRNRATRVECTTIVNGVRRSFYVYANGGKGFCKLHNWNCVNCDTFCAGSTFISDEVA
+RDLSLQFKRPINPTDQSSYIVDSVTVKNGSIHLYFDKAGQKTYERHSLSHFVNLDNLRANNTKGSLPINVIVFDGKSK
+CEESSAKSASVYYSQLMCQPILLLDQALVSDVGDSAEVAVKMFDAYVNTFSSTFNVPMEKLKTLVATAEAELAKNVSL
+DNVLSTFISAARQGFVDSDVETKDVVECLKLSHQSDIEVTGDSCNNYMLTYNKVENMTPRDLGACIDCSARHINAQVA
+KSHNIALIWNVKDFMSLSEQLRKQIRSAAKKNNLPFKLTCATTRQVVNVVTTKIALKGGKIVNNWLKQLIKVTLVFLF
+VAAIFYLITPVHVMSKHTDFSSEIIGYKAIDGGVTRDIASTDTCFANKHADFDTWFSQRGGSYTNDKACPLIAAVITR
+EVGFVVPGLPGTILRTTNGDFLHFLPRVFSAVGNICYTPSKLIEYTDFATSACVLAAECTIFKDASGKPVPYCYDTNV
+LEGSVAYESLRPDTRYVLMDGSIIQFPNTYLEGSVRVVTTFDSEYCRHGTCERSEAGVCVSTSGRWVLNNDYYRSLPG
+VFCGVDAVNLLTNMFTPLIQPIGALDISASIVAGGIVAIVVTCLAYYFMRFRRAFGEYSHVVAFNTLLFLMSFTVLCL
+TPVYSFLPGVYSVIYLYLTFYLTNDVSFLAHIQWMVMFTPLVPFWITIAYIICISTKHFYWFFSNYLKRRVVFNGVSF
+STFEEAALCTFLLNKEMYLKLRSDVLLPLTQYNRYLALYNKYKYFSGAMDTTSYREAACCHLAKALNDFSNSGSDVLY
+QPPQTSITSAVLQSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHN
+FLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNG
+SCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLN
+RFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQ
+CSGVTFQSAVKRTIKGTHHWLLLTILTSLLVLVQSTQWSLFFFLYENAFLPFAMGIIAMSAFAMMFVKHKHAFLCLFL
+LPSLATVAYFNMVYMPASWVMRIMTWLDMVDTSLSGFKLKDCVMYASAVVLLILMTARTVYDDGARRVWTLMNVLTLV
+YKVYYGNALDQAISMWALIISVTSNYSGVVTTVMFLARGIVFMCVEYCPIFFITGNTLQCIMLVYCFLGYFCTCYFGL
+FCLLNRYFRLTLGVYDYLVSTQEFRYMNSQGLLPPKNSIDAFKLNIKLLGVGGKPCIKVATVQSKMSDVKCTSVVLLS
+VLQQLRVESSSKLWAQCVQLHNDILLAKDTTEAFEKMVSLLSVLLSMQGAVDINKLCEEMLDNRATLQAIASEFSSLP
+SYAAFATAQEAYEQAVANGDSEVVLKKLKKSLNVAKSEFDRDAAMQRKLEKMADQAMTQMYKQARSEDKRAKVTSAMQ
+TMLFTMLRKLDNDALNNIINNARDGCVPLNIIPLTTAAKLMVVIPDYNTYKNTCDGTTFTYASALWEIQQVVDADSKI
+VQLSEISMDNSPNLAWPLIVTALRANSAVKLQNNELSPVALRQMSCAAGTTQTACTDDNALAYYNTTKGGRFVLALLS
+DLQDLKWARFPKSDGTGTIYTELEPPCRFVTDTPKGPKVKYLYFIKGLNNLNRGMVLGSLAATVRLQAGNATEVPANS
+TVLSFCAFAVDAAKAYKDYLASGGQPITNCVKMLCTHTGTGQAITVTPEANMDQESFGGASCCLYCRCHIDHPNPKGF
+CDLKGKYVQIPTTCANDPVGFTLKNTVCTVCGMWKGYGCSCDQLREPMLQSADAQSFLNRVCGVSAARLTPCGTGTST
+DVVYRAFDIYNDKVAGFAKFLKTNCCRFQEKDEDDNLIDSYFVVKRHTFSNYQHEETIYNLLKDCPAVAKHDFFKFRI
+DGDMVPHISRQRLTKYTMADLVYALRHFDEGNCDTLKEILVTYNCCDDDYFNKKDWYDFVENPDILRVYANLGERVRQ
+ALLKTVQFCDAMRNAGIVGVLTLDNQDLNGNWYDFGDFIQTTPGSGVPVVDSYYSLLMPILTLTRALTAESHVDTDLT
+KPYIKWDLLKYDFTEERLKLFDRYFKYWDQTYHPNCVNCLDDRCILHCANFNVLFSTVFPPTSFGPLVRKIFVDGVPF
+VVSTGYHFRELGVVHNQDVNLHSSRLSFKELLVYAADPAMHAASGNLLLDKRTTCFSVAALTNNVAFQTVKPGNFNKD
+FYDFAVSKGFFKEGSSVELKHFFFAQDGNAAISDYDYYRYNLPTMCDIRQLLFVVEVVDKYFDCYDGGCINANQVIVN
+NLDKSAGFPFNKWGKARLYYDSMSYEDQDALFAYTKRNVIPTITQMNLKYAISAKNRARTVAGVSICSTMTNRQFHQK
+LLKSIAATRGATVVIGTSKFYGGWHNMLKTVYSDVENPHLMGWDYPKCDRAMPNMLRIMASLVLARKHTTCCSLSHRF
+YRLANECAQVLSEMVMCGGSLYVKPGGTSSGDATTAYANSVFNICQAVTANVNALLSTDGNKIADKYVRNLQHRLYEC
+LYRNRDVDTDFVNEFYAYLRKHFSMMILSDDAVVCFNSTYASQGLVASIKNFKSVLYYQNNVFMSEAKCWTETDLTKG
+PHEFCSQHTMLVKQGDDYVYLPYPDPSRILGAGCFVDDIVKTDGTLMIERFVSLAIDAYPLTKHPNQEYADVFHLYLQ
+YIRKLHDELTGHMLDMYSVMLTNDNTSRYWEPEFYEAMYTPHTVLQAVGACVLCNSQTSLRCGACIRRPFLCCKCCYD
+HVISTSHKLVLSVNPYVCNAPGCDVTDVTQLYLGGMSYYCKSHKPPISFPLCANGQVFGLYKNTCVGSDNVTDFNAIA
+TCDWTNAGDYILANTCTERLKLFAAETLKATEETFKLSYGIATVREVLSDRELHLSWEVGKPRPPLNRNYVFTGYRVT
+KNSKVQIGEYTFEKGDYGDAVVYRGTTTYKLNVGDYFVLTSHTVMPLSAPTLVPQEHYVRITGLYPTLNISDEFSSNV
+ANYQKVGMQKYSTLQGPPGTGKSHFAIGLALYYPSARIVYTACSHAAVDALCEKALKYLPIDKCSRIIPARARVECFD
+KFKVNSTLEQYVFCTVNALPETTADIVVFDEISMATNYDLSVVNARLRAKHYVYIGDPAQLPAPRTLLTKGTLEPEYF
+NSVCRLMKTIGPDMFLGTCRRCPAEIVDTVSALVYDNKLKAHKDKSAQCFKMFYKGVITHDVSSAINRPQIGVVREFL
+TRNPAWRKAVFISPYNSQNAVASKILGLPTQTVDSSQGSEYDYVIFTQTTETAHSCNVNRFNVAITRAKVGILCIMSD
+RDLYDKLQFTSLEIPRRNVATLQAENVTGLFKDCSKVITGLHPTQAPTHLSVDTKFKTEGLCVDIPGIPKDMTYRRLI
+SMMGFKMNYQVNGYPNMFITREEAIRHVRAWIGFDVEGCHATREAVGTNLPLQLGFSTGVNLVAVPTGYVDTPNNTDF
+SRVSAKPPPGDQFKHLIPLMYKGLPWNVVRIKIVQMLSDTLKNLSDRVVFVLWAHGFELTSMKYFVKIGPERTCCLCD
+RRATCFSTASDTYACWHHSIGFDYVYNPFMIDVQQWGFTGNLQSNHDLYCQVHGNAHVASCDAIMTRCLAVHECFVKR
+VDWTIEYPIIGDELKINAACRKVQHMVVKAALLADKFPVLHDIGNPKAIKCVPQADVEWKFYDAQPCSDKAYKIEELF
+YSYATHSDKFTDGVCLFWNCNVDRYPANSIVCRFDTRVLSNLNLPGCDGGSLYVNKHAFHTPAFDKSAFVNLKQLPFF
+YYSDSPCESHGKQVVSDIDYVPLKSATCITRCNLGGAVCRHHANEYRLYLDAYNMMISAGFSLWVYKQFDTYNLWNTF
+TRLQSLENVAFNVVNKGHFDGQQGEVPVSIINNTVYTKVDGVDVELFENKTTLPVNVAFELWAKRNIKPVPEVKILNN
+LGVDIAANTVIWDYKRDAPAHISTIGVCSMTDIAKKPTETICAPLTVFFDGRVDGQVDLFRNARNGVLITEGSVKGLQ
+PSVGPKQASLNGVTLIGEAVKTQFNYYKKVDGVVQQLPETYFTQSRNLQEFKPRSQMEIDFLELAMDEFIERYKLEGY
+AFEHIVYGDFSHSQLGGLHLLIGLAKRFKESPFELEDFIPMDSTVKNYFITDAQTGSSKCVCSVIDLLLDDFVEIIKS
+QDLSVVSKVVKVTIDYTEISFMLWCKDGHVETFYPKLQSSQAWQPGVAMPNLYKMQRMLLEKCDLQNYGDSATLPKGI
+MMNVAKYTQLCQYLNTLTLAVPYNMRVIHFGAGSDKGVAPGTAVLRQWLPTGTLLVDSDLNDFVSDADSTLIGDCATV
+HTANKWDLIISDMYDPKTKNVTKENDSKEGFFTYICGFIQQKLALGGSVAIKITEHSWNADLYKLMGHFAWWTAFVTN
+VNASSSEAFLIGCNYLGKPREQIDGYVMHANYIFWRNTNPIQLSSYSLFDMSKFPLKLRGTAVMSLKEGQINDMILSL
+LSKGRLIIRENNRVVISSDVLVNN"
+      },
+      annot {
+        {
+          data ftable {
+            {
+              id local id 23,
+              data prot {
+                name {
+                  "orf1ab polyprotein"
+                },
+                desc "pp1ab"
+              },
+              location int {
+                from 0,
+                to 7095,
+                id gi 1791269089
+              }
+            }
+          }
+        }
+      }
+    },
+    seq {
+      id {
+        genbank {
+          accession "QHD43416",
+          version 1
+        },
+        gi 1791269090
+      },
+      descr {
+        title "surface glycoprotein [Severe acute respiratory syndrome
+ coronavirus 2]",
+        molinfo {
+          biomol peptide,
+          completeness complete
+        },
+        user {
+          type str "OriginalID",
+          data {
+            {
+              label str "GenBank",
+              data str "gb|QHD43416.1|"
+            }
+          }
+        },
+        create-date std {
+          year 2020,
+          month 1,
+          day 12
+        }
+      },
+      inst {
+        repr raw,
+        mol aa,
+        length 1273,
+        seq-data ncbieaa "MFVFLVLLPLVSSQCVNLTTRTQLPPAYTNSFTRGVYYPDKVFRSSVLHSTQ
+DLFLPFFSNVTWFHAIHVSGTNGTKRFDNPVLPFNDGVYFASTEKSNIIRGWIFGTTLDSKTQSLLIVNNATNVVIKV
+CEFQFCNDPFLGVYYHKNNKSWMESEFRVYSSANNCTFEYVSQPFLMDLEGKQGNFKNLREFVFKNIDGYFKIYSKHT
+PINLVRDLPQGFSALEPLVDLPIGINITRFQTLLALHRSYLTPGDSSSGWTAGAAAYYVGYLQPRTFLLKYNENGTIT
+DAVDCALDPLSETKCTLKSFTVEKGIYQTSNFRVQPTESIVRFPNITNLCPFGEVFNATRFASVYAWNRKRISNCVAD
+YSVLYNSASFSTFKCYGVSPTKLNDLCFTNVYADSFVIRGDEVRQIAPGQTGKIADYNYKLPDDFTGCVIAWNSNNLD
+SKVGGNYNYLYRLFRKSNLKPFERDISTEIYQAGSTPCNGVEGFNCYFPLQSYGFQPTNGVGYQPYRVVVLSFELLHA
+PATVCGPKKSTNLVKNKCVNFNFNGLTGTGVLTESNKKFLPFQQFGRDIADTTDAVRDPQTLEILDITPCSFGGVSVI
+TPGTNTSNQVAVLYQDVNCTEVPVAIHADQLTPTWRVYSTGSNVFQTRAGCLIGAEHVNNSYECDIPIGAGICASYQT
+QTNSPRRARSVASQSIIAYTMSLGAENSVAYSNNSIAIPTNFTISVTTEILPVSMTKTSVDCTMYICGDSTECSNLLL
+QYGSFCTQLNRALTGIAVEQDKNTQEVFAQVKQIYKTPPIKDFGGFNFSQILPDPSKPSKRSFIEDLLFNKVTLADAG
+FIKQYGDCLGDIAARDLICAQKFNGLTVLPPLLTDEMIAQYTSALLAGTITSGWTFGAGAALQIPFAMQMAYRFNGIG
+VTQNVLYENQKLIANQFNSAIGKIQDSLSSTASALGKLQDVVNQNAQALNTLVKQLSSNFGAISSVLNDILSRLDKVE
+AEVQIDRLITGRLQSLQTYVTQQLIRAAEIRASANLAATKMSECVLGQSKRVDFCGKGYHLMSFPQSAPHGVVFLHVT
+YVPAQEKNFTTAPAICHDGKAHFPREGVFVSNGTHWFVTQRNFYEPQIITTDNTFVSGNCDVVIGIVNNTVYDPLQPE
+LDSFKEELDKYFKNHTSPDVDLGDISGINASVVNIQKEIDRLNEVAKNLNESLIDLQELGKYEQYIKWPWYIWLGFIA
+GLIAIVMVTIMLCCMTSCCSCLKGCCSCGSCCKFDEDDSEPVLKGVKLHYT"
+      },
+      annot {
+        {
+          data ftable {
+            {
+              id local id 24,
+              data prot {
+                name {
+                  "surface glycoprotein"
+                }
+              },
+              location int {
+                from 0,
+                to 1272,
+                id gi 1791269090
+              }
+            }
+          }
+        }
+      }
+    },
+    seq {
+      id {
+        genbank {
+          accession "QHD43417",
+          version 1
+        },
+        gi 1791269091
+      },
+      descr {
+        title "ORF3a protein [Severe acute respiratory syndrome coronavirus 2]",
+        molinfo {
+          biomol peptide,
+          completeness complete
+        },
+        user {
+          type str "OriginalID",
+          data {
+            {
+              label str "GenBank",
+              data str "gb|QHD43417.1|"
+            }
+          }
+        },
+        create-date std {
+          year 2020,
+          month 1,
+          day 12
+        }
+      },
+      inst {
+        repr raw,
+        mol aa,
+        length 275,
+        seq-data ncbieaa "MDLFMRIFTIGTVTLKQGEIKDATPSDFVRATATIPIQASLPFGWLIVGVAL
+LAVFQSASKIITLKKRWQLALSKGVHFVCNLLLLFVTVYSHLLLVAAGLEAPFLYLYALVYFLQSINFVRIIMRLWLC
+WKCRSKNPLLYDANYFLCWHTNCYDYCIPYNSVTSSIVITSGDGTTSPISEHDYQIGGYTEKWESGVKDCVVLHSYFT
+SDYYQLYSTQLSTDTGVEHVTFFIYNKIVDEPEEHVQIHTIDGSSGVVNPVMEPIYDEPTTTTSVPL"
+      },
+      annot {
+        {
+          data ftable {
+            {
+              id local id 25,
+              data prot {
+                name {
+                  "ORF3a protein"
+                }
+              },
+              location int {
+                from 0,
+                to 274,
+                id gi 1791269091
+              }
+            }
+          }
+        }
+      }
+    },
+    seq {
+      id {
+        genbank {
+          accession "QHD43418",
+          version 1
+        },
+        gi 1791269092
+      },
+      descr {
+        title "envelope protein [Severe acute respiratory syndrome coronavirus
+ 2]",
+        molinfo {
+          biomol peptide,
+          completeness complete
+        },
+        user {
+          type str "OriginalID",
+          data {
+            {
+              label str "GenBank",
+              data str "gb|QHD43418.1|"
+            }
+          }
+        },
+        create-date std {
+          year 2020,
+          month 1,
+          day 12
+        }
+      },
+      inst {
+        repr raw,
+        mol aa,
+        length 75,
+        seq-data ncbieaa "MYSFVSEETGTLIVNSVLLFLAFVVFLLVTLAILTALRLCAYCCNIVNVSLV
+KPSFYVYSRVKNLNSSRVPDLLV"
+      },
+      annot {
+        {
+          data ftable {
+            {
+              id local id 26,
+              data prot {
+                name {
+                  "envelope protein"
+                }
+              },
+              location int {
+                from 0,
+                to 74,
+                id gi 1791269092
+              }
+            }
+          }
+        }
+      }
+    },
+    seq {
+      id {
+        genbank {
+          accession "QHD43419",
+          version 1
+        },
+        gi 1791269093
+      },
+      descr {
+        title "membrane glycoprotein [Severe acute respiratory syndrome
+ coronavirus 2]",
+        molinfo {
+          biomol peptide,
+          completeness complete
+        },
+        user {
+          type str "OriginalID",
+          data {
+            {
+              label str "GenBank",
+              data str "gb|QHD43419.1|"
+            }
+          }
+        },
+        create-date std {
+          year 2020,
+          month 1,
+          day 12
+        }
+      },
+      inst {
+        repr raw,
+        mol aa,
+        length 222,
+        seq-data ncbieaa "MADSNGTITVEELKKLLEQWNLVIGFLFLTWICLLQFAYANRNRFLYIIKLI
+FLWLLWPVTLACFVLAAVYRINWITGGIAIAMACLVGLMWLSYFIASFRLFARTRSMWSFNPETNILLNVPLHGTILT
+RPLLESELVIGAVILRGHLRIAGHHLGRCDIKDLPKEITVATSRTLSYYKLGASQRVAGDSGFAAYSRYRIGNYKLNT
+DHSSSSDNIALLVQ"
+      },
+      annot {
+        {
+          data ftable {
+            {
+              id local id 27,
+              data prot {
+                name {
+                  "membrane glycoprotein"
+                }
+              },
+              location int {
+                from 0,
+                to 221,
+                id gi 1791269093
+              }
+            }
+          }
+        }
+      }
+    },
+    seq {
+      id {
+        genbank {
+          accession "QHD43420",
+          version 1
+        },
+        gi 1791269094
+      },
+      descr {
+        title "ORF6 protein [Severe acute respiratory syndrome coronavirus 2]",
+        molinfo {
+          biomol peptide,
+          completeness complete
+        },
+        user {
+          type str "OriginalID",
+          data {
+            {
+              label str "GenBank",
+              data str "gb|QHD43420.1|"
+            }
+          }
+        },
+        create-date std {
+          year 2020,
+          month 1,
+          day 12
+        }
+      },
+      inst {
+        repr raw,
+        mol aa,
+        length 61,
+        seq-data ncbieaa "MFHLVDFQVTIAEILLIIMRTFKVSIWNLDYIINLIIKNLSKSLTENKYSQL
+DEEQPMEID"
+      },
+      annot {
+        {
+          data ftable {
+            {
+              id local id 28,
+              data prot {
+                name {
+                  "ORF6 protein"
+                }
+              },
+              location int {
+                from 0,
+                to 60,
+                id gi 1791269094
+              }
+            }
+          }
+        }
+      }
+    },
+    seq {
+      id {
+        genbank {
+          accession "QHD43421",
+          version 1
+        },
+        gi 1791269095
+      },
+      descr {
+        title "ORF7a protein [Severe acute respiratory syndrome coronavirus 2]",
+        molinfo {
+          biomol peptide,
+          completeness complete
+        },
+        user {
+          type str "OriginalID",
+          data {
+            {
+              label str "GenBank",
+              data str "gb|QHD43421.1|"
+            }
+          }
+        },
+        create-date std {
+          year 2020,
+          month 1,
+          day 12
+        }
+      },
+      inst {
+        repr raw,
+        mol aa,
+        length 121,
+        seq-data ncbieaa "MKIILFLALITLATCELYHYQECVRGTTVLLKEPCSSGTYEGNSPFHPLADN
+KFALTCFSTQFAFACPDGVKHVYQLRARSVSPKLFIRQEEVQELYSPIFLIVAAIVFITLCFTLKRKTE"
+      },
+      annot {
+        {
+          data ftable {
+            {
+              id local id 29,
+              data prot {
+                name {
+                  "ORF7a protein"
+                }
+              },
+              location int {
+                from 0,
+                to 120,
+                id gi 1791269095
+              }
+            }
+          }
+        }
+      }
+    },
+    seq {
+      id {
+        genbank {
+          accession "QHD43422",
+          version 1
+        },
+        gi 1791269096
+      },
+      descr {
+        title "ORF8 protein [Severe acute respiratory syndrome coronavirus 2]",
+        molinfo {
+          biomol peptide,
+          completeness complete
+        },
+        user {
+          type str "OriginalID",
+          data {
+            {
+              label str "GenBank",
+              data str "gb|QHD43422.1|"
+            }
+          }
+        },
+        create-date std {
+          year 2020,
+          month 1,
+          day 12
+        }
+      },
+      inst {
+        repr raw,
+        mol aa,
+        length 121,
+        seq-data ncbieaa "MKFLVFLGIITTVAAFHQECSLQSCTQHQPYVVDDPCPIHFYSKWYIRVGAR
+KSAPLIELCVDEAGSKSPIQYIDIGNYTVSCLPFTINCQEPKLGSLVVRCSFYEDFLEYHDVRVVLDFI"
+      },
+      annot {
+        {
+          data ftable {
+            {
+              id local id 30,
+              data prot {
+                name {
+                  "ORF8 protein"
+                }
+              },
+              location int {
+                from 0,
+                to 120,
+                id gi 1791269096
+              }
+            }
+          }
+        }
+      }
+    },
+    seq {
+      id {
+        genbank {
+          accession "QHD43423",
+          version 2
+        },
+        gi 1798172432
+      },
+      descr {
+        title "nucleocapsid phosphoprotein [Severe acute respiratory syndrome
+ coronavirus 2]",
+        molinfo {
+          biomol peptide,
+          completeness complete
+        },
+        user {
+          type str "OriginalID",
+          data {
+            {
+              label str "GenBank",
+              data str "gb|QHD43423.2|"
+            }
+          }
+        },
+        create-date std {
+          year 2020,
+          month 1,
+          day 12
+        }
+      },
+      inst {
+        repr raw,
+        mol aa,
+        length 419,
+        seq-data ncbieaa "MSDNGPQNQRNAPRITFGGPSDSTGSNQNGERSGARSKQRRPQGLPNNTASW
+FTALTQHGKEDLKFPRGQGVPINTNSSPDDQIGYYRRATRRIRGGDGKMKDLSPRWYFYYLGTGPEAGLPYGANKDGI
+IWVATEGALNTPKDHIGTRNPANNAAIVLQLPQGTTLPKGFYAEGSRGGSQASSRSSSRSRNSSRNSTPGSSRGTSPA
+RMAGNGGDAALALLLLDRLNQLESKMSGKGQQQQGQTVTKKSAAEASKKPRQKRTATKAYNVTQAFGRRGPEQTQGNF
+GDQELIRQGTDYKHWPQIAQFAPSASAFFGMSRIGMEVTPSGTWLTYTGAIKLDDKDPNFKDQVILLNKHIDAYKTFP
+PTEPKKDKKKKADETQALPQRQKKQQTVTLLPAADLDDFSKQLQQSMSSADSTQA",
+        hist {
+          replaces {
+            date std {
+              year 2020,
+              month 1,
+              day 17
+            },
+            ids {
+              gi 1791269097
+            }
+          }
+        }
+      },
+      annot {
+        {
+          data ftable {
+            {
+              id local id 31,
+              data prot {
+                name {
+                  "nucleocapsid phosphoprotein"
+                }
+              },
+              location int {
+                from 0,
+                to 418,
+                id gi 1798172432
+              }
+            }
+          }
+        }
+      }
+    },
+    seq {
+      id {
+        genbank {
+          accession "QHI42199",
+          version 1
+        },
+        gi 1798172433
+      },
+      descr {
+        title "ORF10 protein [Severe acute respiratory syndrome coronavirus 2]",
+        molinfo {
+          biomol peptide,
+          completeness complete
+        },
+        user {
+          type str "OriginalID",
+          data {
+            {
+              label str "GenBank",
+              data str "gb|QHI42199.1|"
+            }
+          }
+        },
+        create-date std {
+          year 2020,
+          month 1,
+          day 17
+        }
+      },
+      inst {
+        repr raw,
+        mol aa,
+        length 38,
+        seq-data ncbieaa "MGYINVFAFPFTIYSLLLCRMNSRNYIAQVDVVNFNLT"
+      },
+      annot {
+        {
+          data ftable {
+            {
+              id local id 32,
+              data prot {
+                name {
+                  "ORF10 protein"
+                }
+              },
+              location int {
+                from 0,
+                to 37,
+                id gi 1798172433
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  annot {
+    {
+      data ftable {
+        {
+          id local id 2,
+          data cdregion {
+            frame one,
+            code {
+              id 1
+            }
+          },
+          except TRUE,
+          comment "translated by -1 ribosomal frameshift",
+          product whole gi 1791269089,
+          location packed-int {
+            {
+              from 265,
+              to 13467,
+              strand plus,
+              id gi 1798172431
+            },
+            {
+              from 13467,
+              to 21554,
+              strand plus,
+              id gi 1798172431
+            }
+          },
+          except-text "ribosomal slippage"
+        },
+        {
+          id local id 4,
+          data cdregion {
+            frame one,
+            code {
+              id 1
+            }
+          },
+          comment "structural protein",
+          product whole gi 1791269090,
+          location int {
+            from 21562,
+            to 25383,
+            strand plus,
+            id gi 1798172431
+          }
+        },
+        {
+          id local id 6,
+          data cdregion {
+            frame one,
+            code {
+              id 1
+            }
+          },
+          product whole gi 1791269091,
+          location int {
+            from 25392,
+            to 26219,
+            strand plus,
+            id gi 1798172431
+          }
+        },
+        {
+          id local id 8,
+          data cdregion {
+            frame one,
+            code {
+              id 1
+            }
+          },
+          comment "structural protein; E protein",
+          product whole gi 1791269092,
+          location int {
+            from 26244,
+            to 26471,
+            strand plus,
+            id gi 1798172431
+          }
+        },
+        {
+          id local id 10,
+          data cdregion {
+            frame one,
+            code {
+              id 1
+            }
+          },
+          comment "structural protein",
+          product whole gi 1791269093,
+          location int {
+            from 26522,
+            to 27190,
+            strand plus,
+            id gi 1798172431
+          }
+        },
+        {
+          id local id 12,
+          data cdregion {
+            frame one,
+            code {
+              id 1
+            }
+          },
+          product whole gi 1791269094,
+          location int {
+            from 27201,
+            to 27386,
+            strand plus,
+            id gi 1798172431
+          }
+        },
+        {
+          id local id 14,
+          data cdregion {
+            frame one,
+            code {
+              id 1
+            }
+          },
+          product whole gi 1791269095,
+          location int {
+            from 27393,
+            to 27758,
+            strand plus,
+            id gi 1798172431
+          }
+        },
+        {
+          id local id 16,
+          data cdregion {
+            frame one,
+            code {
+              id 1
+            }
+          },
+          product whole gi 1791269096,
+          location int {
+            from 27893,
+            to 28258,
+            strand plus,
+            id gi 1798172431
+          }
+        },
+        {
+          id local id 18,
+          data cdregion {
+            frame one,
+            code {
+              id 1
+            }
+          },
+          comment "structural protein",
+          product whole gi 1798172432,
+          location int {
+            from 28273,
+            to 29532,
+            strand plus,
+            id gi 1798172431
+          }
+        },
+        {
+          id local id 20,
+          data cdregion {
+            frame one,
+            code {
+              id 1
+            }
+          },
+          product whole gi 1798172433,
+          location int {
+            from 29557,
+            to 29673,
+            strand plus,
+            id gi 1798172431
+          }
+        }
+      }
+    }
+  }
+}
+
