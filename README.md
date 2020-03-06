@@ -60,8 +60,9 @@ esearch -db nuccore -query coronavirus
 Get FASTA.
 
 ```bash
-esearch -db nuccore -query coronavirus |
-efetch -db sequences -format fasta > raw/coronavirus_20200301.fa
+esearch -db nuccore -query coronavirus | efetch -db sequences -format fasta > raw/coronavirus_20200301.fa
+
+esearch -db nuccore -query coronavirus | efetch -db sequences -format fasta > raw/coronavirus_20200306.fa
 
 cat raw/coronavirus_20200301.fa | grep "^>" | wc -l
    41874
@@ -147,6 +148,7 @@ clustalw -infile=raw/MN908947_MN996532.fa
 
 ## Links
 
+* https://github.com/galaxyproject/SARS-CoV-2
 * https://www.ncbi.nlm.nih.gov/genbank/sars-cov-2-seqs/
 * https://www.sciencemag.org/news/2020/01/mining-coronavirus-genomes-clues-outbreak-s-origins
 * https://www.cdc.gov/coronavirus/2019-ncov/lab/rt-pcr-panel-primer-probes.html
