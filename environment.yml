@@ -8,3 +8,10 @@ dependencies:
   - entrez-direct
   - blast
   - clustalw
+  - sra-tools
+  - fastp
+  - fastqc
+  - bcftools
+  - bwa
+  - samtools
+  - csvkit

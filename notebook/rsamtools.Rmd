@@ -1,0 +1,37 @@
+---
+title: "Mismatch summary"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(Rsamtools)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Use [Rsamtools](https://bioconductor.org/packages/release/bioc/html/Rsamtools.html) to import binary "BAM" files into a list structure.
+
+```{r scan_bam}
+# values to extract and store
+my_param <- ScanBamParam(tag = "NM", what = c("mapq"))
+
+bam_list <- scanBam("~/github/sars_cov_2/result/SRR10971381_MN908947_mapped.bam", param = my_param)
+str(bam_list)
+```
+
+Mapping quality.
+
+```{r edit_distance}
+summary(bam_list[[1]]$mapq)
+```
+
+Edit distance summary.
+
+```{r edit_distance}
+summary(bam_list[[1]]$tag$NM)
+
+length(bam_list[[1]]$tag$NM)
+
+options("scipen"= 10)
+prop.table(table(bam_list[[1]]$tag$NM)) * 100
+```

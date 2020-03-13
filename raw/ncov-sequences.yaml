@@ -1,0 +1,1300 @@
+updated: 'Thursday Mar 12 14:40 2020 EST'
+
+genbank-sequences:
+- accession: MN908947
+  refseq-accession: NC_045512
+  gene-region: complete
+  collection-date: Dec-2019
+  locality:
+    country: China
+
+- accession: MN970003
+  gene-region: RdRP
+  collection-date: 08-Jan-2020
+  locality:
+    country: Thailand
+
+- accession: MN970004
+  gene-region: RdRP
+  collection-date: 13-Jan-2020
+  locality:
+    country: Thailand
+
+- accession: MN938384
+  gene-region: complete
+  collection-date: 10-Jan-2020
+  locality:
+    country: China
+    state: Shenzhen
+
+- accession: MN938385
+  gene-region: RdRP
+  collection-date: Jan-2020
+  locality:
+    country: China
+    state: Shenzhen
+
+- accession: MN938386
+  gene-region: RdRP
+  collection-date: Jan-2020
+  locality:
+    country: China
+    state: Shenzhen
+
+- accession: MN938387
+  gene-region: S
+  collection-date: Jan-2020
+  locality:
+    country: China
+    state: Shenzhen
+
+- accession: MN938388
+  gene-region: S
+  collection-date: Jan-2020
+  locality:
+    country: China
+    state: Shenzhen
+
+- accession: MN938389
+  gene-region: S
+  collection-date: Jan-2020
+  locality:
+    country: China
+    state: Shenzhen
+
+- accession: MN938390
+  gene-region: S
+  collection-date: Jan-2020
+  locality:
+    country: China
+    state: Shenzhen
+
+- accession: MN975262
+  gene-region: complete
+  collection-date: 11-Jan-2020
+  locality:
+    country: China
+
+- accession: MN975263
+  gene-region: RdRP
+  collection-date: Jan-2020
+  locality:
+    country: China
+
+- accession: MN975264
+  gene-region: RdRP
+  collection-date: Jan-2020
+  locality:
+    country: China
+
+- accession: MN975265
+  gene-region: RdRP
+  collection-date: Jan-2020
+  locality:
+    country: China
+
+- accession: MN975266
+  gene-region: S
+  collection-date: Jan-2020
+  locality:
+    country: China
+
+- accession: MN975267
+  gene-region: S
+  collection-date: Jan-2020
+  locality:
+    country: China
+
+- accession: MN975268
+  gene-region: S
+  collection-date: Jan-2020
+  locality:
+    country: China
+
+- accession: MN985325
+  gene-region: complete
+  collection-date: 19-Jan-2020
+  locality:
+    country: USA
+    state: WA
+
+- accession: MN988713
+  gene-region: complete
+  collection-date: 21-Jan-2020
+  locality:
+    country: USA
+    state: IL
+
+- accession: MN994467
+  gene-region: complete
+  collection-date: 23-Jan-2020
+  locality:
+    country: USA
+    state: CA
+
+- accession: MN994468
+  gene-region: complete
+  collection-date: 22-Jan-2020
+  locality:
+    country: USA
+    state: CA
+
+- accession: MN997409
+  gene-region: complete
+  collection-date: 22-Jan-2020
+  locality:
+    country: USA
+    state: AZ
+
+- accession: MN988668
+  gene-region: complete
+  collection-date: 02-Jan-2020
+  locality:
+    country: China
+
+- accession: MN988669
+  gene-region: complete
+  collection-date: 02-Jan-2020
+  locality:
+    country: China
+
+- accession: MN996527
+  gene-region: complete
+  collection-date: 30-Dec-2019
+  locality:
+    country: China
+    state: Wuhan
+
+- accession: MN996528
+  gene-region: complete
+  collection-date: 30-Dec-2019
+  locality:
+    country: China
+    state: Wuhan
+
+- accession: MN996529
+  gene-region: complete
+  collection-date: 30-Dec-2019
+  locality:
+    country: China
+    state: Wuhan
+
+- accession: MN996530
+  gene-region: complete
+  collection-date: 30-Dec-2019
+  locality:
+    country: China
+    state: Wuhan
+
+- accession: MN996531
+  gene-region: complete
+  collection-date: 30-Dec-2019
+  locality:
+    country: China
+    state: Wuhan
+
+- accession: MT007544
+  gene-region: complete
+  collection-date: 25-Jan-2020
+  locality:
+    country: Australia
+    state: Victoria
+
+- accession: MT008022
+  gene-region: M
+  collection-date: Jan-2020
+  locality:
+    country: Italy
+    state: Rome
+
+- accession: MT008023
+  gene-region: M
+  collection-date: Jan-2020
+  locality:
+    country: Italy
+    state: Rome
+
+- accession: LR757995
+  gene-region: complete
+  collection-date: 05-Jan-2020
+  locality:
+    country: China
+    state: Wuhan
+
+- accession: LR757996
+  gene-region: complete
+  collection-date: 01-Jan-2020
+  locality:
+    country: China
+    state: Wuhan
+
+- accession: LR757997
+  gene-region: complete, gapped
+  collection-date: 31-Dec-2019
+  locality:
+    country: China
+    state: Wuhan
+
+- accession: LR757998
+  gene-region: complete
+  collection-date: 26-Dec-2019
+  locality:
+    country: China
+    state: Wuhan
+
+- accession: MT019529
+  gene-region: complete
+  collection-date: 23-Dec-2019
+  locality:
+    country: China
+    state: Wuhan
+
+- accession: MT019530
+  gene-region: complete
+  collection-date: 30-Dec-2019
+  locality:
+    country: China
+    state: Wuhan
+
+- accession: MT019531
+  gene-region: complete
+  collection-date: 30-Dec-2019
+  locality:
+    country: China
+    state: Wuhan
+
+- accession: MT019532
+  gene-region: complete
+  collection-date: 30-Dec-2019
+  locality:
+    country: China
+    state: Wuhan
+
+- accession: MT019533
+  gene-region: complete
+  collection-date: 01-Jan-2020
+  locality:
+    country: China
+    state: Wuhan
+
+- accession: MT020781
+  gene-region: complete, gapped
+  collection-date: 29-Jan-2020
+  locality:
+    country: Finland
+
+- accession: MT020880
+  gene-region: complete
+  collection-date: 25-Jan-2020
+  locality:
+    country: USA
+    state: WA
+
+- accession: MT020881
+  gene-region: complete
+  collection-date: 25-Jan-2020
+  locality:
+    country: USA
+    state: WA
+
+- accession: MT027062
+  gene-region: complete
+  collection-date: 29-Jan-2020
+  locality:
+    country: USA
+    state: CA
+
+- accession: MT027063
+  gene-region: complete
+  collection-date: 29-Jan-2020
+  locality:
+    country: USA
+    state: CA
+
+- accession: MT027064
+  gene-region: complete
+  collection-date: 29-Jan-2020
+  locality:
+    country: USA
+    state: CA
+
+- accession: LC522350
+  gene-region:  RdRP
+  collection-date: 26-Jan-2020
+  locality:
+    country: Philippines
+
+- accession: MT039873
+  gene-region: complete
+  collection-date: 20-Jan-2020
+  locality:
+    country: China
+    state: Hangzhou
+
+- accession: MT039887
+  gene-region: complete
+  collection-date: 31-Jan-2020
+  locality:
+    country: USA
+    state: WI
+
+- accession: MT039888
+  gene-region: complete
+  collection-date: 29-Jan-2020
+  locality:
+    country: USA
+    state: MA
+
+- accession: MT039890
+  gene-region: complete
+  collection-date: Jan-2020
+  locality:
+    country: South Korea
+
+- accession: MT042773
+  gene-region: RdRp
+  collection-date: Jan-2020
+  locality:
+    country: China
+    state: Wuhan
+
+- accession: MT042774
+  gene-region: RdRp
+  collection-date: Jan-2020
+  locality:
+    country: China
+    state: Wuhan
+
+- accession: MT042775
+  gene-region: RdRp
+  collection-date: Jan-2020
+  locality:
+    country: China
+    state: Wuhan
+
+- accession: MT042776
+  gene-region: RdRp
+  collection-date: Jan-2020
+  locality:
+    country: China
+    state: Wuhan
+
+- accession: MT042777
+  gene-region: RdRp
+  collection-date: Jan-2020
+  locality:
+    country: China
+    state: Wuhan
+
+- accession: MT042778
+  gene-region: RdRp
+  collection-date: Jan-2020
+  locality:
+    country: China
+    state: Wuhan
+
+- accession: MT044257
+  gene-region: complete
+  collection-date: 28-Jan-2020
+  locality:
+    country: USA
+    state: IL
+
+- accession: MT044258
+  gene-region: complete
+  collection-date: 27-Jan-2020
+  locality:
+    country: USA
+    state: CA
+
+- accession: MT050414
+  gene-region: RdRP
+  collection-date: Jan-2020
+  locality:
+    country: Australia
+    state: QLD
+
+- accession: MT050415
+  gene-region: RdRP
+  collection-date: Jan-2020
+  locality:
+    country: Australia
+    state: QLD
+
+- accession: MT050416
+  gene-region: RdRP
+  collection-date: Jan-2020
+  locality:
+    country: Australia
+    state: QLD
+
+- accession: MT050417
+  gene-region: RdRP
+  collection-date: Jan-2020
+  locality:
+    country: Australia
+    state: QLD
+
+- accession: MT049951
+  gene-region: complete
+  collection-date: 17-Jan-2020
+  locality:
+    country: China
+    state: Yunnan
+
+- accession: LC523807
+  gene-region: N
+  collection-date: 06-Jan-2020
+  locality:
+    country: Philippines
+
+- accession: LC523808
+  gene-region: N
+  collection-date: 26-Jan-2020
+  locality:
+    country: Philippines
+
+- accession: LC523809
+  gene-region: N
+  collection-date: 23-Jan-2020
+  locality:
+    country: Philippines
+
+- accession: MT066157
+  gene-region: RdRp
+  collection-date: 24-Jan-2020
+  locality:
+    country: Malaysia
+
+- accession: MT066158
+  gene-region: RdRp
+  collection-date: 24-Jan-2020
+  locality:
+    country: Malaysia
+
+- accession: MT066159
+  gene-region: RdRp
+  collection-date: 24-Jan-2020
+  locality:
+    country: Malaysia
+
+- accession: MT066175
+  gene-region: complete
+  collection-date: 31-Jan-2020
+  locality:
+    country: Taiwan
+
+- accession: MT066176
+  gene-region: complete
+  collection-date: 05-Feb-2020
+  locality:
+    country: Taiwan
+
+- accession: MT072667
+  gene-region: nsp1-nsp2
+  collection-date: 03-Feb-2020
+  locality:
+    country: Belgium
+
+- accession: MT072668
+  gene-region: RdRp
+  collection-date: 03-Feb-2020
+  locality:
+    country: Belgium
+
+- accession: MT072688
+  gene-region: complete
+  collection-date: 13-Jan-2020
+  locality:
+    country: Nepal
+
+- accession: MT081059
+  gene-region: N
+  collection-date: 22-Jan-2020
+  locality:
+    country: China
+    state: HuaShang
+
+- accession: MT081060
+  gene-region: N
+  collection-date: 23-Jan-2020
+  locality:
+    country: China
+    state: HuaShang
+
+- accession: MT081061
+  gene-region: N
+  collection-date: 23-Jan-2020
+  locality:
+    country: China
+    state: HuaShang
+
+- accession: MT081062
+  gene-region: N
+  collection-date: 25-Jan-2020
+  locality:
+    country: China
+    state: HuaShang
+
+- accession: MT081063
+  gene-region: N
+  collection-date: 26-Jan-2020
+  locality:
+    country: China
+    state: HuaShang
+
+- accession: MT081064
+  gene-region: N
+  collection-date: 28-Jan-2020
+  locality:
+    country: China
+    state: HuaShang
+
+- accession: MT081065
+  gene-region: N
+  collection-date: 30-Jan-2020
+  locality:
+    country: China
+    state: HuaShang
+
+- accession: MT081066
+  gene-region: N
+  collection-date: 30-Jan-2020
+  locality:
+    country: China
+    state: HuaShang
+
+- accession: MT081067
+  gene-region: N
+  collection-date: 31-Jan-2020
+  locality:
+    country: China
+    state: HuaShang
+
+- accession: MT081068
+  gene-region: N
+  collection-date: 06-Feb-2020
+  locality:
+    country: China
+    state: HuaShang
+
+- accession: MT093571
+  gene-region: complete
+  collection-date: 07-Feb-2020
+  locality:
+    country: Sweden
+
+- accession: MT093631
+  gene-region: complete
+  collection-date: 08-Jan-2020
+  locality:
+    country: China
+
+- accession: MT106052
+  gene-region: complete
+  collection-date: 06-Feb-2020
+  locality:
+    country: USA
+    state: CA
+
+- accession: MT106053
+  gene-region: complete
+  collection-date: 10-Feb-2020
+  locality:
+    country: USA
+    state: CA
+
+- accession: MT106054
+  gene-region: complete
+  collection-date: 11-Feb-2020
+  locality:
+    country: USA
+    state: TX
+
+- accession: MT111895
+  gene-region: NSP3
+  collection-date: Feb-2020
+  locality:
+    country: Australia
+    state: QLD
+
+- accession: MT111896
+  gene-region: ORF3a/E
+  collection-date: Feb-2020
+  locality:
+    country: Australia
+    state: QLD
+    
+- accession: MT118835
+  gene-region: complete
+  collection-date: 23-Feb-2020
+  locality:
+    country: USA
+    state: CA    
+
+- accession: MT123290
+  gene-region: complete
+  collection-date: 05-Feb-2020
+  locality:
+    country: China
+    state: Guangzhou    
+
+- accession: MT123291
+  gene-region: complete
+  collection-date: 29-Jan-2020
+  locality:
+    country: China
+    state: Guangzhou 
+    
+- accession: MT123292
+  gene-region: complete
+  collection-date: 27-Jan-2020
+  locality:
+    country: China
+    state: Guangzhou 
+    
+- accession: MT123293
+  gene-region: complete
+  collection-date: 29-Jan-2020
+  locality:
+    country: China
+    state: Guangzhou     
+
+- accession: LC528232
+  gene-region: complete
+  collection-date: 10-Feb-2020
+  locality:
+    country: Japan
+
+- accession: LC528233
+  gene-region: complete
+  collection-date: 10-Feb-2020
+  locality:
+    country: Japan
+    
+- accession: MT126808
+  gene-region: complete
+  collection-date: 28-Feb-2020
+  locality:
+    country: Brazil
+    
+- accession: MT127113
+  gene-region: Exo
+  collection-date: 10-Feb-2020
+  locality:
+    country: Viet Nam
+   
+- accession: MT127114
+  gene-region: ORF8-N
+  collection-date: 10-Feb-2020
+  locality:
+    country: Viet Nam
+    
+- accession: MT127115
+  gene-region: ORF3a-ORF7a
+  collection-date: 10-Feb-2020
+  locality:
+    country: Viet Nam    
+    
+- accession: MT127116
+  gene-region: RdRp
+  collection-date: 10-Feb-2020
+  locality:
+    country: Viet Nam
+    
+- accession: MT135041
+  gene-region: complete
+  collection-date: 26-Jan-2020
+  locality:
+    country: China    
+    state: Beijing 
+   
+- accession: MT135042
+  gene-region: complete
+  collection-date: 28-Jan-2020
+  locality:
+    country: China    
+    state: Beijing   
+    
+- accession: MT135043
+  gene-region: complete
+  collection-date: 28-Jan-2020
+  locality:
+    country: China    
+    state: Beijing  
+    
+- accession: MT135044
+  gene-region: complete
+  collection-date: 28-Jan-2020
+  locality:
+    country: China    
+    state: Beijing
+    
+- accession: MT152824
+  gene-region: complete
+  collection-date: 24-Feb-2020
+  locality:
+    country: USA    
+    state: WA    
+    
+- accession: MT152900
+  gene-region: nsp1-nsp2
+  collection-date: 26-Feb-2020
+  locality:
+    country: Iran        
+    
+- accession: MT012098
+  gene-region: complete
+  collection-date: 27-Jan-2020
+  locality:
+    country: India    
+    state: Kerala State 
+    
+- accession: MT050493
+  gene-region: complete
+  collection-date: 31-Jan-2020
+  locality:
+    country: India    
+    state: Kerala State 
+    
+- accession: MT121215
+  gene-region: complete
+  collection-date: 02-Feb-2020
+  locality:
+    country: China    
+    state: Shanghai
+    
+- accession: MT159705
+  gene-region: complete
+  collection-date: 17-Feb-2020
+  locality:
+    country: USA    
+    
+- accession: MT159706
+  gene-region: complete
+  collection-date: 17-Feb-2020
+  locality:
+    country: USA 
+    
+- accession: MT159707
+  gene-region: complete
+  collection-date: 17-Feb-2020
+  locality:
+    country: USA
+    
+- accession: MT159708
+  gene-region: complete
+  collection-date: 17-Feb-2020
+  locality:
+    country: USA
+    
+- accession: MT159709
+  gene-region: complete
+  collection-date: 20-Feb-2020
+  locality:
+    country: USA
+    
+- accession: MT159710
+  gene-region: complete
+  collection-date: 17-Feb-2020
+  locality:
+    country: USA
+    
+- accession: MT159711
+  gene-region: complete
+  collection-date: 20-Feb-2020
+  locality:
+    country: USA
+    
+- accession: MT159712
+  gene-region: complete
+  collection-date: 25-Feb-2020
+  locality:
+    country: USA
+    
+- accession: MT159713
+  gene-region: complete
+  collection-date: 18-Feb-2020
+  locality:
+    country: USA
+    
+- accession: MT159714
+  gene-region: complete
+  collection-date: 18-Feb-2020
+  locality:
+    country: USA
+    
+- accession: MT159715
+  gene-region: complete
+  collection-date: 24-Feb-2020
+  locality:
+    country: USA
+    
+- accession: MT159716
+  gene-region: complete
+  collection-date: 24-Feb-2020
+  locality:
+    country: USA
+    
+- accession: MT159717
+  gene-region: complete
+  collection-date: 17-Feb-2020
+  locality:
+    country: USA
+    
+- accession: MT159718
+  gene-region: complete
+  collection-date: 18-Feb-2020
+  locality:
+    country: USA
+    
+- accession: MT159719
+  gene-region: complete
+  collection-date: 18-Feb-2020
+  locality:
+    country: USA    
+    
+- accession: MT159720
+  gene-region: complete
+  collection-date: 21-Feb-2020
+  locality:
+    country: USA
+    
+- accession: MT159721
+  gene-region: complete
+  collection-date: 21-Feb-2020
+  locality:
+    country: USA
+    
+- accession: MT159722
+  gene-region: complete
+  collection-date: 21-Feb-2020
+  locality:
+    country: USA        
+
+- accession: MT159778
+  gene-region: RdRP
+  collection-date: 02-Feb-2020
+  locality:
+    country: Nigeria    
+    state: Lagos
+    
+- accession: MT066156
+  gene-region: complete
+  collection-date: 30-Jan-2020
+  locality:
+    country: Italy    
+
+- accession: MT161607
+  gene-region: UTR
+  collection-date: 05-Mar-2020
+  locality:
+    country: Italy
+    
+- accession: MT163712
+  gene-region: nsp14
+  collection-date: 29-Feb-2020
+  locality:
+    country: Iran
+    
+- accession: MT163714
+  gene-region: N
+  collection-date: 29-Feb-2020
+  locality:
+    country: India
+    
+- accession: MT163715
+  gene-region: N
+  collection-date: 29-Feb-2020
+  locality:
+    country: India
+    
+- accession: MT163716
+  gene-region: complete
+  collection-date: 27-Feb-2020
+  locality:
+    country: USA    
+    state: WA
+    
+- accession: MT163717
+  gene-region: complete
+  collection-date: 28-Feb-2020
+  locality:
+    country: USA    
+    state: WA
+    
+- accession: MT163718
+  gene-region: complete
+  collection-date: 29-Feb-2020
+  locality:
+    country: USA    
+    state: WA
+    
+- accession: MT163719
+  gene-region: complete
+  collection-date: 01-Mar-2020
+  locality:
+    country: USA    
+    state: WA    
+    
+- accession: MT163720
+  gene-region: near complete
+  collection-date: 01-Mar-2020
+  locality:
+    country: USA    
+    state: WA
+    
+- accession: MT163721
+  gene-region: near complete
+  collection-date: 01-Mar-2020
+  locality:
+    country: USA    
+    state: WA
+    
+- accession: MT163737
+  gene-region: nsp1-nsp2
+  collection-date: 29-Feb-2020
+  locality:
+    country: Iran
+    
+- accession: MT163738
+  gene-region: nsp1-nsp2
+  collection-date: 29-Feb-2020
+  locality:
+    country: Iran
+
+- accession: LC529905
+  gene-region: complete
+  collection-date: Jan-2020
+  locality:
+    country: Japan    
+ 
+- accession: MT184907
+  gene-region: complete
+  collection-date: 18-Feb-2020
+  locality:
+    country: USA        
+
+- accession: MT184908
+  gene-region: complete
+  collection-date: 21-Feb-2020
+  locality:
+    country: USA        
+
+- accession: MT184909
+  gene-region: complete
+  collection-date: 21-Feb-2020
+  locality:
+    country: USA        
+
+- accession: MT184910
+  gene-region: complete
+  collection-date: 18-Feb-2020
+  locality:
+    country: USA        
+
+- accession: MT184911
+  gene-region: complete
+  collection-date: 17-Feb-2020
+  locality:
+    country: USA
+
+- accession: MT184912
+  gene-region: complete
+  collection-date: 17-Feb-2020
+  locality:
+    country: USA
+
+- accession: MT184913
+  gene-region: complete
+  collection-date: 24-Feb-2020
+  locality:
+    country: USA        
+      
+sra-accessions:
+- sra-study: SRP242226
+  bioproject: PRJNA601736
+  biosample: SAMN13872787
+  sra-sample: SRS6007144
+  sra-experiment: SRX7571571
+  sra-run: SRR10903401
+
+- sra-study: SRP242226
+  bioproject: PRJNA601736
+  biosample: SAMN13872786
+  sra-sample: SRS6007143
+  sra-experiment: SRX7571570
+  sra-run: SRR10903402
+
+- sra-study: SRP242169
+  bioproject: PRJNA601630
+  biosample: SAMN13871323
+  sra-sample: SRS6014638
+  sra-experiment: SRX7570458
+  sra-run: SRR10902284
+
+- sra-study: SRP242169
+  bioproject: PRJNA601630
+  biosample: SAMN13898864
+  sra-sample: SRS6048919
+  sra-experiment: SRX7615553
+  sra-run: SRR10948474
+
+- sra-study: SRP242169
+  bioproject: PRJNA601630
+  biosample: SAMN13871323
+  sra-sample: SRS6014638
+  sra-experiment: SRX7615629
+  sra-run: SRR10948550
+
+- sra-study: SRP245409
+  bioproject: PRJNA603194
+  biosample: SAMN13922059
+  sra-sample: SRS6067521
+  sra-experiment: SRX7636886
+  sra-run: SRR10971381
+
+- sra-study: SRP249613
+  bioproject: PRJNA605983
+  biosample: SAMN14082196
+  sra-sample: SRS6151291
+  sra-experiment: SRX7730885
+  sra-run: SRR11092058
+
+- sra-study: SRP249613
+  bioproject: PRJNA605983
+  biosample: SAMN14082197
+  sra-sample: SRS6151292
+  sra-experiment: SRX7730886
+  sra-run: SRR11092057
+
+- sra-study: SRP249613
+  bioproject: PRJNA605983
+  biosample: SAMN14082199
+  sra-sample: SRS6151294
+  sra-experiment: SRX7730887
+  sra-run: SRR11092056
+
+- sra-study: SRP249613
+  bioproject: PRJNA605983
+  biosample: SAMN14082200
+  sra-sample: SRS6151290
+  sra-experiment: SRX7730879
+  sra-run: SRR11092064
+
+- sra-study: SRP249482
+  bioproject: PRJNA606165
+  biosample: SAMN14082201
+  sra-sample: SRS6146537
+  sra-experiment: SRX7724752
+  sra-run: SRR11085797
+
+- sra-study: SRP249478
+  bioproject: PRJNA606159
+  biosample: SAMN14086234
+  sra-sample: SRS6146478
+  sra-experiment: SRX7724692
+  sra-run: SRR11085737
+
+- sra-study: SRP249478
+  bioproject: PRJNA606159
+  biosample: SAMN14086234
+  sra-sample: SRS6146478
+  sra-experiment: SRX7724692
+  sra-run: SRR11085740
+
+- sra-study: SRP249478
+  bioproject: PRJNA606159
+  biosample: SAMN14086238
+  sra-sample: SRS6146482
+  sra-experiment: SRX7724696
+  sra-run: SRR11085733
+
+- sra-study: SRP249478
+  bioproject: PRJNA606159
+  biosample: SAMN14086235
+  sra-sample: SRS6146479
+  sra-experiment: SRX7724693
+  sra-run: SRR11085736
+
+- sra-study: SRP249478
+  bioproject: PRJNA606159
+  biosample: SAMN14086233
+  sra-sample: SRS6146477
+  sra-experiment: SRX7724691
+  sra-run: SRR11085738
+
+- sra-study: SRP249478
+  bioproject: PRJNA606159
+  biosample: SAMN14086230
+  sra-sample: SRS6146474
+  sra-experiment: SRX7724688
+  sra-run: SRR11085741
+  
+- sra-study: SRP250294 
+  bioproject: PRJNA607948
+  biosample: SAMN14154205
+  sra-sample: SRS6189924
+  sra-experiment: SRX7777166
+  sra-run: SRR11140744    
+  
+- sra-study: SRP250294 
+  bioproject: PRJNA607948
+  biosample: SAMN14154204
+  sra-sample: SRS6189920
+  sra-experiment: SRX7777165
+  sra-run: SRR11140745
+  
+- sra-study: SRP250294 
+  bioproject: PRJNA607948
+  biosample: SAMN14154200
+  sra-sample: SRS6189916
+  sra-experiment: SRX7777161
+  sra-run: SRR11140749   
+  
+- sra-study: SRP250294 
+  bioproject: PRJNA607948
+  biosample: SAMN14154201
+  sra-sample: SRS6189918
+  sra-experiment: SRX7777162
+  sra-run: SRR11140748  
+
+- sra-study: SRP250294 
+  bioproject: PRJNA607948
+  biosample: SAMN14154202
+  sra-sample: SRS6189917 
+  sra-experiment: SRX7777163
+  sra-run: SRR11140747
+  
+- sra-study: SRP250294 
+  bioproject: PRJNA607948
+  biosample: SAMN14154203
+  sra-sample: SRS6189919  
+  sra-experiment: SRX7777164
+  sra-run: SRR11140746
+  
+- sra-study: SRP250294 
+  bioproject: PRJNA607948
+  biosample: SAMN14154198 
+  sra-sample: SRS6189915  
+  sra-experiment: SRX7777159
+  sra-run: SRR11140751  
+  
+- sra-study: SRP250294 
+  bioproject: PRJNA607948
+  biosample: SAMN14154199 
+  sra-sample: SRS6189914   
+  sra-experiment: SRX7777160
+  sra-run: SRR11140750
+  
+- sra-study: SRP250653 
+  bioproject: PRJNA608651
+  biosample: SAMN14180202
+  sra-sample: SRS6213494   
+  sra-experiment: SRX7798477
+  sra-run: SRR11177792 
+  
+- sra-study: SRP251618 
+  bioproject: PRJNA610428
+  biosample: SAMN14297849
+  sra-sample: SRS6262461   
+  sra-experiment: SRX7852918
+  sra-run: SRR11241254 
+  
+- sra-study: SRP251618 
+  bioproject: PRJNA610428
+  biosample: SAMN14297848
+  sra-sample: SRS6262460    
+  sra-experiment: SRX7852917
+  sra-run: SRR11241255 
+  
+- sra-study: SRP251618 
+  bioproject: PRJNA610428
+  biosample: SAMN14308029
+  sra-sample: SRS6266707   
+  sra-experiment: SRX7857605
+  sra-run: SRR11247075
+
+- sra-study: SRP251618 
+  bioproject: PRJNA610428
+  biosample: SAMN14308028
+  sra-sample: SRS6266706    
+  sra-experiment: SRX7857604
+  sra-run: SRR11247076
+
+- sra-study: SRP251618 
+  bioproject: PRJNA610428
+  biosample: SAMN14308027
+  sra-sample: SRS6266705    
+  sra-experiment: SRX7857603
+  sra-run: SRR11247077
+  
+- sra-study: SRP251618 
+  bioproject: PRJNA610428
+  biosample: SAMN14308026
+  sra-sample: SRS6266704     
+  sra-experiment: SRX7857602
+  sra-run: SRR11247078
+  
+- sra-study: SRP252022  
+  bioproject: PRJNA611496
+  biosample: SAMN14332760
+  sra-sample: SRS6282736     
+  sra-experiment: SRX7874444
+  sra-run: SRR11267811  
+  
+- sra-study: SRP251618   
+  bioproject: PRJNA610428
+  biosample: SAMN14341563
+  sra-sample: SRS6294173      
+  sra-experiment: SRX7884335
+  sra-run: SRR11278090   
+  
+- sra-study: SRP251618   
+  bioproject: PRJNA610428
+  biosample: SAMN14341562
+  sra-sample: SRS6294172       
+  sra-experiment: SRX7884334
+  sra-run: SRR11278091     
+  
+- sra-study: SRP251618   
+  bioproject: PRJNA610428
+  biosample: SAMN14341561
+  sra-sample: SRS6294171        
+  sra-experiment: SRX7884333
+  sra-run: SRR11278092  
+  
+- sra-study: SRP251618   
+  bioproject: PRJNA610428
+  biosample: SAMN14341640
+  sra-sample: SRS6294250         
+  sra-experiment: SRX7884411
+  sra-run: SRR11278164   
+  
+- sra-study: SRP251618   
+  bioproject: PRJNA610428
+  biosample: SAMN14341639
+  sra-sample: SRS6294249          
+  sra-experiment: SRX7884410
+  sra-run: SRR11278165 
+  
+- sra-study: SRP251618   
+  bioproject: PRJNA610428
+  biosample: SAMN14341638
+  sra-sample: SRS6294248         
+  sra-experiment: SRX7884409
+  sra-run: SRR11278166  
+  
+- sra-study: SRP251618   
+  bioproject: PRJNA610428
+  biosample: SAMN14341637
+  sra-sample: SRS6294247         
+  sra-experiment: SRX7884408
+  sra-run: SRR11278167 
+  
+- sra-study: SRP251618   
+  bioproject: PRJNA610428
+  biosample: SAMN14341636
+  sra-sample: SRS6294246         
+  sra-experiment: SRX7884407
+  sra-run: SRR11278168  
