@@ -1,40 +1,26 @@
 ## README
 
-The [Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)](https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome_coronavirus_2) is currently causing a pandemic. This repository contains scripts and analysis code for analysing the sequence of SARS-CoV-2.
+The [Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)](https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome_coronavirus_2) is an RNA virus currently causing the 2019–20 coronavirus pandemic. This repository contains my analysis code and notes for my analysis of SARS-CoV-2. My hope is that some of this work will be useful for researchers currently working on the analysis of SARS-CoV-2.
 
-## Install
+For more information see my related blog posts:
 
-* [Entrez Direct (EDirect)](https://www.ncbi.nlm.nih.gov/books/NBK179288/)
+1. https://davetang.org/muse/2020/03/05/sequence-analysis-sars-cov-2/
+2. https://davetang.org/muse/2020/03/06/sequence-analysis-of-sars-cov-2-part-2/
+3. https://davetang.org/muse/2020/03/12/sequence-analysis-of-sars-cov-2-part-3/
+
+## Tools
+
+I rely on Conda (a lot) to install the tools needed to perform my analyses. I have written a [short introduction to Conda](https://davetang.github.io/reproducible_bioinformatics/conda.html) that may be useful if you have never used it before. Please install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) if you haven't already. Once you have Conda, run the command below to install all the necessary tools.
 
 ```bash
 conda env create --file environment.yml
+
+conda activate sars_cov_2
 ```
-
-### Entrez Direct Functions
-
-Navigation functions support exploration within the Entrez databases:
-
-* esearch performs a new Entrez search using terms in indexed fields.
-* elink looks up neighbors (within a database) or links (between databases).
-* efilter filters or restricts the results of a previous query.
-
-Records can be retrieved in specified formats or as document summaries:
-
-* efetch downloads records or reports in a designated format.
-
-Desired fields from XML results can be extracted without writing a program:
-
-* xtract converts EDirect XML output into a table of data values.
-
-Several additional functions are also provided:
-
-* einfo obtains information on indexed fields in an Entrez database.
-* epost uploads unique identifiers (UIDs) or sequence accession numbers.
-* nquire sends a URL request to a web page or CGI service.
 
 ## Sequences
 
-* SARS-CoV-2 - https://www.ncbi.nlm.nih.gov/nuccore/MN908947
+The page https://www.ncbi.nlm.nih.gov/genbank/sars-cov-2-seqs/ contains a list of SARS-CoV-2 sequences. We can use `efetch` to download an [assembled genome sequence](https://www.ncbi.nlm.nih.gov/nuccore/MN908947).
 
 ```bash
 mkdir raw
@@ -44,7 +30,7 @@ efetch -db sequences -format fasta -id MN908947 > raw/MN908947.fa
 efetch -db sequences -format fasta_cds_aa -id MN908947
 ```
 
-41874 results as of 2020/03/01.
+We can use `esearch` to query the number of sequences associated with the term "coronavirus". There were 41,874 results as of 2020/03/01.
 
 ```bash
 esearch -db nuccore -query coronavirus
@@ -57,12 +43,10 @@ esearch -db nuccore -query coronavirus
 </ENTREZ_DIRECT>
 ```
 
-Get FASTA.
+We can pipe the output from `esearch` to `efetch` to fetch all sequences.
 
 ```bash
 esearch -db nuccore -query coronavirus | efetch -db sequences -format fasta > raw/coronavirus_20200301.fa
-
-esearch -db nuccore -query coronavirus | efetch -db sequences -format fasta > raw/coronavirus_20200306.fa
 
 cat raw/coronavirus_20200301.fa | grep "^>" | wc -l
    41874
@@ -71,7 +55,7 @@ cat raw/coronavirus_20200301.fa | grep MN908947
 >MN908947.3 Severe acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1, complete genome
 ```
 
-FASTA stats.
+I wrote a simple Perl script to calculate the length of the FASTA sequences.
 
 ```bash
 script/fasta_stats.pl -f raw/coronavirus_20200301.fa | gzip > result/coronavirus_20200301_stat.txt.gz
@@ -79,7 +63,7 @@ script/fasta_stats.pl -f raw/coronavirus_20200301.fa | gzip > result/coronavirus
 
 ## BLAST
 
-Create BLAST database.
+Create BLAST database using the sequences associated with the term "coronavirus".
 
 ```bash
 mkdir db
@@ -99,7 +83,7 @@ Maximum file size: 1000000000B
 Adding sequences from FASTA; added 41874 sequences in 9.91486 seconds.
 ```
 
-BLAST.
+After creating the database we can blast the assembled genome to all the sequences we fetched to see if it matches other coronaviruses.
 
 ```bash
 # -evalue <Real> - Expectation value (E) threshold for saving hits 
@@ -115,7 +99,7 @@ cat result/MN908947_blast.txt | grep -v "^#" | cut -f2 | sort -u | wc -l
 cat result/MN908947_blast.txt | grep -v "^#" | cut -f2 | sort -u > result/MN908947_matched.txt
 ```
 
-Extract FASTA.
+The script `extract_fasta.pl` will extract specific FASTA entries. Below we fetch all the sequences that our query sequence matched (500 in total).
 
 ```bash
 script/extract_fasta.pl -i result/MN908947_matched.txt -f raw/coronavirus_20200301.fa > result/MN908947_matched.fa
@@ -124,7 +108,7 @@ cat result/MN908947_matched.fa | grep "^>" | wc -l
      500
 ```
 
-FASTA stats.
+We will calculate some simple FASTA stats on the matched sequences.
 
 ```bash
 script/fasta_stats.pl -f result/MN908947_matched.fa > result/MN908947_matched_stats.txt
@@ -132,11 +116,15 @@ script/fasta_stats.pl -f result/MN908947_matched.fa > result/MN908947_matched_st
 
 ## Parse results
 
+The script `parse_outfmt7.pl` simply parses the BLAST result and outputs the results in a more readable format.
+
 ```bash
 script/parse_outfmt7.pl -i result/MN908947_blast.txt -p 80 -l 10000 -f raw/coronavirus_20200301.fa | less
 ```
 
 ## ClustalW
+
+Create a multiple sequence alignment of MN908947 to other bat coronaviruses.
 
 ```bash
 script/extract_fasta.pl -i raw/wanted.txt -f raw/coronavirus_20200301.fa > raw/wanted.fa
@@ -148,13 +136,13 @@ clustalw -infile=raw/MN908947_MN996532.fa
 
 ## SRA
 
-Download YML file with SARS-CoV-2 accessions.
+The page https://www.ncbi.nlm.nih.gov/genbank/sars-cov-2-seqs/ contains a YAML file with accession information on the SARS-CoV-2 sequences currently deposited on NCBI databases.
 
 ```bash
 wget -N https://www.ncbi.nlm.nih.gov/core/assets/genbank/files/ncov-sequences.yaml -O raw/ncov-sequences.yaml
 ```
 
-Use `wget` To [obtain metadata](https://www.ncbi.nlm.nih.gov/books/NBK242621/).
+Use `wget` to [obtain metadata](https://www.ncbi.nlm.nih.gov/books/NBK242621/) of all SARS-CoV-2 raw sequences upload to the SRA.
 
 ```bash
 mkdir sra
@@ -182,13 +170,14 @@ csvcut -c Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout
 |             |            |              |         |                 |                    |               |          |                |            |
 ```
 
-Download all metadata using SRPs from ncov-sequences.yaml.
+Download all metadata using SRP accessions from `raw/ncov-sequences.yaml`.
 
 ```bash
 for acc in `cat raw/ncov-sequences.yaml | grep sra-study | sort -u | cut -f3 -d' '`; do
    wget -O sra/${acc}_info.csv "http://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?save=efetch&db=sra&rettype=runinfo&term=$acc"
 done
 
+# concenate into one metadata file
 rm -f sra/metadata.txt
 touch sra/metadata.txt
 for file in `ls sra/*info.csv`; do
@@ -197,7 +186,7 @@ for file in `ls sra/*info.csv`; do
 done
 ```
 
-Download all Illumina data.
+Download all Illumina data for further analysis. (I have not analysed Oxford Nanopore before, so I won't download these yet.)
 
 ```bash
 for acc in `cat sra/metadata.txt | grep ILLUMINA | cut -f1 -d','`; do
@@ -208,11 +197,11 @@ done
 
 ### SRR10971381
 
-Follow https://github.com/galaxyproject/SARS-CoV-2/blob/master/1-PreProcessing/pp_wf.png
+We will analysis the data from SRR10971381 following the preprocessing steps outlined in https://github.com/galaxyproject/SARS-CoV-2/blob/master/1-PreProcessing/pp_wf.png.
 
 Use [SRA Toolkit](https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=toolkit_doc) to download FASTQ sequences from the SRA. First use [prefetch](https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=toolkit_doc&f=prefetch), a command-line for downloading SRA, dbGaP, and ADSP data, to download `sra` files. See https://www.ncbi.nlm.nih.gov/books/NBK242621/ for more information.
 
-Download and install https://downloads.asperasoft.com/connect2/.
+Using `prefetch` kept resulting in timeout errors. Perhaps https://github.com/ncbi/sra-tools/wiki/06.-Connection-Timeouts will help?
 
 ```bash
 prefetch --output-directory raw SRR10971381
@@ -225,7 +214,7 @@ cat SRR10971381.md5sum
 5496488662893a836e23541b84bfb7cd  SRR10971381
 ```
 
-Uploaded to https://davetang.org/file/SRR10971381, so download file from my server.
+I have uploaded the SRA object SRR10971381 to my web server: https://davetang.org/file/SRR10971381. You can download it from there.
 
 ```bash
 wget -c -N https://davetang.org/file/SRR10971381  
@@ -244,7 +233,7 @@ Read 28282964 spots for ./SRR10971381
 Written 28282964 spots for ./SRR10971381
 ```
 
-[fastp](https://github.com/OpenGene/fastp).
+Preprocess using [fastp](https://github.com/OpenGene/fastp).
 
 ```bash
 fastp --thread 8 -i SRR10971381_1.fastq -I SRR10971381_2.fastq -o SRR10971381_1_fastp.fastq -O SRR10971381_2_fastp.fastq
@@ -291,14 +280,14 @@ fastp --thread 8 -i SRR10971381_1.fastq -I SRR10971381_2.fastq -o SRR10971381_1_
 fastp v0.20.0, time used: 544 seconds
 ```
 
-FastQC.
+Quality control using FastQC.
 
 ```bash
 mkdir fastqc_out
 fastqc -o fastqc_out -f fastq SRR10971381_1_fastp.fastq SRR10971381_2_fastp.fastq
 ```
 
-Use BWA to map to MN908947.
+Use BWA MEM to map raw reads back to MN908947.
 
 ```bash
 mkdir bwa_index
@@ -309,7 +298,7 @@ bwa index MN908947.fa
 bwa mem -t 8 raw/bwa_index/MN908947.fa raw/SRR10971381/SRR10971381_1_fastp.fastq raw/SRR10971381/SRR10971381_2_fastp.fastq | samtools sort - -o result/SRR10971381_MN908947.bam
 ```
 
-Stats.
+Stats on the BAM file.
 
 ```bash
 samtools flagstat -@8 SRR10971381_MN908947.bam 
@@ -344,4 +333,30 @@ bcftools mpileup -f raw/MN908947.fa result/SRR10971381_MN908947_mapped.bam | bcf
 * https://www.sciencemag.org/news/2020/01/mining-coronavirus-genomes-clues-outbreak-s-origins
 * https://www.cdc.gov/coronavirus/2019-ncov/lab/rt-pcr-panel-primer-probes.html
 * https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6356540/
+
+## Appendix
+
+### Entrez Direct Functions
+
+See [Entrez Direct (EDirect)](https://www.ncbi.nlm.nih.gov/books/NBK179288/) for more information.
+
+Navigation functions support exploration within the Entrez databases:
+
+* esearch performs a new Entrez search using terms in indexed fields.
+* elink looks up neighbors (within a database) or links (between databases).
+* efilter filters or restricts the results of a previous query.
+
+Records can be retrieved in specified formats or as document summaries:
+
+* efetch downloads records or reports in a designated format.
+
+Desired fields from XML results can be extracted without writing a program:
+
+* xtract converts EDirect XML output into a table of data values.
+
+Several additional functions are also provided:
+
+* einfo obtains information on indexed fields in an Entrez database.
+* epost uploads unique identifiers (UIDs) or sequence accession numbers.
+* nquire sends a URL request to a web page or CGI service.
 
