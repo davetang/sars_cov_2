@@ -46,19 +46,27 @@ esearch -db nuccore -query coronavirus
 We can pipe the output from `esearch` to `efetch` to fetch all sequences.
 
 ```bash
-esearch -db nuccore -query coronavirus | efetch -db sequences -format fasta > raw/coronavirus_20200301.fa
+today=$(date "+%Y%m%d")
 
-cat raw/coronavirus_20200301.fa | grep "^>" | wc -l
-   41874
+time esearch -db nuccore -query coronavirus | efetch -db sequences -format fasta > raw/coronavirus_$today.fa
 
-cat raw/coronavirus_20200301.fa | grep MN908947
+real    10m39.511s
+user    0m53.739s
+sys     0m7.705s
+
+cat raw/coronavirus_$today.fa | grep "^>" | wc -l
+   43581
+
+
+cat raw/coronavirus_$today.fa | grep MN908947
 >MN908947.3 Severe acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1, complete genome
 ```
 
 I wrote a simple Perl script to calculate the length of the FASTA sequences.
 
 ```bash
-script/fasta_stats.pl -f raw/coronavirus_20200301.fa | gzip > result/coronavirus_20200301_stat.txt.gz
+today=$(date "+%Y%m%d")
+script/fasta_stats.pl -f raw/coronavirus_$today.fa | gzip > result/coronavirus_${today}1_stat.txt.gz
 ```
 
 ## BLAST
@@ -69,18 +77,18 @@ Create BLAST database using the sequences associated with the term "coronavirus"
 mkdir db
 
 makeblastdb -dbtype nucl \
-            -in raw/coronavirus_20200301.fa \
+            -in raw/coronavirus_20200426.fa \
             -input_type fasta \
-            -title coronavirus_20200301 \
-            -out db/coronavirus_20200301
+            -title coronavirus_20200426 \
+            -out db/coronavirus_20200426
 
-Building a new DB, current time: 03/01/2020 19:25:30
-New DB name:   /Users/dtang/github/sars_cov_2/db/coronavirus_20200301
-New DB title:  coronavirus_20200301
+Building a new DB, current time: 04/26/2020 09:29:19
+New DB name:   /Users/dtang/github/sars_cov_2/db/coronavirus_20200426
+New DB title:  coronavirus_20200426
 Sequence type: Nucleotide
 Keep MBits: T
 Maximum file size: 1000000000B
-Adding sequences from FASTA; added 41874 sequences in 9.91486 seconds.
+Adding sequences from FASTA; added 43581 sequences in 13.0157 seconds.
 ```
 
 After creating the database we can blast the assembled genome to all the sequences we fetched to see if it matches other coronaviruses.
@@ -88,9 +96,10 @@ After creating the database we can blast the assembled genome to all the sequenc
 ```bash
 # -evalue <Real> - Expectation value (E) threshold for saving hits 
 # Default = `10'
-blastn -outfmt 7 -query raw/MN908947.fa -db db/coronavirus_20200301 > result/MN908947_blast.txt
+blastn -outfmt 7 -query raw/MN908947.fa -db db/coronavirus_20200426 > result/MN908947_blast.txt
 
-blastn -evalue 1 -outfmt 7 -query raw/MN908947.fa -db db/coronavirus_20200301 | wc -l
+blastn -evalue 1 -outfmt 7 -query raw/MN908947.fa -db db/coronavirus_20200426 | wc -l
+     506
 
 # accessions with BLAST hits
 cat result/MN908947_blast.txt | grep -v "^#" | cut -f2 | sort -u | wc -l
@@ -102,7 +111,7 @@ cat result/MN908947_blast.txt | grep -v "^#" | cut -f2 | sort -u > result/MN9089
 The script `extract_fasta.pl` will extract specific FASTA entries. Below we fetch all the sequences that our query sequence matched (500 in total).
 
 ```bash
-script/extract_fasta.pl -i result/MN908947_matched.txt -f raw/coronavirus_20200301.fa > result/MN908947_matched.fa
+script/extract_fasta.pl -i result/MN908947_matched.txt -f raw/coronavirus_20200426.fa > result/MN908947_matched.fa
 
 cat result/MN908947_matched.fa | grep "^>" | wc -l
      500
@@ -119,7 +128,7 @@ script/fasta_stats.pl -f result/MN908947_matched.fa > result/MN908947_matched_st
 The script `parse_outfmt7.pl` simply parses the BLAST result and outputs the results in a more readable format.
 
 ```bash
-script/parse_outfmt7.pl -i result/MN908947_blast.txt -p 80 -l 10000 -f raw/coronavirus_20200301.fa | less
+script/parse_outfmt7.pl -i result/MN908947_blast.txt -p 80 -l 10000 -f raw/coronavirus_20200426.fa | less
 ```
 
 ## ClustalW
@@ -127,7 +136,7 @@ script/parse_outfmt7.pl -i result/MN908947_blast.txt -p 80 -l 10000 -f raw/coron
 Create a multiple sequence alignment of MN908947 to other bat coronaviruses.
 
 ```bash
-script/extract_fasta.pl -i raw/wanted.txt -f raw/coronavirus_20200301.fa > raw/wanted.fa
+script/extract_fasta.pl -i raw/wanted.txt -f raw/coronavirus_20200426.fa > raw/wanted.fa
 clustalw -infile=raw/wanted.fa
 
 script/extract_fasta.pl -i raw/MN908947_MN996532.txt -f raw/coronavirus_20200301.fa > raw/MN908947_MN996532.fa
@@ -140,50 +149,149 @@ The page https://www.ncbi.nlm.nih.gov/genbank/sars-cov-2-seqs/ contains a YAML f
 
 ```bash
 wget -N https://www.ncbi.nlm.nih.gov/core/assets/genbank/files/ncov-sequences.yaml -O raw/ncov-sequences.yaml
+
+head raw/ncov-sequences.yaml
+updated: 'Thursay Apr 23 15:15 2020 EST'
+
+genbank-sequences: [
+    {
+      "accession": "NC_045512",
+      "accession_list": "<a href=\"https://www.ncbi.nlm.nih.gov/nuccore/NC_045512\">NC_045512</a>",
+      "collection_date": "2019-12",
+      "country": "China"
+    },
+    {
+
+cat raw/ncov-sequences.yaml | grep "sra-run\"" | wc -l
+     288
 ```
 
-Use `wget` to [obtain metadata](https://www.ncbi.nlm.nih.gov/books/NBK242621/) of all SARS-CoV-2 raw sequences upload to the SRA.
+Use `wget` to [obtain metadata](https://www.ncbi.nlm.nih.gov/books/NBK242621/) of all SARS-CoV-2 raw sequences upload to the SRA. The YAML file no longer uses project accessions (SRP242226), so we will get information on each run instead (SRR10948550).
 
 ```bash
 mkdir sra
 
-# sra-study: SRP242226
-wget -O sra/SRP242226_info.csv 'http://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?save=efetch&db=sra&rettype=runinfo&term=SRP242226'
+# "sra-run": "SRR10948550"
+wget -O sra/SRR10948550_info.csv 'http://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?save=efetch&db=sra&rettype=runinfo&term=SRR10948550'
 ```
 
 Checkout metadata using [csvkit](https://csvkit.readthedocs.io/en/latest/).
 
 ```bash
-csvcut -n sra/SRP242226_info.csv  | head -6
-1: Run
-2: ReleaseDate
-3: LoadDate
-4: spots
-5: bases
-6: spots_with_mates
+csvcut -n sra/SRR10948550_info.csv 
+  1: Run
+  2: ReleaseDate
+  3: LoadDate
+  4: spots
+  5: bases
+  6: spots_with_mates
+  7: avgLength
+  8: size_MB
+  9: AssemblyName
+ 10: download_path
+ 11: Experiment
+ 12: LibraryName
+ 13: LibraryStrategy
+ 14: LibrarySelection
+ 15: LibrarySource
+ 16: LibraryLayout
+ 17: InsertSize
+ 18: InsertDev
+ 19: Platform
+ 20: Model
+ 21: SRAStudy
+ 22: BioProject
+ 23: Study_Pubmed_id
+ 24: ProjectID
+ 25: Sample
+ 26: BioSample
+ 27: SampleType
+ 28: TaxID
+ 29: ScientificName
+ 30: SampleName
+ 31: g1k_pop_code
+ 32: source
+ 33: g1k_analysis_group
+ 34: Subject_ID
+ 35: Sex
+ 36: Disease
+ 37: Tumor
+ 38: Affection_Status
+ 39: Analyte_Type
+ 40: Histological_Type
+ 41: Body_Site
+ 42: CenterName
+ 43: Submission
+ 44: dbgap_study_accession
+ 45: Consent
+ 46: RunHash
+ 47: ReadHash
 
-csvcut -c Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType sra/SRP242226_info.csv | csvlook
-| Run         | Sample     | BioSample    |   spots | LibraryStrategy | LibrarySource      | LibraryLayout | Platform | Model          | SampleType |
-| ----------- | ---------- | ------------ | ------- | --------------- | ------------------ | ------------- | -------- | -------------- | ---------- |
-| SRR10903402 | SRS6007143 | SAMN13872786 | 676,694 | RNA-Seq         | METATRANSCRIPTOMIC | PAIRED        | ILLUMINA | Illumina MiSeq | simple     |
-| SRR10903401 | SRS6007144 | SAMN13872787 | 476,632 | RNA-Seq         | METATRANSCRIPTOMIC | PAIRED        | ILLUMINA | Illumina MiSeq | simple     |
-|             |            |              |         |                 |                    |               |          |                |            |
+csvcut -c Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName sra/SRR10948550_info.csv | csvlook
+| Run         | Sample     | BioSample    |   spots | LibraryStrategy | LibrarySource | LibraryLayout | Platform        | Model  | SampleType | CenterName            |
+| ----------- | ---------- | ------------ | ------- | --------------- | ------------- | ------------- | --------------- | ------ | ---------- | --------------------- |
+| SRR10948550 | SRS6014638 | SAMN13871323 | 425,717 | RNA-Seq         | GENOMIC       | SINGLE        | OXFORD_NANOPORE | MinION | simple     | HKU-SHENZHEN HOSPITAL |
+|             |            |              |         |                 |               |               |                 |        |            |                       |
 ```
 
-Download all metadata using SRP accessions from `raw/ncov-sequences.yaml`.
+Download all metadata using SRR accessions from `raw/ncov-sequences.yaml`.
 
 ```bash
-for acc in `cat raw/ncov-sequences.yaml | grep sra-study | sort -u | cut -f3 -d' '`; do
+my_accession=$(cat raw/ncov-sequences.yaml | grep 'sra-run"' | perl -nle 's/.*"(\w+)",/$1/; print')
+for acc in $my_accession; do
    wget -O sra/${acc}_info.csv "http://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?save=efetch&db=sra&rettype=runinfo&term=$acc"
 done
 
 # concenate into one metadata file
 rm -f sra/metadata.txt
 touch sra/metadata.txt
-for file in `ls sra/*info.csv`; do
+for file in `ls sra/SRR*info.csv`; do
    echo $file;
-   csvcut -c Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType $file >> sra/metadata.txt
+   csvcut -c Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName $file >> sra/metadata.txt
 done
+
+head sra/metadata.txt
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR10902284,SRS6014638,SAMN13871323,261890,RNA-Seq,METAGENOMIC,SINGLE,OXFORD_NANOPORE,MinION,simple,UNIVERSITY OF HONG KONG
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR10903401,SRS6007144,SAMN13872787,476632,RNA-Seq,METATRANSCRIPTOMIC,PAIRED,ILLUMINA,Illumina MiSeq,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR10903402,SRS6007143,SAMN13872786,676694,RNA-Seq,METATRANSCRIPTOMIC,PAIRED,ILLUMINA,Illumina MiSeq,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+
+# technology
+cat sra/metadata.txt | grep -v "^," | grep -v "^Run" | cut -f9 -d','| sort | uniq -c
+   1 BGISEQ-500
+ 248 GridION
+   7 Illumina HiSeq 3000
+  18 Illumina MiSeq
+   1 Illumina MiniSeq
+   2 Ion Torrent S5
+   3 MinION
+   8 NextSeq 500
+
+# center
+cat sra/metadata.txt | grep -v "^," | grep -v "^Run" | cut -f11 -d','| sort | uniq -c
+   1 "SHANGHAI PUBLIC HEALTH CLINICAL CENTER & SCHOOL OF PUBLIC HEALTH
+  11 "WUHAN INSTITUTE OF VIROLOGY
+   1 BGI
+   2 HKU-SHENZHEN HOSPITAL
+   1 THE SCRIPPS RESEARCH INSTITUTE
+   2 UFBA
+   1 UNIVERSIDAD TECNOLOGICA DE PEREIRA
+   1 UNIVERSITY OF HONG KONG
+   3 UNIVERSITY OF MELBOURNE
+  14 UNIVERSITY OF WASHINGTON
+   8 UNIVERSITY OF WISCONSIN - MADISON
+ 243 WUHAN UNIVERSITY
+
+cat sra/metadata.txt | grep MELBOURNE
+SRR11267570,SRS6201528,SAMN14167851,779208,RNA-Seq,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,UNIVERSITY OF MELBOURNE
+SRR11350376,SRS6201528,SAMN14167851,779208,RNA-Seq,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,UNIVERSITY OF MELBOURNE
+SRR11300652,SRS6313628,SAMN14371025,430923,RNA-Seq,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,UNIVERSITY OF MELBOURNE
 ```
 
 Download all Illumina data for further analysis. (I have not analysed Oxford Nanopore before, so I won't download these yet.)

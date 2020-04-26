@@ -1,69 +1,864 @@
-Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType
-SRR10902284,SRS6014638,SAMN13871323,261890,RNA-Seq,METAGENOMIC,SINGLE,OXFORD_NANOPORE,MinION,simple
-SRR10948550,SRS6014638,SAMN13871323,425717,RNA-Seq,GENOMIC,SINGLE,OXFORD_NANOPORE,MinION,simple
-SRR10948474,SRS6048919,SAMN13898864,505484,RNA-Seq,GENOMIC,SINGLE,OXFORD_NANOPORE,MinION,simple
-,,,,,,,,,
-Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType
-SRR10903402,SRS6007143,SAMN13872786,676694,RNA-Seq,METATRANSCRIPTOMIC,PAIRED,ILLUMINA,Illumina MiSeq,simple
-SRR10903401,SRS6007144,SAMN13872787,476632,RNA-Seq,METATRANSCRIPTOMIC,PAIRED,ILLUMINA,Illumina MiSeq,simple
-,,,,,,,,,
-Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType
-SRR10971381,SRS6067521,SAMN13922059,28282964,RNA-Seq,METATRANSCRIPTOMIC,PAIRED,ILLUMINA,Illumina MiniSeq,simple
-,,,,,,,,,
-Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType
-SRR11085739,SRS6146476,SAMN14086232,4796377,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina HiSeq 3000,simple
-SRR11085736,SRS6146479,SAMN14086235,11924182,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina HiSeq 3000,simple
-SRR11085735,SRS6146480,SAMN14086236,4016562,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina HiSeq 3000,simple
-SRR11085734,SRS6146481,SAMN14086237,9635986,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina HiSeq 3000,simple
-SRR11085741,SRS6146474,SAMN14086230,12453192,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina HiSeq 3000,simple
-SRR11085740,SRS6146475,SAMN14086231,9833862,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina HiSeq 3000,simple
-SRR11085738,SRS6146477,SAMN14086233,14762465,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina HiSeq 3000,simple
-SRR11085733,SRS6146482,SAMN14086238,13547864,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina HiSeq 3000,simple
-SRR11085737,SRS6146478,SAMN14086234,11545986,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina HiSeq 3000,simple
-,,,,,,,,,
-Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType
-SRR11085797,SRS6146537,SAMN14082201,11604666,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina HiSeq 3000,simple
-,,,,,,,,,
-Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType
-SRR11092058,SRS6151291,SAMN14082196,8267029,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina MiSeq,simple
-SRR11092063,SRS6151291,SAMN14082196,67083195,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina HiSeq 3000,simple
-SRR11092057,SRS6151292,SAMN14082197,5184909,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina MiSeq,simple
-SRR11092062,SRS6151292,SAMN14082197,61304030,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina HiSeq 1000,simple
-SRR11092061,SRS6151293,SAMN14082198,34255843,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina HiSeq 3000,simple
-SRR11092060,SRS6151294,SAMN14082199,29675834,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina HiSeq 3000,simple
-SRR11092056,SRS6151294,SAMN14082199,5239723,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina MiSeq,simple
-SRR11092059,SRS6151290,SAMN14082200,38464188,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina HiSeq 3000,simple
-SRR11092064,SRS6151290,SAMN14082200,3566583,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina MiSeq,simple
-,,,,,,,,,
-Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType
-SRR11140751,SRS6189915,SAMN14154198,37999,WGS,METAGENOMIC,SINGLE,OXFORD_NANOPORE,GridION,simple
-SRR11140750,SRS6189914,SAMN14154199,17657,WGS,METAGENOMIC,PAIRED,ILLUMINA,Illumina MiSeq,simple
-SRR11140749,SRS6189916,SAMN14154200,482954,WGS,METAGENOMIC,SINGLE,OXFORD_NANOPORE,GridION,simple
-SRR11140748,SRS6189918,SAMN14154201,421395,WGS,METAGENOMIC,PAIRED,ILLUMINA,Illumina MiSeq,simple
-SRR11140747,SRS6189917,SAMN14154202,566845,WGS,METAGENOMIC,SINGLE,OXFORD_NANOPORE,GridION,simple
-SRR11140746,SRS6189919,SAMN14154203,358971,WGS,METAGENOMIC,PAIRED,ILLUMINA,Illumina MiSeq,simple
-SRR11140745,SRS6189920,SAMN14154204,396363,WGS,METAGENOMIC,SINGLE,OXFORD_NANOPORE,GridION,simple
-SRR11140744,SRS6189924,SAMN14154205,503344,WGS,METAGENOMIC,PAIRED,ILLUMINA,Illumina MiSeq,simple
-,,,,,,,,,
-Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType
-SRR11177792,SRS6213494,SAMN14180202,5246584,RNA-Seq,GENOMIC,PAIRED,ILLUMINA,Illumina MiSeq,simple
-,,,,,,,,,
-Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType
-SRR11278092,SRS6294171,SAMN14341561,101360,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,NextSeq 500,simple
-SRR11278091,SRS6294172,SAMN14341562,597251,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,NextSeq 500,simple
-SRR11278090,SRS6294173,SAMN14341563,24424,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,NextSeq 500,simple
-SRR11278168,SRS6294246,SAMN14341636,44159,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,NextSeq 500,simple
-SRR11278167,SRS6294247,SAMN14341637,10124079,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,NextSeq 500,simple
-SRR11278166,SRS6294248,SAMN14341638,8213820,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,NextSeq 500,simple
-SRR11278165,SRS6294249,SAMN14341639,122658,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,NextSeq 500,simple
-SRR11278164,SRS6294250,SAMN14341640,3801124,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,NextSeq 500,simple
-SRR11241254,SRS6262461,SAMN14297849,131952,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,Illumina MiSeq,simple
-SRR11241255,SRS6262460,SAMN14297848,123353,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,Illumina MiSeq,simple
-SRR11247078,SRS6266704,SAMN14308026,1087374,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,Illumina MiSeq,simple
-SRR11247077,SRS6266705,SAMN14308027,643627,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,Illumina MiSeq,simple
-SRR11247076,SRS6266706,SAMN14308028,61329,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,Illumina MiSeq,simple
-SRR11247075,SRS6266707,SAMN14308029,10454,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,Illumina MiSeq,simple
-,,,,,,,,,
-Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType
-SRR11267811,SRS6282736,SAMN14332760,107,WGA,METAGENOMIC,SINGLE,BGISEQ,BGISEQ-500,simple
-,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR10902284,SRS6014638,SAMN13871323,261890,RNA-Seq,METAGENOMIC,SINGLE,OXFORD_NANOPORE,MinION,simple,UNIVERSITY OF HONG KONG
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR10903401,SRS6007144,SAMN13872787,476632,RNA-Seq,METATRANSCRIPTOMIC,PAIRED,ILLUMINA,Illumina MiSeq,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR10903402,SRS6007143,SAMN13872786,676694,RNA-Seq,METATRANSCRIPTOMIC,PAIRED,ILLUMINA,Illumina MiSeq,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR10948474,SRS6048919,SAMN13898864,505484,RNA-Seq,GENOMIC,SINGLE,OXFORD_NANOPORE,MinION,simple,HKU-SHENZHEN HOSPITAL
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR10948550,SRS6014638,SAMN13871323,425717,RNA-Seq,GENOMIC,SINGLE,OXFORD_NANOPORE,MinION,simple,HKU-SHENZHEN HOSPITAL
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR10971381,SRS6067521,SAMN13922059,28282964,RNA-Seq,METATRANSCRIPTOMIC,PAIRED,ILLUMINA,Illumina MiniSeq,simple,"SHANGHAI PUBLIC HEALTH CLINICAL CENTER & SCHOOL OF PUBLIC HEALTH, FUDAN UNIVERSITY"
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11085733,SRS6146482,SAMN14086238,13547864,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina HiSeq 3000,simple,"WUHAN INSTITUTE OF VIROLOGY, CHINESE ACADEMY OF SCIENCES"
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11085736,SRS6146479,SAMN14086235,11924182,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina HiSeq 3000,simple,"WUHAN INSTITUTE OF VIROLOGY, CHINESE ACADEMY OF SCIENCES"
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11085737,SRS6146478,SAMN14086234,11545986,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina HiSeq 3000,simple,"WUHAN INSTITUTE OF VIROLOGY, CHINESE ACADEMY OF SCIENCES"
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11085738,SRS6146477,SAMN14086233,14762465,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina HiSeq 3000,simple,"WUHAN INSTITUTE OF VIROLOGY, CHINESE ACADEMY OF SCIENCES"
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11085740,SRS6146475,SAMN14086231,9833862,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina HiSeq 3000,simple,"WUHAN INSTITUTE OF VIROLOGY, CHINESE ACADEMY OF SCIENCES"
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11085741,SRS6146474,SAMN14086230,12453192,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina HiSeq 3000,simple,"WUHAN INSTITUTE OF VIROLOGY, CHINESE ACADEMY OF SCIENCES"
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11085797,SRS6146537,SAMN14082201,11604666,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina HiSeq 3000,simple,"WUHAN INSTITUTE OF VIROLOGY, CHINESE ACADEMY OF SCIENCES"
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11092056,SRS6151294,SAMN14082199,5239723,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina MiSeq,simple,"WUHAN INSTITUTE OF VIROLOGY, CHINESE ACADEMY OF SCIENCES"
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11092057,SRS6151292,SAMN14082197,5184909,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina MiSeq,simple,"WUHAN INSTITUTE OF VIROLOGY, CHINESE ACADEMY OF SCIENCES"
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11092058,SRS6151291,SAMN14082196,8267029,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina MiSeq,simple,"WUHAN INSTITUTE OF VIROLOGY, CHINESE ACADEMY OF SCIENCES"
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11092064,SRS6151290,SAMN14082200,3566583,RNA-Seq,METAGENOMIC,PAIRED,ILLUMINA,Illumina MiSeq,simple,"WUHAN INSTITUTE OF VIROLOGY, CHINESE ACADEMY OF SCIENCES"
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11140744,SRS6189924,SAMN14154205,503344,WGS,METAGENOMIC,PAIRED,ILLUMINA,Illumina MiSeq,simple,UNIVERSITY OF WISCONSIN - MADISON
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11140745,SRS6189920,SAMN14154204,396363,WGS,METAGENOMIC,SINGLE,OXFORD_NANOPORE,GridION,simple,UNIVERSITY OF WISCONSIN - MADISON
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11140746,SRS6189919,SAMN14154203,358971,WGS,METAGENOMIC,PAIRED,ILLUMINA,Illumina MiSeq,simple,UNIVERSITY OF WISCONSIN - MADISON
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11140747,SRS6189917,SAMN14154202,566845,WGS,METAGENOMIC,SINGLE,OXFORD_NANOPORE,GridION,simple,UNIVERSITY OF WISCONSIN - MADISON
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11140748,SRS6189918,SAMN14154201,421395,WGS,METAGENOMIC,PAIRED,ILLUMINA,Illumina MiSeq,simple,UNIVERSITY OF WISCONSIN - MADISON
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11140749,SRS6189916,SAMN14154200,482954,WGS,METAGENOMIC,SINGLE,OXFORD_NANOPORE,GridION,simple,UNIVERSITY OF WISCONSIN - MADISON
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11140750,SRS6189914,SAMN14154199,17657,WGS,METAGENOMIC,PAIRED,ILLUMINA,Illumina MiSeq,simple,UNIVERSITY OF WISCONSIN - MADISON
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11140751,SRS6189915,SAMN14154198,37999,WGS,METAGENOMIC,SINGLE,OXFORD_NANOPORE,GridION,simple,UNIVERSITY OF WISCONSIN - MADISON
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11177792,SRS6213494,SAMN14180202,5246584,RNA-Seq,GENOMIC,PAIRED,ILLUMINA,Illumina MiSeq,simple,UNIVERSIDAD TECNOLOGICA DE PEREIRA
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11241254,SRS6262461,SAMN14297849,131952,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,Illumina MiSeq,simple,UNIVERSITY OF WASHINGTON
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11241255,SRS6262460,SAMN14297848,123353,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,Illumina MiSeq,simple,UNIVERSITY OF WASHINGTON
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11247075,SRS6266707,SAMN14308029,10454,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,Illumina MiSeq,simple,UNIVERSITY OF WASHINGTON
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11247076,SRS6266706,SAMN14308028,61329,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,Illumina MiSeq,simple,UNIVERSITY OF WASHINGTON
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11247077,SRS6266705,SAMN14308027,643627,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,Illumina MiSeq,simple,UNIVERSITY OF WASHINGTON
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11247078,SRS6266704,SAMN14308026,1087374,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,Illumina MiSeq,simple,UNIVERSITY OF WASHINGTON
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11267570,SRS6201528,SAMN14167851,779208,RNA-Seq,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,UNIVERSITY OF MELBOURNE
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11267811,SRS6282736,SAMN14332760,107,WGA,METAGENOMIC,SINGLE,BGISEQ,BGISEQ-500,simple,BGI
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11278090,SRS6294173,SAMN14341563,24424,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,NextSeq 500,simple,UNIVERSITY OF WASHINGTON
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11278091,SRS6294172,SAMN14341562,597251,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,NextSeq 500,simple,UNIVERSITY OF WASHINGTON
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11278092,SRS6294171,SAMN14341561,101360,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,NextSeq 500,simple,UNIVERSITY OF WASHINGTON
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11278164,SRS6294250,SAMN14341640,3801124,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,NextSeq 500,simple,UNIVERSITY OF WASHINGTON
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11278165,SRS6294249,SAMN14341639,122658,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,NextSeq 500,simple,UNIVERSITY OF WASHINGTON
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11278166,SRS6294248,SAMN14341638,8213820,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,NextSeq 500,simple,UNIVERSITY OF WASHINGTON
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11278167,SRS6294247,SAMN14341637,10124079,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,NextSeq 500,simple,UNIVERSITY OF WASHINGTON
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11278168,SRS6294246,SAMN14341636,44159,RNA-Seq,VIRAL RNA,SINGLE,ILLUMINA,NextSeq 500,simple,UNIVERSITY OF WASHINGTON
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11350376,SRS6201528,SAMN14167851,779208,RNA-Seq,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,UNIVERSITY OF MELBOURNE
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11300652,SRS6313628,SAMN14371025,430923,RNA-Seq,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,UNIVERSITY OF MELBOURNE
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313269,SRS6324143,SAMN14381172,104,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313270,SRS6324343,SAMN14381111,50,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313271,SRS6324341,SAMN14381075,76,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313272,SRS6324340,SAMN14381110,21,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313273,SRS6324339,SAMN14381109,1,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313274,SRS6324338,SAMN14381108,1978,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313275,SRS6324337,SAMN14381107,200,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313276,SRS6324336,SAMN14381106,2741,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313277,SRS6324334,SAMN14381105,244,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313278,SRS6324335,SAMN14381104,35,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313279,SRS6324333,SAMN14381103,1,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313280,SRS6324332,SAMN14381102,29840,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313281,SRS6324330,SAMN14381101,2769,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313282,SRS6324331,SAMN14381074,82,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313283,SRS6324329,SAMN14381100,19,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313284,SRS6324328,SAMN14381099,1,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313285,SRS6324327,SAMN14381098,20814,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313286,SRS6324326,SAMN14381097,1628,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313287,SRS6324324,SAMN14381096,22374,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313288,SRS6324325,SAMN14381311,5202,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313289,SRS6324323,SAMN14381095,1821,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313290,SRS6324322,SAMN14381310,207,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313291,SRS6324321,SAMN14381309,6185,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313292,SRS6324320,SAMN14381308,3180,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313293,SRS6324319,SAMN14381307,1608,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313294,SRS6324318,SAMN14381306,800,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313295,SRS6324317,SAMN14381305,252,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313296,SRS6324316,SAMN14381304,7900,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313297,SRS6324315,SAMN14381303,4193,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313298,SRS6324314,SAMN14381302,2138,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313299,SRS6324313,SAMN14381301,1055,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313300,SRS6324312,SAMN14381094,77,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313301,SRS6324311,SAMN14381300,328,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313302,SRS6324310,SAMN14381299,14019,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313303,SRS6324309,SAMN14381298,7216,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313304,SRS6324308,SAMN14381297,3680,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313305,SRS6324307,SAMN14381296,1864,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313306,SRS6324305,SAMN14381295,655,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313307,SRS6324306,SAMN14381294,20623,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313308,SRS6324304,SAMN14381293,10313,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313309,SRS6324303,SAMN14381292,5133,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313310,SRS6324302,SAMN14381291,2651,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313311,SRS6324301,SAMN14381093,6,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313312,SRS6324300,SAMN14381290,859,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313313,SRS6324298,SAMN14381289,16203,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313314,SRS6324299,SAMN14381288,7679,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313315,SRS6324297,SAMN14381287,3780,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313316,SRS6324296,SAMN14381286,1950,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313317,SRS6324295,SAMN14381285,638,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313318,SRS6324294,SAMN14381284,1556,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313319,SRS6324293,SAMN14381283,811,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313320,SRS6324292,SAMN14381282,423,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313321,SRS6324291,SAMN14381281,227,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313322,SRS6324290,SAMN14381092,58,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313323,SRS6324289,SAMN14381280,93,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313324,SRS6324288,SAMN14381279,1448,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313325,SRS6324287,SAMN14381278,779,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313326,SRS6324285,SAMN14381277,411,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313327,SRS6324286,SAMN14381276,217,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313328,SRS6324284,SAMN14381275,69,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313329,SRS6324283,SAMN14381274,80,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313330,SRS6324282,SAMN14381273,45,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313331,SRS6324281,SAMN14381272,27,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313332,SRS6324280,SAMN14381271,17,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313333,SRS6324278,SAMN14381091,2,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313334,SRS6324279,SAMN14381073,5,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313335,SRS6324277,SAMN14381270,7,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313336,SRS6324276,SAMN14381269,681,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313337,SRS6324275,SAMN14381268,340,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313338,SRS6324274,SAMN14381267,155,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313339,SRS6324273,SAMN14381266,90,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313340,SRS6324271,SAMN14381265,35,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313341,SRS6324272,SAMN14381264,813,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313342,SRS6324270,SAMN14381263,388,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313343,SRS6324269,SAMN14381262,197,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313344,SRS6324268,SAMN14381261,104,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313345,SRS6324267,SAMN14381090,204,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313346,SRS6324266,SAMN14381260,40,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313347,SRS6324265,SAMN14381259,929,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313348,SRS6324264,SAMN14381258,500,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313349,SRS6324263,SAMN14381257,241,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313350,SRS6324262,SAMN14381256,115,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313351,SRS6324261,SAMN14381255,40,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313352,SRS6324260,SAMN14381254,285,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313353,SRS6324259,SAMN14381253,122,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313354,SRS6324258,SAMN14381252,71,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313355,SRS6324257,SAMN14381251,36,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313356,SRS6324256,SAMN14381089,20,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313357,SRS6324255,SAMN14381250,14,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313358,SRS6324254,SAMN14381249,27,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313359,SRS6324253,SAMN14381248,11,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313360,SRS6324252,SAMN14381247,7,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313361,SRS6324251,SAMN14381246,3,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313362,SRS6324250,SAMN14381245,42,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313363,SRS6324249,SAMN14381244,23,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313364,SRS6324248,SAMN14381243,10,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313365,SRS6324247,SAMN14381242,5,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313366,SRS6324246,SAMN14381241,2,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313367,SRS6324245,SAMN14381088,32,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313368,SRS6324244,SAMN14381240,1480,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313369,SRS6324243,SAMN14381239,717,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313370,SRS6324242,SAMN14381238,365,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313371,SRS6324241,SAMN14381237,180,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313372,SRS6324240,SAMN14381236,67,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313373,SRS6324239,SAMN14381235,154,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313374,SRS6324238,SAMN14381234,90,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313375,SRS6324237,SAMN14381233,46,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313376,SRS6324236,SAMN14381232,25,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313377,SRS6324235,SAMN14381231,8,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313378,SRS6324234,SAMN14381087,1,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313379,SRS6324233,SAMN14381230,221,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313380,SRS6324232,SAMN14381229,120,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313381,SRS6324231,SAMN14381228,65,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313382,SRS6324230,SAMN14381227,35,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313383,SRS6324229,SAMN14381226,14,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313384,SRS6324228,SAMN14381225,116,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313385,SRS6324227,SAMN14381224,52,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313386,SRS6324226,SAMN14381223,24,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313387,SRS6324225,SAMN14381222,11,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313388,SRS6324224,SAMN14381221,4,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313389,SRS6324223,SAMN14381086,630,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313390,SRS6324222,SAMN14381220,371,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313391,SRS6324221,SAMN14381219,183,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313392,SRS6324220,SAMN14381218,86,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313393,SRS6324219,SAMN14381217,40,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313394,SRS6324218,SAMN14381216,11,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313395,SRS6324217,SAMN14381215,145,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313396,SRS6324216,SAMN14381214,69,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313397,SRS6324215,SAMN14381213,35,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313398,SRS6324214,SAMN14381212,15,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313399,SRS6324213,SAMN14381211,3,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313400,SRS6324212,SAMN14381085,77,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313401,SRS6324211,SAMN14381210,4,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313402,SRS6324210,SAMN14381209,2,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313403,SRS6324209,SAMN14381208,1,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313404,SRS6324208,SAMN14381207,10,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313405,SRS6324207,SAMN14381206,6,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313406,SRS6324206,SAMN14381170,49,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313407,SRS6324138,SAMN14381205,3,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313408,SRS6324205,SAMN14381169,3,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313409,SRS6324204,SAMN14381168,71,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313410,SRS6324203,SAMN14381167,2,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313411,SRS6324202,SAMN14381166,4081,AMPLICON,OTHER,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313412,SRS6324201,SAMN14381165,239,AMPLICON,OTHER,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313413,SRS6324200,SAMN14381164,6,AMPLICON,OTHER,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313414,SRS6324199,SAMN14381163,36,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313415,SRS6324198,SAMN14381162,5,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313416,SRS6324197,SAMN14381161,198,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313417,SRS6324196,SAMN14381080,8494,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313418,SRS6324195,SAMN14381160,15,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313419,SRS6324194,SAMN14381159,26900,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313420,SRS6324193,SAMN14381158,1561,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313421,SRS6324192,SAMN14381157,21460,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313422,SRS6324191,SAMN14381156,1398,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313423,SRS6324190,SAMN14381155,1051,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313424,SRS6324189,SAMN14381154,65,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313425,SRS6324188,SAMN14381153,12133,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313426,SRS6324187,SAMN14381152,705,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313427,SRS6324186,SAMN14381151,516,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313428,SRS6324185,SAMN14381079,686,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313429,SRS6324184,SAMN14381150,39,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313430,SRS6324183,SAMN14381149,448,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313431,SRS6324182,SAMN14381148,20,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313432,SRS6324181,SAMN14381147,56,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313433,SRS6324180,SAMN14381146,1,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313434,SRS6324179,SAMN14381145,4557,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313435,SRS6324178,SAMN14381144,291,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313436,SRS6324177,SAMN14381143,9086,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313437,SRS6324176,SAMN14381142,651,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313438,SRS6324175,SAMN14381141,3173,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313439,SRS6324174,SAMN14381078,50,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313440,SRS6324173,SAMN14381140,244,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313441,SRS6324172,SAMN14381139,4040,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313442,SRS6324171,SAMN14381138,279,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313443,SRS6324170,SAMN14381137,806,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313444,SRS6324169,SAMN14381136,34,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313445,SRS6324168,SAMN14381135,7467,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313446,SRS6324167,SAMN14381134,494,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313447,SRS6324166,SAMN14381133,42,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313448,SRS6324165,SAMN14381132,769,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313449,SRS6324164,SAMN14381131,43,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313450,SRS6324163,SAMN14381077,2,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313451,SRS6324162,SAMN14381130,63,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313452,SRS6324161,SAMN14381129,5,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313453,SRS6324160,SAMN14381128,77,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313454,SRS6324159,SAMN14381127,5,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313455,SRS6324158,SAMN14381126,1379,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313456,SRS6324157,SAMN14381125,79,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313457,SRS6324156,SAMN14381124,54,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313458,SRS6324155,SAMN14381123,2,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313459,SRS6324154,SAMN14381122,2555,AMPLICON,OTHER,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313460,SRS6324153,SAMN14381121,230,AMPLICON,OTHER,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313461,SRS6324152,SAMN14381076,670,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313462,SRS6324151,SAMN14381120,320,AMPLICON,OTHER,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313463,SRS6324150,SAMN14381119,34,AMPLICON,OTHER,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313464,SRS6324149,SAMN14381118,21801,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313465,SRS6324148,SAMN14381117,1921,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313466,SRS6324147,SAMN14381116,136,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313467,SRS6324146,SAMN14381115,6,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313468,SRS6324145,SAMN14381114,14920,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313469,SRS6324144,SAMN14381113,1181,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313470,SRS6324342,SAMN14381112,622,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313471,SRS6324142,SAMN14381171,6,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313472,SRS6324141,SAMN14381081,3,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313473,SRS6324140,SAMN14381072,220,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313474,SRS6324139,SAMN14381071,14,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313475,SRS6324137,SAMN14381204,1,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313476,SRS6324136,SAMN14381203,7,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313477,SRS6324135,SAMN14381202,6,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313478,SRS6324134,SAMN14381201,4,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313479,SRS6324133,SAMN14381084,54,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313480,SRS6324132,SAMN14381200,2,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313481,SRS6324131,SAMN14381199,5,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313482,SRS6324130,SAMN14381198,2,AMPLICON,SYNTHETIC,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313483,SRS6324129,SAMN14381197,45,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313484,SRS6324128,SAMN14381196,2,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313485,SRS6324127,SAMN14381195,518,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313486,SRS6324126,SAMN14381194,28,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313487,SRS6324125,SAMN14381193,55,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313488,SRS6324124,SAMN14381192,2,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313489,SRS6324123,SAMN14381191,299,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313490,SRS6324122,SAMN14381083,4,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313491,SRS6324121,SAMN14381190,18,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313492,SRS6324120,SAMN14381189,3378,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313493,SRS6324119,SAMN14381188,171,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313494,SRS6324118,SAMN14381187,39036,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313495,SRS6324117,SAMN14381186,2113,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313496,SRS6324116,SAMN14381185,146,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313497,SRS6324115,SAMN14381184,8,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313498,SRS6324114,SAMN14381183,52,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313499,SRS6324113,SAMN14381182,3,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313500,SRS6324112,SAMN14381181,52,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313501,SRS6324111,SAMN14381082,16,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313502,SRS6324110,SAMN14381180,1,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313503,SRS6324109,SAMN14381179,62,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313504,SRS6324108,SAMN14381178,4,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313505,SRS6324107,SAMN14381177,314,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313506,SRS6324106,SAMN14381176,23,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313507,SRS6324105,SAMN14381175,1893,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313508,SRS6324104,SAMN14381174,87,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11313509,SRS6324103,SAMN14381173,41,AMPLICON,VIRAL RNA,SINGLE,OXFORD_NANOPORE,GridION,simple,WUHAN UNIVERSITY
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11314339,SRS6325118,SAMN14380341,517281,RNA-Seq,VIRAL RNA,PAIRED,ILLUMINA,Illumina MiSeq,simple,THE SCRIPPS RESEARCH INSTITUTE
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11365239,SRS6352053,SAMN14422484,353192,RNA-Seq,METATRANSCRIPTOMIC,SINGLE,ION_TORRENT,Ion Torrent S5,simple,UFBA
+,,,,,,,,,,
+Run,Sample,BioSample,spots,LibraryStrategy,LibrarySource,LibraryLayout,Platform,Model,SampleType,CenterName
+SRR11365240,SRS6352053,SAMN14422484,126839,RNA-Seq,METATRANSCRIPTOMIC,SINGLE,ION_TORRENT,Ion Torrent S5,simple,UFBA
+,,,,,,,,,,

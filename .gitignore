@@ -1,3 +1,3 @@
-raw/coronavirus_20200301.fa
+raw/*.fa
 db/*
 *.swp
