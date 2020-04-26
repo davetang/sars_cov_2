@@ -26,7 +26,7 @@ while(<IN>){
    if ($lookup{$query}){
       print ">$query\n$lookup{$query}\n";
    } else {
-      die "Could not find $query in $fasta\n";
+      warn "Could not find $query in $fasta\n";
    }
 }
 close(IN);
@@ -40,6 +40,8 @@ sub store_fasta {
       chomp;
       if (/^>(.*?)\s/){
          $current_id = $1;
+         # remove version
+         $current_id =~ s/\.\d+$//;
       } else {
          $store{$current_id} .= $_;
       }

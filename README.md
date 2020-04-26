@@ -57,7 +57,6 @@ sys     0m7.705s
 cat raw/coronavirus_$today.fa | grep "^>" | wc -l
    43581
 
-
 cat raw/coronavirus_$today.fa | grep MN908947
 >MN908947.3 Severe acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1, complete genome
 ```
@@ -66,7 +65,7 @@ I wrote a simple Perl script to calculate the length of the FASTA sequences.
 
 ```bash
 today=$(date "+%Y%m%d")
-script/fasta_stats.pl -f raw/coronavirus_$today.fa | gzip > result/coronavirus_${today}1_stat.txt.gz
+script/fasta_stats.pl -f raw/coronavirus_$today.fa | gzip > result/coronavirus_${today}_stat.txt.gz
 ```
 
 ## BLAST
@@ -164,6 +163,61 @@ genbank-sequences: [
 
 cat raw/ncov-sequences.yaml | grep "sra-run\"" | wc -l
      288
+```
+
+Did we get all the GenBank sequences using `esearch` and `efetch`? We should directly use the accessions in the YAML file as 417 sequences are missing.
+
+```bash
+cat raw/ncov-sequences.yaml | grep 'accession"' | perl -nle 's/.*"(\w+)",/$1/; print' > raw/genbank_list.txt
+
+cat raw/genbank_list.txt | wc -l
+    1622
+
+script/extract_fasta.pl -i raw/genbank_list.txt -f raw/coronavirus_20200426.fa > raw/genbank_list.fa 2> raw/genbank_list_missing.txt
+
+cat raw/genbank_list.fa | grep "^>" | wc -l
+    1205
+
+cat raw/genbank_list_missing.txt | wc -l
+     417
+```
+
+Download using `efetch` and check out the distribution of sequence lengths.
+
+```bash
+my_accession=$(cat raw/genbank_list.txt | tr '\n' ',' | sed 's/,$//')
+efetch -db sequences -format fasta -id $my_accession > raw/genbank_efetch.fa
+
+cat raw/genbank_efetch.fa | grep "^>" | wc -l
+    1621
+
+script/fasta_stats.pl -f raw/genbank_efetch.fa | gzip > result/genbank_stat.txt.gz
+
+# get stats from https://github.com/arq5x/filo/
+gunzip -c result/genbank_stat.txt.gz  | cut -f2 | grep -v "Length" | stats
+Total lines:            1621
+Sum of lines:           45891887
+Ari. Mean:              28310.8494756323
+Geo. Mean:              23869.0792681778
+Median:                 29844
+Mode:                   29882 (N=208)
+Anti-Mode:              64 (N=1)
+Minimum:                64
+Maximum:                29945
+Variance:               41665645.6466825
+StdDev:                 6454.89315532663
+
+# some short sequences
+gunzip -c result/genbank_stat.txt.gz  |  sort -k2n | head -6
+Accession       Length  A       C       G       T       Unknown
+MT293547.1      64      13      16      12      23      0
+MT273658.1      84      20      15      22      27      0
+MT163712.1      87      20      17      23      27      0
+MN938387.1      107     38      14      22      33      0
+MN938388.1      107     38      14      22      33      0
+
+cat raw/genbank_efetch.fa | grep  MT293547.1
+>MT293547.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/IRQ/KRD/2020 envelope protein (E) gene, partial cds
 ```
 
 Use `wget` to [obtain metadata](https://www.ncbi.nlm.nih.gov/books/NBK242621/) of all SARS-CoV-2 raw sequences upload to the SRA. The YAML file no longer uses project accessions (SRP242226), so we will get information on each run instead (SRR10948550).
