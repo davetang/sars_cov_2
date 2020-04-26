@@ -1,0 +1,77 @@
+---
+title: "SARS-CoV-2 genomes"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library("Biostrings")
+library("tidyverse")
+library("BiocParallel")
+library("stringdist")
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_knit$set(root.dir = "~/github/sars_cov_2/")
+```
+
+Use the [Biostrings package](https://www.bioconductor.org/packages/release/bioc/html/Biostrings.html) to load FASTA files. Sequences in `raw/genbank_efetch.fa` were downloaded using `efetch` using accessions list in https://www.ncbi.nlm.nih.gov/core/assets/genbank/files/ncov-sequences.yaml.
+
+```{r read_fasta}
+my_fasta <- readDNAStringSet("raw/genbank_efetch.fa")
+
+my_seq_len <- sapply(X = my_fasta, FUN = length)
+
+summary(my_seq_len)
+```
+
+Plot distibution of sequence lengths.
+
+```{r plot_seq_len}
+ggplot(data = data.frame(len = my_seq_len), aes(len)) +
+  geom_histogram(bins = 20) +
+  labs(x = "FASTA lengths",
+       y = "Count",
+       title = "Distribution of sequence lengths") +
+  theme_minimal() +
+  theme(text = element_text(size = 16))
+```
+
+Sequences longer than 29,000 bp.
+
+```{r table_len}
+table(my_seq_len > 29000)
+
+my_seq <- my_fasta[my_seq_len > 29000]
+my_seq
+```
+
+Duplicated sequences.
+
+```{r duplicated_seq}
+names(my_seq[duplicated(my_seq)])
+```
+
+Pairwise alignment.
+
+```{r pairwise_aln}
+my_aln <- pairwiseAlignment(pattern = my_seq[1], subject = my_seq[2])
+
+mismatchTable(my_aln)
+```
+
+Use 8 cores to perform pairwise alignments.
+
+```{r multicore_param, warning=FALSE, message=FALSE}
+my_param <- MulticoreParam(workers = 8)
+my_comb <- combn(x = 1:length(my_seq[1:5]), m = 2)
+my_comb_list <- lapply(apply(X = my_comb, MARGIN = 2, FUN = list), unlist)
+length(my_comb_list)
+
+align_wrapper <- function(x){
+  pairwiseAlignment(pattern = my_seq[x[1]], subject = my_seq[x[2]], type = "overlap")
+}
+
+system.time(
+  my_alignments <- bplapply(my_comb_list, align_wrapper, BPPARAM = my_param)
+)
+```
+
