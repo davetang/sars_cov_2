@@ -1,3 +1,5 @@
 raw/*.fa
 db/*
 *.swp
+raw/protein
+raw/genome

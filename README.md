@@ -18,9 +18,178 @@ conda env create --file environment.yml
 conda activate sars_cov_2
 ```
 
+The [NCBI Datasets project](https://github.com/ncbi/datasets) has developed a command-line tool, `datasets`, that is used to query and download biological sequence data across all domains of life from NCBI databases.
+
+```bash
+wget https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/LATEST/linux-amd64/datasets -O bin/datasets
+chmod 755 bin/datasets
+```
+
 ## Sequences
 
-The page https://www.ncbi.nlm.nih.gov/genbank/sars-cov-2-seqs/ contains a list of SARS-CoV-2 sequences. We can use `efetch` to download an [assembled genome sequence](https://www.ncbi.nlm.nih.gov/nuccore/MN908947).
+### Genomes
+
+Download [Coronavirus genomes](https://www.ncbi.nlm.nih.gov/datasets/coronavirus/genomes/) using `datasets`.
+
+```bash
+mkdir raw/genome
+today=$(date +%Y%m%d)
+bin/datasets download virus genome tax-name sars2 --filename raw/genome/sars2.${today}.zip
+```
+
+7,031 genome sequences as of Mon Jul 20 14:32:46 JST 2020.
+
+```bash
+cat genomic.fna | grep "^>" | wc -l
+7031
+```
+
+Look for [MN908947](https://www.ncbi.nlm.nih.gov/nuccore/MN908947).
+
+```bash
+cat genomic.fna | grep MN908947
+>MN908947.3 Severe acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1, complete genome
+>MT576029.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/ESP/2019-nCoV-MN908947-cOVID-96_19/2020, complete genome
+```
+
+### Proteins
+
+The `download virus protein` [command](https://www.ncbi.nlm.nih.gov/datasets/docs/command-line-virus/) downloads [complete protein sequences](https://www.ncbi.nlm.nih.gov/datasets/coronavirus/proteins/) (excluding partial sequences) and annotation data as a zip file in the BDBag (Big Data Bag) format.
+
+```bash
+bin/datasets download virus protein S --filename raw/SARS2-spike.zip
+```
+
+The default protein dataset for a given protein includes the following for all complete SARS2 RefSeq and GenBank genomes:
+
+* amino acid sequences in FASTA (.faa) format
+* protein structures in PDB (.pdb) format
+* nucleotide coding (CDS) sequences in FASTA (.fna) format
+* data report containing taxonomy, isolate, host and other metadata (`data_report.yaml`)
+* annotation and amino acid sequences in the GenPept flat file format (`protein.gpff`)
+* a README containing details on sequence file data content and other general information (`virus_dataset.md`)
+* a list of files and file types (`dataset_catalog.json`)
+
+```bash
+|-- ncbi_dataset
+|   |-- bag-info.txt
+|   |-- bagit.txt
+|   |-- data
+|   |   |-- cds.fna
+|   |   |-- data_report.yaml
+|   |   |-- dataset_catalog.json
+|   |   |-- pdb
+|   |   |   |-- 6VYB.pdb
+|   |   |   |-- 6VYO.pdb
+|   |   |   |-- 6W37.pdb
+|   |   |   |-- 6W4H.pdb
+|   |   |   |-- 6W9C.pdb
+|   |   |   |-- 6W9Q.pdb
+|   |   |   |-- 6WEY.pdb
+|   |   |   |-- 6WJI.pdb
+|   |   |   |-- 6WLC.pdb
+|   |   |   |-- 7BQY.pdb
+|   |   |   `-- 7BV2.pdb
+|   |   |-- protein.faa
+|   |   |-- protein.gpff
+|   |   `-- virus_dataset.md
+|   |-- fetch.txt
+|   |-- manifest-md5.txt
+|   `-- tagmanifest-md5.txt
+`-- README.md
+```
+
+Extract only the amino acid FASTA sequences.
+
+```bash
+for file in $(ls raw/protein/SARS2*.zip); do
+   base=$(basename $file .zip);
+   unzip -jp $file ncbi_dataset/data/protein.faa | gzip > raw/protein/${base}.faa.gz
+done
+
+zcat raw/protein/SARS2.20200720.S.faa.gz | grep "^>" | wc -l
+7015
+```
+
+Number of unique sequences.
+
+```bash
+for file in $(ls raw/protein/*.faa.gz); do
+   echo $file;
+   script/unique_seq.pl -f $file | wc -l;
+done
+
+raw/protein/SARS2.20200720.E.faa.gz
+30
+raw/protein/SARS2.20200720.M.faa.gz
+95
+raw/protein/SARS2.20200720.N.faa.gz
+360
+raw/protein/SARS2.20200720.nsp10.faa.gz
+36
+raw/protein/SARS2.20200720.nsp11.faa.gz
+7
+raw/protein/SARS2.20200720.nsp13.faa.gz
+254
+raw/protein/SARS2.20200720.nsp14.faa.gz
+307
+raw/protein/SARS2.20200720.nsp15.faa.gz
+166
+raw/protein/SARS2.20200720.nsp16.faa.gz
+146
+raw/protein/SARS2.20200720.nsp1.faa.gz
+134
+raw/protein/SARS2.20200720.nsp2.faa.gz
+388
+raw/protein/SARS2.20200720.nsp3.faa.gz
+862
+raw/protein/SARS2.20200720.nsp4.faa.gz
+198
+raw/protein/SARS2.20200720.nsp5.faa.gz
+118
+raw/protein/SARS2.20200720.nsp6.faa.gz
+120
+raw/protein/SARS2.20200720.nsp7.faa.gz
+31
+raw/protein/SARS2.20200720.nsp8.faa.gz
+69
+raw/protein/SARS2.20200720.nsp9.faa.gz
+48
+raw/protein/SARS2.20200720.ORF10.faa.gz
+28
+raw/protein/SARS2.20200720.orf1ab.faa.gz
+5773
+raw/protein/SARS2.20200720.orf1a.faa.gz
+3756
+raw/protein/SARS2.20200720.ORF3a.faa.gz
+290
+raw/protein/SARS2.20200720.ORF6.faa.gz
+58
+raw/protein/SARS2.20200720.ORF7a.faa.gz
+88
+raw/protein/SARS2.20200720.ORF7b.faa.gz
+1
+raw/protein/SARS2.20200720.ORF8.faa.gz
+99
+raw/protein/SARS2.20200720.RdRp.faa.gz
+342
+raw/protein/SARS2.20200720.S.faa.gz
+779
+```
+
+### Nucleotide sequences
+
+The page https://www.ncbi.nlm.nih.gov/genbank/sars-cov-2-seqs/ contains a list of SARS-CoV-2 sequences. Download latest list of SARS-CoV-2 nucleotide sequence IDs.
+
+```bash
+outfile=acc.$(date +%F).txt.gz
+wget https://www.ncbi.nlm.nih.gov/sars-cov-2/download-nuccore-ids/ -O - | gzip > raw/$outfile
+
+zcat raw/$outfile | wc -l
+10001
+```
+
+We can use `efetch` to download an [assembled SARS-CoV-2 genome sequence](https://www.ncbi.nlm.nih.gov/nuccore/MN908947) in various formats.
 
 ```bash
 mkdir raw
