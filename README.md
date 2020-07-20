@@ -113,6 +113,8 @@ zcat raw/protein/SARS2.20200720.S.faa.gz | grep "^>" | wc -l
 
 Number of unique sequences.
 
+![](assets/sars2_genome.png)
+
 ```bash
 for file in $(ls raw/protein/*.faa.gz); do
    echo $file;

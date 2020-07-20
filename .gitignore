@@ -3,3 +3,4 @@ db/*
 *.swp
 raw/protein
 raw/genome
+.Rhistory
