@@ -1,0 +1,64 @@
+---
+title: "Daily Covid19 cases"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Read all files.
+
+```{r load_data, message=FALSE, warning=FALSE}
+my_dir <- "/github/COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/"
+my_files <- list.files(path = my_dir, pattern = "\\.csv$", full.names = TRUE)
+
+my_data_list <- lapply(X = my_files, FUN = read_csv)
+
+sapply(X = my_data_list, FUN = ncol)
+```
+
+As seen above the file format has changed several times. For each time the format has changed, check the columns.
+
+```{r get_colnames}
+my_col_num <- sapply(X = my_data_list, FUN = ncol)
+my_idx <- c(1, which(diff(my_col_num) > 0) + 1)
+
+sapply(my_data_list[my_idx], colnames)
+```
+
+Need to change `Country/Region` to `Country_Region`.
+
+```{r change_country_col}
+my_mod <- lapply(my_data_list[my_col_num < 9], function(x) x %>% rename("Country_Region" = `Country/Region`))
+my_data <- c(my_mod, my_data_list[my_col_num > 9])
+my_date <- sub(pattern = ".csv", replacement = "", x = basename(my_files))
+names(my_data) <- my_date
+```
+
+Prepare data frame.
+
+```{r prep_df}
+all <- lapply(seq_along(my_data),
+              function(x, y) my_data[[x]] %>%
+                select(Country_Region, Confirmed) %>%
+                mutate(date = rep(y[x], nrow(my_data[[x]]))),
+              y = my_date)
+              
+confirmed <- do.call(rbind.data.frame, all)
+confirmed$date <- as.Date(confirmed$date, format = "%m-%d-%y")
+```
+
+Plot confirmed cases for Japan.
+
+```{r plot_japan, fig.width=20, fig.height=8}
+confirmed %>%
+  filter(Country_Region == "Japan") %>%
+  group_by(date) %>%
+  summarise(total = sum(Confirmed)) %>%
+  ggplot(., aes(date, c(0, diff(total)))) +
+    geom_col() +
+    theme_bw()
+```
+
