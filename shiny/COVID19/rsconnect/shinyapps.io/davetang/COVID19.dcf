@@ -1,0 +1,12 @@
+name: COVID19
+title: COVID19
+username:
+account: davetang
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3216551
+bundleId: 3851477
+url: https://davetang.shinyapps.io/COVID19/
+when: 1605177250.57929
+asMultiple: FALSE
+asStatic: FALSE
