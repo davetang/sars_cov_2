@@ -5,13 +5,34 @@ output: html_document
 
 ```{r setup, include=FALSE}
 library(tidyverse)
+library(plotly)
+theme_set(theme_bw())
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Read all files.
+Clone the COVID-19 repo (or update it if you had previously cloned it).
+
+```{bash eval=FALSE}
+git clone https://github.com/CSSEGISandData/COVID-19.git
+
+ls -1 COVID-19/
+README.md
+archived_data
+csse_covid_19_data
+who_covid_19_situation_reports
+
+ls -1 COVID-19/csse_covid_19_data/
+README.md
+UID_ISO_FIPS_LookUp_Table.csv
+csse_covid_19_daily_reports
+csse_covid_19_daily_reports_us
+csse_covid_19_time_series
+```
+
+Read all files in `csse_covid_19_daily_reports`.
 
 ```{r load_data, message=FALSE, warning=FALSE}
-my_dir <- "/github/COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/"
+my_dir <- "~/github/COVID-19/csse_covid_19_data/csse_covid_19_daily_reports/"
 my_files <- list.files(path = my_dir, pattern = "\\.csv$", full.names = TRUE)
 
 my_data_list <- lapply(X = my_files, FUN = read_csv)
@@ -58,7 +79,47 @@ confirmed %>%
   group_by(date) %>%
   summarise(total = sum(Confirmed)) %>%
   ggplot(., aes(date, c(0, diff(total)))) +
-    geom_col() +
-    theme_bw()
+    geom_col()
 ```
 
+Read time series.
+
+```{r load_time_series}
+time_series_con <- read_csv(file = "~/github/COVID-19/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv")
+time_series_death <- read_csv(file = "~/github/COVID-19/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv")
+time_series_con
+```
+
+```{r plot_time_series_japan, fig.width=20, fig.height=8}
+time_series_con %>%
+  filter(`Country/Region` == "Japan") %>%
+  select_at(-(1:4)) %>%
+  t() %>%
+  as.data.frame() %>%
+  rownames_to_column(var = "date") %>%
+  mutate(confirmed = rowSums(.[-1])) %>%
+  mutate(date = as.Date(date, format = "%m/%d/%y")) %>%
+  mutate(confirmed = c(0, diff(confirmed))) %>%
+  ggplot(., aes(date, confirmed)) +
+    geom_col()
+```
+
+Sweden.
+
+```{r plot_time_series_sweden, fig.width=20, fig.height=8}
+time_series_con %>%
+  filter(`Country/Region` == "Sweden") %>%
+  select_at(-(1:4)) %>%
+  t() %>%
+  as.data.frame() %>%
+  rownames_to_column(var = "date") %>%
+  mutate(confirmed = rowSums(.[-1])) %>%
+  mutate(date = as.Date(date, format = "%m/%d/%y")) %>%
+  mutate(confirmed = c(0, diff(confirmed))) %>%
+  ggplot(., aes(date, confirmed)) +
+    geom_col() +
+    theme(axis.title.x = element_blank()) +
+    labs(y = "Confirmed cases") -> p
+
+ggplotly(p)
+```

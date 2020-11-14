@@ -4,3 +4,4 @@ db/*
 raw/protein
 raw/genome
 .Rhistory
+.DS_Store
