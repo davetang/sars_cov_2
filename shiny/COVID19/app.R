@@ -12,8 +12,22 @@ library(tidyverse)
 library(plotly)
 library(DT)
 theme_set(theme_bw())
-time_series_confirmed <- read_csv(file = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv")
-time_series_deaths <- read_csv(file = "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv")
+
+confirmed_csv <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv"
+read_csv(file = confirmed_csv) %>%
+    mutate(`Country/Region` = sub(pattern = "US",
+                                  replacement = "United States",
+                                  x = `Country/Region`)
+           ) -> time_series_confirmed
+
+
+deaths_csv <- "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv"
+read_csv(file = deaths_csv) %>%
+    mutate(`Country/Region` = sub(pattern = "US",
+                                  replacement = "United States",
+                                  x = `Country/Region`)
+           ) -> time_series_deaths
+
 choices <- unique(time_series_confirmed$`Country/Region`)
 
 prep_table <- function(country){
@@ -29,6 +43,7 @@ prep_table <- function(country){
         mutate(deaths = c(0, diff(deaths))) %>%
         select(date, deaths) %>%
         arrange(desc(date)) -> deaths
+    deaths$deaths[deaths$deaths < 0] <- 0
     
     time_series_confirmed %>%
         filter(`Country/Region` == country) %>%
@@ -41,7 +56,11 @@ prep_table <- function(country){
         mutate(confirmed = c(0, diff(confirmed))) %>%
         select(date, confirmed) %>%
         arrange(desc(date)) %>%
-        inner_join(y = deaths, by = "date")
+        inner_join(y = deaths, by = "date") %>%
+        mutate(day = strftime(date, format = "%A")) %>%
+        select(date, day, everything()) -> confirmed
+    confirmed$confirmed[confirmed$confirmed < 0] <- 0
+    return(confirmed)
 }
 
 # Define UI for application that draws a histogram
@@ -52,7 +71,9 @@ ui <- fluidPage(
     sidebarLayout(
         sidebarPanel(
             selectInput("country", "Country/Region:", choices = choices, selected = "Sweden"),
-            a("Data source", href="https://github.com/CSSEGISandData/COVID-19")
+            a("Data source", href="https://github.com/CSSEGISandData/COVID-19"),
+            br(),
+            a("Source code", href="https://github.com/davetang/sars_cov_2/tree/master/shiny/COVID19")
         ),
 
         mainPanel(

@@ -5,8 +5,8 @@ account: davetang
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 3216551
-bundleId: 3859220
+bundleId: 3861490
 url: https://davetang.shinyapps.io/COVID19/
-when: 1605334563.55383
+when: 1605400328.44092
 asMultiple: FALSE
 asStatic: FALSE
