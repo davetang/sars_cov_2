@@ -32,24 +32,42 @@ chmod 755 bin/datasets
 Download [Coronavirus genomes](https://www.ncbi.nlm.nih.gov/datasets/coronavirus/genomes/) using `datasets`.
 
 ```bash
-mkdir raw/genome
+mkdir -p raw/genome
 today=$(date +%Y%m%d)
 bin/datasets download virus genome tax-name sars2 --filename raw/genome/sars2.${today}.zip
 ```
 
-7,031 genome sequences as of Mon Jul 20 14:32:46 JST 2020.
+973,966 genome sequences as of Thu Jul 22 17:37:22 JST 2021 up from 7,031 genome sequences from Mon Jul 20 14:32:46 JST 2020.
 
 ```bash
-cat genomic.fna | grep "^>" | wc -l
-7031
+cd raw/genome/
+unzip sars2.20210722.zip
+
+cat ncbi_dataset/data/genomic.fna | grep "^>" | wc -l
+973966
 ```
 
 Look for [MN908947](https://www.ncbi.nlm.nih.gov/nuccore/MN908947).
 
 ```bash
-cat genomic.fna | grep MN908947
+cat ncbi_dataset/data/genomic.fna | grep MN908947
 >MN908947.3 Severe acute respiratory syndrome coronavirus 2 isolate Wuhan-Hu-1, complete genome
 >MT576029.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/ESP/2019-nCoV-MN908947-cOVID-96_19/2020, complete genome
+```
+
+Look for [MZ157012](https://www.ncbi.nlm.nih.gov/nuccore/MZ157012) (an isolate from lineage B.1.617.2 or also known as the Delta variant).
+
+```bash
+cat ncbi_dataset/data/genomic.fna | grep MZ157012
+>MZ157012.1 Severe acute respiratory syndrome coronavirus 2 isolate SARS-CoV-2/human/NPL/LMB11/2021 ORF1ab polyprotein (ORF1ab) gene, partial cds; ORF1a polyprotein (ORF1ab) gene, complete cds; surface glycoprotein (S) and ORF3a protein (ORF3a) genes, partial cds; envelope protein (E), membrane glycoprotein (M), and ORF6 protein (ORF6) genes, complete cds; ORF7a protein (ORF7a) gene, partial cds; ORF8 gene, partial sequence; and nucleocapsid phosphoprotein (N) gene, partial cds
+```
+
+Extract MN908947.3 and MZ157012.1.
+
+```bash
+echo -e "MN908947.3\nMZ157012.1" > raw/wanted.txt
+
+bin/seqtk subseq raw/genome/ncbi_dataset/data/genomic.fna raw/wanted.txt > raw/wanted.fa
 ```
 
 ### Proteins
