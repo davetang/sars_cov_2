@@ -27,6 +27,46 @@ chmod 755 bin/datasets
 
 ## Sequences
 
+### Variants
+
+See [SARS-CoV-2 Variant Classifications and Definitions](https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-info.html) and https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8342008/ for more information.
+
+* Alpha (B.1.1.7)
+* Beta (B.1.351)
+* Delta (B.1.617.2)
+* Gamma (P.1)
+
+https://www.ncbi.nlm.nih.gov/datasets/docs/how-tos/virus/get-sars2-genomes/
+
+```bash
+mkdir raw/variants
+bin/macos/datasets download virus genome taxon SARS2 --lineage B.1.1.7 --filename raw/variants/SARS-CoV-2-B.1.1.7.zip
+bin/macos/datasets download virus genome taxon SARS2 --lineage B.1.351 --filename raw/variants/SARS-CoV-2-B.1.351.zip
+bin/macos/datasets download virus genome taxon SARS2 --lineage B.1.617.2 --filename raw/variants/SARS-CoV-2-B.1.617.2.zip
+bin/macos/datasets download virus genome taxon SARS2 --lineage P.1 --filename raw/variants/SARS-CoV-2-P.1.zip
+```
+
+[Reference sequence](https://www.ncbi.nlm.nih.gov/sars-cov-2/) NC_045512. Download GFF for NC_045512 from https://www.ncbi.nlm.nih.gov/sars-cov-2/.
+
+```bash
+mkdir tmp && cd tmp
+../bin/macos/datasets download genome accession GCF_009858895.2 --filename GCF_009858895.2.zip --include-gbff --include-gtf
+unzip GCF_009858895.2.zip
+
+gzip ncbi_dataset/data/GCF_009858895.2/GCF_009858895.2_ASM985889v3_genomic.fna
+mv ncbi_dataset/data/GCF_009858895.2/GCF_009858895.2_ASM985889v3_genomic.fna.gz ../raw
+cd .. && rm -rf tmp
+```
+
+[Delta variant](https://en.wikipedia.org/wiki/SARS-CoV-2_Delta_variant): It has mutations in the gene encoding the SARS-CoV-2 spike protein[6] causing the substitutions T478K, P681R and L452R.
+
+```bash
+id=MZ157012
+efetch -db sequences -format fasta -id ${id} | gzip > raw/${id}.fa.gz
+```
+
+[Gamma variant](https://en.wikipedia.org/wiki/SARS-CoV-2_Gamma_variant): This variant of SARS-CoV-2 has been named lineage P.1 and has 17 amino acid substitutions, ten of which are in its spike protein, including these three designated to be of particular concern: N501Y, E484K and K417T.
+
 ### Genomes
 
 Download [Coronavirus genomes](https://www.ncbi.nlm.nih.gov/datasets/coronavirus/genomes/) using `datasets`.
