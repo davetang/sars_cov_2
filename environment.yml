@@ -3,6 +3,7 @@ channels:
   - bioconda
   - anaconda
   - conda-forge
+  - r
   - defaults
 dependencies:
   - entrez-direct
@@ -15,3 +16,5 @@ dependencies:
   - bwa
   - samtools
   - csvkit
+  - snp-sites
+  - muscle
