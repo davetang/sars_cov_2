@@ -12,8 +12,16 @@ For more information see my related blog posts:
 
 I rely on Conda (a lot) to install the tools needed to perform my analyses. I have written a [short introduction to Conda](https://davetang.github.io/reproducible_bioinformatics/conda.html) that may be useful if you have never used it before. Please install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) if you haven't already. Once you have Conda, run the command below to install all the necessary tools.
 
+Install [Mamba](https://github.com/mamba-org/mamba) first.
+
 ```bash
-conda env create --file environment.yml
+conda install mamba -n base -c conda-forge
+```
+
+Use Mamba to create environment.
+
+```bash
+mamba env create --file environment.yml
 
 conda activate sars_cov_2
 ```
@@ -23,6 +31,16 @@ The [NCBI Datasets project](https://github.com/ncbi/datasets) has developed a co
 ```bash
 wget https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/LATEST/linux-amd64/datasets -O bin/datasets
 chmod 755 bin/datasets
+```
+
+[SnpEff](https://pcingola.github.io/SnpEff/).
+
+```bash
+cd bin
+wget https://snpeff.blob.core.windows.net/versions/snpEff_latest_core.zip
+unzip snpEff_latest_core.zip
+cd snpEff
+java -jar snpEff.jar download NC_045512.2
 ```
 
 ## Sequences
@@ -39,11 +57,10 @@ See [SARS-CoV-2 Variant Classifications and Definitions](https://www.cdc.gov/cor
 https://www.ncbi.nlm.nih.gov/datasets/docs/how-tos/virus/get-sars2-genomes/
 
 ```bash
-mkdir raw/variants
-bin/macos/datasets download virus genome taxon SARS2 --lineage B.1.1.7 --filename raw/variants/SARS-CoV-2-B.1.1.7.zip
-bin/macos/datasets download virus genome taxon SARS2 --lineage B.1.351 --filename raw/variants/SARS-CoV-2-B.1.351.zip
-bin/macos/datasets download virus genome taxon SARS2 --lineage B.1.617.2 --filename raw/variants/SARS-CoV-2-B.1.617.2.zip
-bin/macos/datasets download virus genome taxon SARS2 --lineage P.1 --filename raw/variants/SARS-CoV-2-P.1.zip
+bin/macos/datasets download virus genome taxon SARS2 --lineage B.1.1.7 --filename SARS-CoV-2-B.1.1.7.zip
+bin/macos/datasets download virus genome taxon SARS2 --lineage B.1.351 --filename SARS-CoV-2-B.1.351.zip
+bin/macos/datasets download virus genome taxon SARS2 --lineage B.1.617.2 --filename SARS-CoV-2-B.1.617.2.zip
+bin/macos/datasets download virus genome taxon SARS2 --lineage P.1 --filename SARS-CoV-2-P.1.zip
 ```
 
 [Reference sequence](https://www.ncbi.nlm.nih.gov/sars-cov-2/) NC_045512. Download GFF for NC_045512 from https://www.ncbi.nlm.nih.gov/sars-cov-2/.
@@ -63,6 +80,17 @@ cd .. && rm -rf tmp
 ```bash
 id=MZ157012
 efetch -db sequences -format fasta -id ${id} | gzip > raw/${id}.fa.gz
+
+gunzip -c raw/GCF_009858895.2_ASM985889v3_genomic.fna.gz raw/MZ157012.fa.gz | gzip > raw/ref_vs_delta.fa.gz
+
+gunzip -c raw/ref_vs_delta.fa.gz | muscle -out raw/ref_vs_delta.aln.fa
+
+snp-sites -v -o raw/ref_vs_delta.vcf raw/ref_vs_delta.aln.fa
+
+cat raw/ref_vs_delta.vcf | sed 's/ID=1/ID=NC_045512.2/;s/^1/NC_045512.2/' > blah
+mv -f blah raw/ref_vs_delta.vcf
+
+java -Xmx8g -jar bin/snpEff/snpEff.jar NC_045512.2 raw/ref_vs_delta.vcf > raw/ref_vs_delta.ann.vcf 
 ```
 
 [Gamma variant](https://en.wikipedia.org/wiki/SARS-CoV-2_Gamma_variant): This variant of SARS-CoV-2 has been named lineage P.1 and has 17 amino acid substitutions, ten of which are in its spike protein, including these three designated to be of particular concern: N501Y, E484K and K417T.
