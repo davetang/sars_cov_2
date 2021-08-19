@@ -31,5 +31,11 @@ wget https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/LATEST/mac/dataforma
 
 chmod 755 macos/datasets
 chmod 755 macos/dataformat
+
+# Raspberry Pi
+wget https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/LATEST/linux-arm/datasets -O arm32/datasets
+wget https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/LATEST/linux-arm/dataformat -O arm32/dataformat
+chmod 755 arm32/datasets
+chmod 755 arm32/dataformat
 ```
 
