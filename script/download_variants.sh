@@ -6,10 +6,10 @@
 os=$(uname -s)
 arc=$(arch)
 
-if [[ ${os} -eq Darwin ]]; then
+if [[ ${os} == Darwin ]]; then
    datasets=bin/macos/datasets
-elif [[ ${os} -eq Linux ]]; then
-   if [[ ${arc} -eq x86_64 ]]; then
+elif [[ ${os} == Linux ]]; then
+   if [[ ${arc} == x86_64 ]]; then
       datasets=bin/ubuntu/datasets
    elif [[ ${arc} =~ arm ]]; then
       datasets=bin/arm32/datasets
