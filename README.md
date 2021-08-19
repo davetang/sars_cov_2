@@ -49,38 +49,27 @@ java -jar snpEff.jar download NC_045512.2
 
 See [SARS-CoV-2 Variant Classifications and Definitions](https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-info.html) and https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8342008/ for more information.
 
+Download [variants of concern](https://ncbiinsights.ncbi.nlm.nih.gov/2021/04/23/data-sars-cov-2-variants/) using `script/download_variants.sh`. The script uses the ARM32 version of `datasets`, so please change this accordingly.
+
 * Alpha (B.1.1.7)
-* Beta (B.1.351)
-* Delta (B.1.617.2)
-* Gamma (P.1)
-
-https://ncbiinsights.ncbi.nlm.nih.gov/2021/04/23/data-sars-cov-2-variants/
-
-```bash
-mkdir -p raw/variants
-
-# Alpha
-bin/macos/datasets download virus genome taxon SARS-CoV-2 --lineage B.1.1.7   --filename raw/variants/SARS-CoV-2-B.1.1.7.zip
-
-# Beta
-bin/macos/datasets download virus genome taxon SARS-CoV-2 --lineage B.1.351   --filename raw/variants/SARS-CoV-2-B.1.351.zip
-
-# Delta
-bin/macos/datasets download virus genome taxon SARS-CoV-2 --lineage B.1.617.2 --filename raw/variants/SARS-CoV-2-B.1.617.2.zip
-
-# Gamma
-bin/macos/datasets download virus genome taxon SARS-CoV-2 --lineage P.1       --filename raw/variants/SARS-CoV-2-P.1.zip
-```
+* Beta (B.1.351, B.1.351.2, B.1.351.3)
+* Delta (B.1.617.2, AY.1, AY.2, AY.3)
+* Gamma (P.1, P.1.1, P.1.2)
 
 Summarise using `dataformat`.
 
 ```bash
-bin/macos/dataformat tsv virus-genome --package raw/variants/SARS-CoV-2-P.1.zip --fields accession,virus-pangolin,release-date,isolate-lineage | head -5
+bin/macos/dataformat tsv virus-genome --package raw/variants/SARS-CoV-2-P.1.1.20210819.zip --fields accession,virus-pangolin,release-date,isolate-lineage | head -5
 Accession       Virus Pangolin Classification   Release date    Isolate Lineage
-MZ816854.1      P.1     2021-08-16      SARS-CoV-2/human/USA/TX-DSHS-7434/2021
-MZ810634.1      P.1     2021-08-16      SARS-CoV-2/human/USA/CO-CDC-QDX27027876/2021
-MZ810633.1      P.1     2021-08-16      SARS-CoV-2/human/USA/CA-CDC-QDX26988300/2021
-MZ810632.1      P.1     2021-08-16      SARS-CoV-2/human/USA/NJ-CDC-QDX27027792/2021
+MZ799138.1      P.1.1   2021-08-15      SARS-CoV-2/human/USA/2105200446/2021
+MZ788313.1      P.1.1   2021-08-13      SARS-CoV-2/human/USA/TX-DSHS-7363/2021
+MZ770359.1      P.1.1   2021-08-12      SARS-CoV-2/human/USA/UT-UPHL-210729378097/2021
+MZ746322.1      P.1.1   2021-08-10      SARS-CoV-2/human/USA/UT-UPHL-210729378097/2021
+
+for file in $(ls raw/variants/*.zip); do
+   echo ${file};
+   bin/macos/dataformat tsv virus-genome --package ${file} | wc -l
+done
 ```
 
 [Reference sequence](https://www.ncbi.nlm.nih.gov/sars-cov-2/) NC_045512. Download GFF for NC_045512 from https://www.ncbi.nlm.nih.gov/sars-cov-2/.
