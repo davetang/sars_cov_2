@@ -19,13 +19,17 @@ mv seqtk-1.3/seqtk .
 rm -rf seqtk-1.3 v1.3.tar.gz
 ```
 
-Use [datasets](https://www.ncbi.nlm.nih.gov/datasets/docs/quickstarts/command-line-tools/) to download biological sequence data across all domains of life from NCBI.
+Use [command line tools](https://www.ncbi.nlm.nih.gov/datasets/docs/quickstarts/command-line-tools/) to download and summarise biological sequence data across all domains of life from NCBI.
 
 
 ```bash
 wget https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/LATEST/linux-amd64/datasets -O ubuntu/datasets
-wget https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/LATEST/mac/datasets -O macos/datasets
-chmod 755 macos/datasets
 chmod 755 ubuntu/datasets
+
+wget https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/LATEST/mac/datasets -O macos/datasets
+wget https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/LATEST/mac/dataformat -O macos/dataformat
+
+chmod 755 macos/datasets
+chmod 755 macos/dataformat
 ```
 

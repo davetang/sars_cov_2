@@ -54,13 +54,33 @@ See [SARS-CoV-2 Variant Classifications and Definitions](https://www.cdc.gov/cor
 * Delta (B.1.617.2)
 * Gamma (P.1)
 
-https://www.ncbi.nlm.nih.gov/datasets/docs/how-tos/virus/get-sars2-genomes/
+https://ncbiinsights.ncbi.nlm.nih.gov/2021/04/23/data-sars-cov-2-variants/
 
 ```bash
-bin/macos/datasets download virus genome taxon SARS2 --lineage B.1.1.7 --filename SARS-CoV-2-B.1.1.7.zip
-bin/macos/datasets download virus genome taxon SARS2 --lineage B.1.351 --filename SARS-CoV-2-B.1.351.zip
-bin/macos/datasets download virus genome taxon SARS2 --lineage B.1.617.2 --filename SARS-CoV-2-B.1.617.2.zip
-bin/macos/datasets download virus genome taxon SARS2 --lineage P.1 --filename SARS-CoV-2-P.1.zip
+mkdir -p raw/variants
+
+# Alpha
+bin/macos/datasets download virus genome taxon SARS-CoV-2 --lineage B.1.1.7   --filename raw/variants/SARS-CoV-2-B.1.1.7.zip
+
+# Beta
+bin/macos/datasets download virus genome taxon SARS-CoV-2 --lineage B.1.351   --filename raw/variants/SARS-CoV-2-B.1.351.zip
+
+# Delta
+bin/macos/datasets download virus genome taxon SARS-CoV-2 --lineage B.1.617.2 --filename raw/variants/SARS-CoV-2-B.1.617.2.zip
+
+# Gamma
+bin/macos/datasets download virus genome taxon SARS-CoV-2 --lineage P.1       --filename raw/variants/SARS-CoV-2-P.1.zip
+```
+
+Summarise using `dataformat`.
+
+```bash
+bin/macos/dataformat tsv virus-genome --package raw/variants/SARS-CoV-2-P.1.zip --fields accession,virus-pangolin,release-date,isolate-lineage | head -5
+Accession       Virus Pangolin Classification   Release date    Isolate Lineage
+MZ816854.1      P.1     2021-08-16      SARS-CoV-2/human/USA/TX-DSHS-7434/2021
+MZ810634.1      P.1     2021-08-16      SARS-CoV-2/human/USA/CO-CDC-QDX27027876/2021
+MZ810633.1      P.1     2021-08-16      SARS-CoV-2/human/USA/CA-CDC-QDX26988300/2021
+MZ810632.1      P.1     2021-08-16      SARS-CoV-2/human/USA/NJ-CDC-QDX27027792/2021
 ```
 
 [Reference sequence](https://www.ncbi.nlm.nih.gov/sars-cov-2/) NC_045512. Download GFF for NC_045512 from https://www.ncbi.nlm.nih.gov/sars-cov-2/.
