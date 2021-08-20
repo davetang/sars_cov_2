@@ -106,11 +106,38 @@ MZ746322.1      P.1.1   2021-08-10      SARS-CoV-2/human/USA/UT-UPHL-21072937809
 # confirm that accession MZ157012 is a delta variant
 bin/macos/dataformat tsv virus-genome --package raw/variants/SARS-CoV-2-B.1.617.2.20210819.zip --fields accession,virus-pangolin,release-date,isolate-lineage | grep MZ157012
 MZ157012.1      B.1.617.2       2021-05-11      SARS-CoV-2/human/NPL/LMB11/2021
+```
 
+Count number of sequences per lineage.
+
+```bash
 for file in $(ls raw/variants/*.zip); do
    echo ${file};
    bin/macos/dataformat tsv virus-genome --package ${file} | wc -l
 done
+
+raw/variants/SARS-CoV-2-AY.1.20210819.zip
+     254
+raw/variants/SARS-CoV-2-AY.2.20210819.zip
+    1036
+raw/variants/SARS-CoV-2-AY.3.20210819.zip
+    5678
+raw/variants/SARS-CoV-2-B.1.1.7.20210819.zip
+  467304
+raw/variants/SARS-CoV-2-B.1.351.2.20210819.zip
+      47
+raw/variants/SARS-CoV-2-B.1.351.20210819.zip
+    4311
+raw/variants/SARS-CoV-2-B.1.351.3.20210819.zip
+     340
+raw/variants/SARS-CoV-2-B.1.617.2.20210819.zip
+  152212
+raw/variants/SARS-CoV-2-P.1.1.20210819.zip
+    1004
+raw/variants/SARS-CoV-2-P.1.2.20210819.zip
+     746
+raw/variants/SARS-CoV-2-P.1.20210819.zip
+   16109
 ```
 
 ### Genomes
