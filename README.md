@@ -1,3 +1,26 @@
+Table of Contents
+=================
+
+      * [README](#readme)
+      * [Tools](#tools)
+      * [Sequences](#sequences)
+         * [Reference sequence](#reference-sequence)
+         * [Variants](#variants)
+         * [Genomes](#genomes)
+         * [Proteins](#proteins)
+         * [Nucleotide sequences](#nucleotide-sequences)
+      * [Identifying variants in lineages](#identifying-variants-in-lineages)
+      * [BLAST](#blast)
+      * [Parse results](#parse-results)
+      * [ClustalW](#clustalw)
+      * [SRA](#sra)
+         * [SRR10971381](#srr10971381)
+      * [Links](#links)
+      * [Appendix](#appendix)
+         * [Entrez Direct Functions](#entrez-direct-functions)
+
+Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
+
 ## README
 
 The [Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)](https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome_coronavirus_2) is an RNA virus currently causing the 2019–20 coronavirus pandemic. This repository contains my analysis code and notes for my analysis of SARS-CoV-2. My hope is that some of this work will be useful for researchers currently working on the analysis of SARS-CoV-2.
@@ -45,11 +68,25 @@ java -jar snpEff.jar download NC_045512.2
 
 ## Sequences
 
+### Reference sequence
+
+[Reference sequence](https://www.ncbi.nlm.nih.gov/sars-cov-2/) NC_045512. Download GFF for NC_045512 from https://www.ncbi.nlm.nih.gov/sars-cov-2/.
+
+```bash
+mkdir tmp && cd tmp
+../bin/macos/datasets download genome accession GCF_009858895.2 --filename GCF_009858895.2.zip --include-gbff --include-gtf
+unzip GCF_009858895.2.zip
+
+gzip ncbi_dataset/data/GCF_009858895.2/GCF_009858895.2_ASM985889v3_genomic.fna
+mv ncbi_dataset/data/GCF_009858895.2/GCF_009858895.2_ASM985889v3_genomic.fna.gz ../raw
+cd .. && rm -rf tmp
+```
+
 ### Variants
 
 See [SARS-CoV-2 Variant Classifications and Definitions](https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-info.html) and https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8342008/ for more information.
 
-Download [variants of concern](https://ncbiinsights.ncbi.nlm.nih.gov/2021/04/23/data-sars-cov-2-variants/) using `script/download_variants.sh`. The script uses the ARM32 version of `datasets`, so please change this accordingly.
+Download [variants of concern](https://ncbiinsights.ncbi.nlm.nih.gov/2021/04/23/data-sars-cov-2-variants/) using `script/download_variants.sh`. The script will keep trying to download a lineage until successful; this was implemented because for variants with a lot of sequences (Alpha and Delta), the download would disconnect quite often (despite having a very fast Internet connection).
 
 * Alpha (B.1.1.7)
 * Beta (B.1.351, B.1.351.2, B.1.351.3)
@@ -66,43 +103,15 @@ MZ788313.1      P.1.1   2021-08-13      SARS-CoV-2/human/USA/TX-DSHS-7363/2021
 MZ770359.1      P.1.1   2021-08-12      SARS-CoV-2/human/USA/UT-UPHL-210729378097/2021
 MZ746322.1      P.1.1   2021-08-10      SARS-CoV-2/human/USA/UT-UPHL-210729378097/2021
 
+# confirm that accession MZ157012 is a delta variant
+bin/macos/dataformat tsv virus-genome --package raw/variants/SARS-CoV-2-B.1.617.2.20210819.zip --fields accession,virus-pangolin,release-date,isolate-lineage | grep MZ157012
+MZ157012.1      B.1.617.2       2021-05-11      SARS-CoV-2/human/NPL/LMB11/2021
+
 for file in $(ls raw/variants/*.zip); do
    echo ${file};
    bin/macos/dataformat tsv virus-genome --package ${file} | wc -l
 done
 ```
-
-[Reference sequence](https://www.ncbi.nlm.nih.gov/sars-cov-2/) NC_045512. Download GFF for NC_045512 from https://www.ncbi.nlm.nih.gov/sars-cov-2/.
-
-```bash
-mkdir tmp && cd tmp
-../bin/macos/datasets download genome accession GCF_009858895.2 --filename GCF_009858895.2.zip --include-gbff --include-gtf
-unzip GCF_009858895.2.zip
-
-gzip ncbi_dataset/data/GCF_009858895.2/GCF_009858895.2_ASM985889v3_genomic.fna
-mv ncbi_dataset/data/GCF_009858895.2/GCF_009858895.2_ASM985889v3_genomic.fna.gz ../raw
-cd .. && rm -rf tmp
-```
-
-[Delta variant](https://en.wikipedia.org/wiki/SARS-CoV-2_Delta_variant): It has mutations in the gene encoding the SARS-CoV-2 spike protein[6] causing the substitutions T478K, P681R and L452R.
-
-```bash
-id=MZ157012
-efetch -db sequences -format fasta -id ${id} | gzip > raw/${id}.fa.gz
-
-gunzip -c raw/GCF_009858895.2_ASM985889v3_genomic.fna.gz raw/MZ157012.fa.gz | gzip > raw/ref_vs_delta.fa.gz
-
-gunzip -c raw/ref_vs_delta.fa.gz | muscle -out raw/ref_vs_delta.aln.fa
-
-snp-sites -v -o raw/ref_vs_delta.vcf raw/ref_vs_delta.aln.fa
-
-cat raw/ref_vs_delta.vcf | sed 's/ID=1/ID=NC_045512.2/;s/^1/NC_045512.2/' > blah
-mv -f blah raw/ref_vs_delta.vcf
-
-java -Xmx8g -jar bin/snpEff/snpEff.jar NC_045512.2 raw/ref_vs_delta.vcf > raw/ref_vs_delta.ann.vcf 
-```
-
-[Gamma variant](https://en.wikipedia.org/wiki/SARS-CoV-2_Gamma_variant): This variant of SARS-CoV-2 has been named lineage P.1 and has 17 amino acid substitutions, ten of which are in its spike protein, including these three designated to be of particular concern: N501Y, E484K and K417T.
 
 ### Genomes
 
@@ -333,6 +342,38 @@ I wrote a simple Perl script to calculate the length of the FASTA sequences.
 today=$(date "+%Y%m%d")
 script/fasta_stats.pl -f raw/coronavirus_$today.fa | gzip > result/coronavirus_${today}_stat.txt.gz
 ```
+
+## Identifying variants in lineages
+
+The [SARS-CoV-2 Delta variant](https://en.wikipedia.org/wiki/SARS-CoV-2_Delta_variant) is a variant of lineage B.1.617 of SARS-CoV-2; it belongs to lineage B.1.617.2. It has mutations in the gene encoding the SARS-CoV-2 spike protein causing the substitutions T478K, P681R and L452R. The workflow below will download the FASTA sequence of one particular Delta variant (accession MZ157012), align it with the SARS-CoV-2 reference sequence, generate a VCF file based on the alignment, and finally annotate the differences to the reference sequence.
+
+```bash
+id=MZ157012
+efetch -db sequences -format fasta -id ${id} | gzip > raw/${id}.fa.gz
+
+gunzip -c raw/GCF_009858895.2_ASM985889v3_genomic.fna.gz raw/MZ157012.fa.gz | gzip > raw/ref_vs_delta.fa.gz
+
+gunzip -c raw/ref_vs_delta.fa.gz | muscle -out raw/ref_vs_delta.aln.fa
+
+snp-sites -v -o raw/ref_vs_delta.vcf raw/ref_vs_delta.aln.fa
+
+cat raw/ref_vs_delta.vcf | sed 's/ID=1/ID=NC_045512.2/;s/^1/NC_045512.2/' > blah
+mv -f blah raw/ref_vs_delta.vcf
+
+java -Xmx8g -jar bin/snpEff/snpEff.jar NC_045512.2 raw/ref_vs_delta.vcf > raw/ref_vs_delta.ann.vcf 
+```
+
+There are four mutations in the spike protein in MZ157012; two intersect with the reported substitutions in the Wikipedia article: L452R and T478K but P681R was not found.
+
+```bash
+cat raw/ref_vs_delta.ann.vcf | perl -nle 'next if /^#/; @s=split(/\|/); next unless $s[3] eq "S"; print $s[10]' 
+p.Leu452Arg
+p.Thr478Lys
+p.Asp614Gly
+p.Asp950Asn
+```
+
+[Gamma variant](https://en.wikipedia.org/wiki/SARS-CoV-2_Gamma_variant): This variant of SARS-CoV-2 has been named lineage P.1 and has 17 amino acid substitutions, ten of which are in its spike protein, including these three designated to be of particular concern: N501Y, E484K and K417T.
 
 ## BLAST
 
