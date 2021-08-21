@@ -18,3 +18,5 @@ dependencies:
   - csvkit
   - snp-sites
   - muscle
+  - mafft
+  - emboss
