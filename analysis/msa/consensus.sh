@@ -3,6 +3,7 @@
 set -euo pipefail
 
 variant=P.1
+threads=8
 
 rand=$$$RANDOM
 tmpdir=/tmp/${rand}
@@ -40,7 +41,7 @@ fi
 
 if [[ ! -e ${variant}/genomic.uniq.mafft.fa ]]; then
    >&2 echo Generating ${variant}/genomic.uniq.mafft.fa
-   mafft --retree 2 --inputorder ${variant}/genomic.uniq.fa > ${tmpdir}/genomic.uniq.mafft.fa
+   mafft --thread ${threads} --retree 2 --inputorder ${variant}/genomic.uniq.fa > ${tmpdir}/genomic.uniq.mafft.fa
    mv ${tmpdir}/genomic.uniq.mafft.fa ${variant}
 else
    >&2 echo ${variant}/genomic.uniq.mafft.fa already exists
