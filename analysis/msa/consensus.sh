@@ -41,7 +41,11 @@ fi
 
 if [[ ! -e ${variant}/genomic.uniq.mafft.fa ]]; then
    >&2 echo Generating ${variant}/genomic.uniq.mafft.fa
-   mafft --thread ${threads} --retree 2 --inputorder ${variant}/genomic.uniq.fa > ${tmpdir}/genomic.uniq.mafft.fa
+
+   # FFT-NS-1 (very fast; recommended for >2000 sequences; progressive method with a rough guide tree):
+   # mafft --retree 1 --maxiterate 0 input [> output]
+
+   mafft --thread ${threads} --retree 1 --maxiterate 0 --inputorder ${variant}/genomic.uniq.fa > ${tmpdir}/genomic.uniq.mafft.fa
    mv ${tmpdir}/genomic.uniq.mafft.fa ${variant}
 else
    >&2 echo ${variant}/genomic.uniq.mafft.fa already exists
