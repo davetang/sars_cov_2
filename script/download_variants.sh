@@ -5,14 +5,16 @@
 
 os=$(uname -s)
 arc=$(arch)
+today=$(date +%Y%m%d)
+path=$(dirname $0)
 
 if [[ ${os} == Darwin ]]; then
-   datasets=bin/macos/datasets
+   datasets=${path}/../bin/macos/datasets
 elif [[ ${os} == Linux ]]; then
    if [[ ${arc} == x86_64 ]]; then
-      datasets=bin/ubuntu/datasets
+      datasets=${path}/../bin/ubuntu/datasets
    elif [[ ${arc} =~ arm ]]; then
-      datasets=bin/arm32/datasets
+      datasets=${path}/../bin/arm32/datasets
    fi
 else
    >&2 echo Unrecognised operating system
@@ -22,6 +24,7 @@ fi
 >&2 echo Using ${datasets}
 
 lineages=(
+B.1.1.529
 AY.1
 AY.2
 AY.3
@@ -34,9 +37,6 @@ P.1.2
 B.1.617.2
 B.1.1.7
 )
-
-today=$(date +%Y%m%d)
-path=$(dirname $0)
 
 if [[ -d ${path}/../raw/variants ]]; then
    >&2 echo ${path}/../raw/variants exists

@@ -92,6 +92,7 @@ Download [variants of concern](https://ncbiinsights.ncbi.nlm.nih.gov/2021/04/23/
 * Beta (B.1.351, B.1.351.2, B.1.351.3)
 * Delta (B.1.617.2, AY.1, AY.2, AY.3)
 * Gamma (P.1, P.1.1, P.1.2)
+* Omicron (B.1.1.529)
 
 Summarise using `dataformat`.
 
