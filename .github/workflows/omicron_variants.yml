@@ -35,7 +35,8 @@ jobs:
 
       - name: Install tools
         run: |
-          wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.11.3/sratoolkit.2.11.3-ubuntu64.tar.gz
+          cd src
+          wget --quiet https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.11.3/sratoolkit.2.11.3-ubuntu64.tar.gz
           tar -xzf sratoolkit.2.11.3-ubuntu64.tar.gz
           fasterq-dump -h
 
