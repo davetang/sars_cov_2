@@ -1,0 +1,43 @@
+# name of workflow that will be displayed on the actions page
+name: Call Omicron variants
+
+# execute workflow only when these files are modified
+on:
+  push:
+    paths:
+      - '.github/workflows/omicron_variants.yml'
+  workflow_dispatch:
+
+# a list of the jobs that run as part of the workflow
+jobs:
+  call_variant:
+    runs-on: ubuntu-latest
+
+    # the type of runner to run the given job
+    container: davetang/build:1.1
+
+    # a list of the steps that will run as part of the job
+    steps:
+      - run: echo "The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - run: echo "The ${{ github.repository }} repository has been cloned to the runner."
+      - run: echo "The workflow is now ready to test your code on the runner."
+
+      - name: Prepare environment
+        run: |
+          mkdir -p tools/bin
+          mkdir src
+          export PATH=$(pwd)/tools/bin:$(pwd)/src/edirect:$(pwd)/src/sratoolkit.2.11.3-ubuntu64/bin/:$PATH
+          cp -r .ncbi ~
+
+      - name: Install tools
+        run: |
+          wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.11.3/sratoolkit.2.11.3-ubuntu64.tar.gz
+          tar -xzf sratoolkit.2.11.3-ubuntu64.tar.gz
+          fasterq-dump -h
+
+      - run: echo "This job's status is ${{ job.status }}."
+
