@@ -131,7 +131,7 @@ jobs:
              tabix -p vcf ${base}.vcf.gz
           done
           bcftools merge -o PRJNA784038_illumina.vcf -O v SRR*.vcf.gz
-          bcftools norm PRJNA784038_illumina.vcf -o PRJNA784038_illumina.norm.vcf
+          # bcftools norm PRJNA784038_illumina.vcf -o PRJNA784038_illumina.norm.vcf
 
       - run: echo "This job's status is ${{ job.status }}."
 
