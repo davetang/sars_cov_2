@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     # the type of runner to run the given job
-    container: davetang/build:1.1
+    # container: davetang/build:1.1
 
     # a list of the steps that will run as part of the job
     steps:
@@ -29,10 +29,12 @@ jobs:
       - name: Prepare environment
         run: |
           pwd
+          echo $PATH
           mkdir -p tools/bin
           mkdir src
           export PATH=$(pwd)/tools/bin:$(pwd)/src/edirect:$(pwd)/src/sratoolkit.2.11.3-ubuntu64/bin/:$PATH
           cp -r .ncbi ~
+          echo $PATH
 
       - name: Install tools
         run: |
