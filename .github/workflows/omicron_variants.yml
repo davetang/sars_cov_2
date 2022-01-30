@@ -28,23 +28,66 @@ jobs:
 
       - name: Prepare environment
         run: |
-          pwd
-          echo $GITHUB_WORKSPACE
-          echo $GITHUB_PATH
           mkdir -p tools/bin
           mkdir src
           echo "$GITHUB_WORKSPACE/tools/bin:$GITHUB_WORKSPACE/src/edirect:$GITHUB_WORKSPACE/src/sratoolkit.2.11.3-ubuntu64/bin/" >> $GITHUB_PATH
           cp -r .ncbi ~
-          echo $GITHUB_PATH
 
-      - name: Install tools
+      - name: Install SRA Toolkit and datasets
         run: |
-          pwd
-          echo $GITHUB_PATH
           cd src
           wget --quiet https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.11.3/sratoolkit.2.11.3-ubuntu64.tar.gz
           tar -xzf sratoolkit.2.11.3-ubuntu64.tar.gz
-          fasterq-dump -h
+          wget --quiet https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/LATEST/linux-amd64/datasets
+          chmod 755 datasets && mv datasets $GITHUB_WORKSPACE/tools/bin
+
+      - name: SnpEff
+        run: |
+          cd src
+          wget --quiet https://snpeff.blob.core.windows.net/versions/snpEff_latest_core.zip
+          unzip snpEff_latest_core.zip
+          cd snpEff
+          java -jar snpEff.jar download NC_045512.2
+
+      - name: Install Entrez Direct
+        run: |
+          cd src
+          url=ftp://ftp.ncbi.nlm.nih.gov/entrez/entrezdirect
+          wget --quiet ${url}/edirect.tar.gz
+          tar -xzf edirect.tar.gz
+          cd edirect
+          plt=Linux
+          for exc in xtract rchive transmute; do
+             wget --quiet ${url}/${exc}.${plt}.gz
+             gunzip ${exc}.${plt}.gz
+             chmod 755 ${exc}.${plt}
+          done
+
+      - name: Compile tools
+        run: |
+          cd src
+          git clone https://github.com/atks/vt.git  
+          cd vt 
+          git submodule update --init --recursive 
+          make
+          make test
+          mv vt $GITHUB_WORKSPACE/tools/bin
+          cd ..
+          wget --quiet https://github.com/lh3/bwa/archive/refs/tags/v0.7.17.tar.gz
+          tar -xzf v0.7.17.tar.gz
+          cd bwa-0.7.17 && make && mv bwa $GITHUB_WORKSPACE/tools/bin
+          cd ..
+          ver=1.14
+          dir=$GITHUB_WORKSPACE/tools
+          for tool in htslib bcftools samtools; do
+             url=https://github.com/samtools/${tool}/releases/download/${ver}/${tool}-${ver}.tar.bz2
+             wget --quiet ${url}
+             tar xjf ${tool}-${ver}.tar.bz2
+             cd ${tool}-${ver}
+             ./configure --prefix=${dir}
+             make && make install
+             cd ..
+          done
 
       - run: echo "This job's status is ${{ job.status }}."
 
