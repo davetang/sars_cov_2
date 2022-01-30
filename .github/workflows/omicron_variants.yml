@@ -84,7 +84,7 @@ jobs:
 
       - name: Download data
         run: |
-          cd ref
+          mkdir fasta && cd fasta
           datasets download genome accession GCF_009858895.2 --filename GCF_009858895.2.zip --include-gbff --include-gtf
           unzip GCF_009858895.2.zip
           ln -s ncbi_dataset/data/GCF_009858895.2/GCF_009858895.2_ASM985889v3_genomic.fna ref.fa
@@ -99,7 +99,7 @@ jobs:
       - name: Align
         run: |
           mkdir bam && cd bam
-          ref=$GITHUB_WORKSPACE/ref/ref.fa
+          ref=$GITHUB_WORKSPACE/fasta/ref.fa
           thread=2
           for acc in $(cat $GITHUB_WORKSPACE/runinfo.csv | grep "ILLUMINA" | cut -f1 -d','); do
              platform=$(cat $GITHUB_WORKSPACE/runinfo.csv | grep ${acc} | cut -f19 -d',')
@@ -123,7 +123,7 @@ jobs:
       - name: Call variants
         run: |
           mkdir vcf && cd vcf
-          ref=$GITHUB_WORKSPACE/ref/ref.fa
+          ref=$GITHUB_WORKSPACE/fasta/ref.fa
           for bam in $(ls $GITHUB_WORKSPACE/bam/*.bam); do
              base=$(basename ${bam} .bam)
              bcftools mpileup -d 10000 -O v -f ${ref} ${bam} | bcftools call -mv -O v -o ${base}.vcf
