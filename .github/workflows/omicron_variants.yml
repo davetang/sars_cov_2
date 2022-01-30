@@ -29,17 +29,18 @@ jobs:
       - name: Prepare environment
         run: |
           pwd
-          echo $PATH
+          echo $GITHUB_WORKSPACE
+          echo $GITHUB_PATH
           mkdir -p tools/bin
           mkdir src
-          export PATH=$(pwd)/tools/bin:$(pwd)/src/edirect:$(pwd)/src/sratoolkit.2.11.3-ubuntu64/bin/:$PATH
+          echo "$GITHUB_WORKSPACE/tools/bin:$GITHUB_WORKSPACE/src/edirect:$GITHUB_WORKSPACE/src/sratoolkit.2.11.3-ubuntu64/bin/" >> $GITHUB_PATH
           cp -r .ncbi ~
-          echo $PATH
+          echo $GITHUB_PATH
 
       - name: Install tools
         run: |
           pwd
-          echo $PATH
+          echo $GITHUB_PATH
           cd src
           wget --quiet https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.11.3/sratoolkit.2.11.3-ubuntu64.tar.gz
           tar -xzf sratoolkit.2.11.3-ubuntu64.tar.gz
