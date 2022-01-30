@@ -33,6 +33,25 @@ jobs:
           echo "$GITHUB_WORKSPACE/tools/bin:$GITHUB_WORKSPACE/src/edirect:$GITHUB_WORKSPACE/src/sratoolkit.2.11.3-ubuntu64/bin/" >> $GITHUB_PATH
           cp -r .ncbi ~
 
+      - name: Compile tools
+        run: |
+          cd src
+          wget --quiet https://github.com/lh3/bwa/archive/refs/tags/v0.7.17.tar.gz
+          tar -xzf v0.7.17.tar.gz
+          cd bwa-0.7.17 && make && mv bwa $GITHUB_WORKSPACE/tools/bin
+          cd ..
+          ver=1.14
+          dir=$GITHUB_WORKSPACE/tools
+          for tool in htslib bcftools samtools; do
+             url=https://github.com/samtools/${tool}/releases/download/${ver}/${tool}-${ver}.tar.bz2
+             wget --quiet ${url}
+             tar xjf ${tool}-${ver}.tar.bz2
+             cd ${tool}-${ver}
+             ./configure --prefix=${dir}
+             make && make install
+             cd ..
+          done
+
       - name: Install SRA Toolkit and datasets
         run: |
           cd src
@@ -63,31 +82,56 @@ jobs:
              chmod 755 ${exc}.${plt}
           done
 
-      - name: Compile tools
+      - name: Download data
         run: |
-          cd src
-          git clone https://github.com/atks/vt.git  
-          cd vt 
-          git submodule update --init --recursive 
-          make
-          make test
-          mv vt $GITHUB_WORKSPACE/tools/bin
+          cd ref
+          datasets download genome accession GCF_009858895.2 --filename GCF_009858895.2.zip --include-gbff --include-gtf
+          unzip GCF_009858895.2.zip
+          ln -s ncbi_dataset/data/GCF_009858895.2/GCF_009858895.2_ASM985889v3_genomic.fna ref.fa
+          bwa index ref.fa
           cd ..
-          wget --quiet https://github.com/lh3/bwa/archive/refs/tags/v0.7.17.tar.gz
-          tar -xzf v0.7.17.tar.gz
-          cd bwa-0.7.17 && make && mv bwa $GITHUB_WORKSPACE/tools/bin
-          cd ..
-          ver=1.14
-          dir=$GITHUB_WORKSPACE/tools
-          for tool in htslib bcftools samtools; do
-             url=https://github.com/samtools/${tool}/releases/download/${ver}/${tool}-${ver}.tar.bz2
-             wget --quiet ${url}
-             tar xjf ${tool}-${ver}.tar.bz2
-             cd ${tool}-${ver}
-             ./configure --prefix=${dir}
-             make && make install
-             cd ..
+          project=PRJNA784038
+          esearch -db sra -query ${project} | efetch -format runinfo > runinfo.csv
+          for acc in $(cat runinfo.csv | grep "ILLUMINA" | cut -f1 -d','); do
+             fasterq-dump -p --outdir fastq ${acc}
           done
+
+      - name: Align
+        run: |
+          mkdir bam && cd bam
+          ref=$GITHUB_WORKSPACE/ref/ref.fa
+          thread=2
+          for acc in $(cat $GITHUB_WORKSPACE/runinfo.csv | grep "ILLUMINA" | cut -f1 -d','); do
+             platform=$(cat $GITHUB_WORKSPACE/runinfo.csv | grep ${acc} | cut -f19 -d',')
+             sample=$(cat $GITHUB_WORKSPACE/runinfo.csv | grep ${acc} | cut -f25 -d',')
+             if [[ -e $GITHUB_WORKSPACE/fastq/${acc}_1.fastq && $GITHUB_WORKSPACE/fastq/${acc}_2.fastq ]]; then
+                bwa mem \
+                  -t ${thread} \
+                  -R "@RG\tID:${acc}\tSM:${sample}\tPL:${platform}" \
+                  ${ref} \
+                  $GITHUB_WORKSPACE/fastq/${acc}_1.fastq \
+                  $GITHUB_WORKSPACE/fastq/${acc}_2.fastq |
+                samtools sort -@ ${thread} -O BAM |\
+                tee ${acc}.bam |\
+                samtools index - ${acc}.bam.bai
+             fi
+          done
+
+      - name: Remove FASTQ files
+        run: rm -rf fastq
+
+      - name: Call variants
+        run: |
+          mkdir vcf && cd vcf
+          ref=$GITHUB_WORKSPACE/ref/ref.fa
+          for bam in $(ls $GITHUB_WORKSPACE/bam/*.bam); do
+             base=$(basename ${bam} .bam)
+             bcftools mpileup -d 10000 -O v -f ${ref} ${bam} | bcftools call -mv -O v -o ${base}.vcf
+             bgzip ${base}.vcf
+             tabix -p vcf ${base}.vcf.gz
+          done
+          bcftools merge -o PRJNA784038_illumina.vcf -O v SRR*.vcf.gz
+          bcftools norm PRJNA784038_illumina.vcf -o PRJNA784038_illumina.norm.vcf
 
       - run: echo "This job's status is ${{ job.status }}."
 
