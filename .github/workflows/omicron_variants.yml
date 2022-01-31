@@ -60,13 +60,13 @@ jobs:
           wget --quiet https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/LATEST/linux-amd64/datasets
           chmod 755 datasets && mv datasets $GITHUB_WORKSPACE/tools/bin
 
-      - name: SnpEff
-        run: |
-          cd src
-          wget --quiet https://snpeff.blob.core.windows.net/versions/snpEff_latest_core.zip
-          unzip snpEff_latest_core.zip
-          cd snpEff
-          java -jar snpEff.jar download NC_045512.2
+#      - name: SnpEff
+#        run: |
+#          cd src
+#          wget --quiet https://snpeff.blob.core.windows.net/versions/snpEff_latest_core.zip
+#          unzip snpEff_latest_core.zip
+#          cd snpEff
+#          java -jar snpEff.jar download NC_045512.2
 
       - name: Install Entrez Direct
         run: |
@@ -115,10 +115,8 @@ jobs:
                 tee ${acc}.bam |\
                 samtools index - ${acc}.bam.bai
              fi
+             rm $GITHUB_WORKSPACE/fastq/${acc}_1.fastq $GITHUB_WORKSPACE/fastq/${acc}_2.fastq
           done
-
-      - name: Remove FASTQ files
-        run: rm -rf fastq
 
       - name: Call variants
         run: |
@@ -132,6 +130,17 @@ jobs:
           done
           bcftools merge -o PRJNA784038_illumina.vcf -O v SRR*.vcf.gz
           # bcftools norm PRJNA784038_illumina.vcf -o PRJNA784038_illumina.norm.vcf
+          bgzip PRJNA784038_illumina.vcf
+          tabix -p vcf PRJNA784038_illumina.vcf.gz
+          cp PRJNA784038_illumina.vcf.gz* ../result
+
+      - name: Add and commit variants
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'davetingpongtang@gmail.com'
+          git add result/PRJNA784038_illumina.vcf*
+          git commit -m "Add variant calls"
+          git push origin master
 
       - run: echo "This job's status is ${{ job.status }}."
 
