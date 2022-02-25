@@ -25,6 +25,12 @@ else
    exit 1
 fi
 
+if [[ ! -d ${path}/snpEff ]]; then
+   wget https://snpeff.blob.core.windows.net/versions/snpEff_latest_core.zip
+   unzip snpEff_latest_core.zip
+   rm snpEff_latest_core.zip
+fi
+
 >&2 echo Done
 exit 0
 

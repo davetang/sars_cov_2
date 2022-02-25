@@ -23,6 +23,8 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 ## README
 
+![Call Omicron variants](https://github.com/davetang/sars_cov_2/actions/workflows/omicron_variants.yml/badge.svg)
+
 The [Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)](https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome_coronavirus_2) is an RNA virus currently causing the 2019–20 coronavirus pandemic. This repository contains my analysis code and notes for my analysis of SARS-CoV-2. My hope is that some of this work will be useful for researchers currently working on the analysis of SARS-CoV-2.
 
 For more information see my related blog posts:
@@ -30,6 +32,7 @@ For more information see my related blog posts:
 1. https://davetang.org/muse/2020/03/05/sequence-analysis-sars-cov-2/
 2. https://davetang.org/muse/2020/03/06/sequence-analysis-of-sars-cov-2-part-2/
 3. https://davetang.org/muse/2020/03/12/sequence-analysis-of-sars-cov-2-part-3/
+4. https://davetang.org/muse/2022/01/26/omicron-variants/ (this analysis workflow is also implemented as a [GitHub Actions workflow](https://github.com/davetang/sars_cov_2/blob/master/.github/workflows/omicron_variants.yml))
 
 ## Tools
 
@@ -66,6 +69,8 @@ cd snpEff
 java -jar snpEff.jar download NC_045512.2
 ```
 
+The script `bin/download.sh` will attempt to download `datasets`, `dataformat`, and `snpEff`.
+
 ## Sequences
 
 ### Reference sequence
@@ -86,13 +91,13 @@ cd .. && rm -rf tmp
 
 See [SARS-CoV-2 Variant Classifications and Definitions](https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-info.html) and https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8342008/ for more information.
 
-Download [variants of concern](https://ncbiinsights.ncbi.nlm.nih.gov/2021/04/23/data-sars-cov-2-variants/) using `script/download_variants.sh`. The script will keep trying to download a lineage until successful; this was implemented because for variants with a lot of sequences (Alpha and Delta), the download would disconnect quite often (despite having a very fast Internet connection).
+Download [variants of concern](https://ncbiinsights.ncbi.nlm.nih.gov/2021/04/23/data-sars-cov-2-variants/) using `script/download_variants.sh`. The script will keep trying to download a [lineage](https://cov-lineages.org/lineage_list.html) until successful; this was implemented because for variants with a lot of sequences (Alpha and Delta), the download would disconnect quite often (despite having a very fast Internet connection).
 
 * Alpha (B.1.1.7)
 * Beta (B.1.351, B.1.351.2, B.1.351.3)
 * Delta (B.1.617.2, AY.1, AY.2, AY.3)
 * Gamma (P.1, P.1.1, P.1.2)
-* Omicron (B.1.1.529)
+* Omicron (B.1.1.529, BA.1, BA.2, BA.3)
 
 Summarise using `dataformat`.
 

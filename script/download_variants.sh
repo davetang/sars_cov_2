@@ -24,6 +24,9 @@ fi
 >&2 echo Using ${datasets}
 
 lineages=(
+BA.1
+BA.2
+BA.3
 B.1.1.529
 AY.1
 AY.2
