@@ -146,6 +146,56 @@ raw/variants/SARS-CoV-2-P.1.20210819.zip
    16109
 ```
 
+#### Omicron
+
+BA.1.
+
+```bash
+bin/macos/dataformat tsv virus-genome --package raw/variants/SARS-CoV-2-BA.1.20220225.zip --fields accession,virus-pangolin,release-date,isolate-lineage,geo-location | head -5
+Accession	Virus Pangolin Classification	Release date	Isolate Lineage	Geographic location
+OL815078.1	BA.1	2021-12-11	SARS-CoV-2/human/USA/NY-CDC-IBX854867598434/2021	USA: New York
+OL808790.1	BA.1	2021-12-10	SARS-CoV-2/human/USA/MA-MGB-02636/2021	USA: Massachusetts
+OL802692.1	BA.1	2021-12-10	SARS-CoV-2/human/USA/NY-CDCBI-CRSP_GHHFUDBUXELXFY54/2021	USA: New York
+OL800703.1	BA.1	2021-12-10	SARS-CoV-2/human/DEU/FFM-ZAF0396/2021	Germany: Hesse
+
+bin/macos/dataformat tsv virus-genome --package raw/variants/SARS-CoV-2-BA.1.20220225.zip | wc -l
+8792232
+```
+
+BA.2.
+
+```bash
+bin/macos/dataformat tsv virus-genome --package raw/variants/SARS-CoV-2-BA.2.20220225.zip --fields accession,virus-pangolin,release-date,isolate-lineage,geo-location | head -5
+Accession	Virus Pangolin Classification	Release date	Isolate Lineage	Geographic location
+OM364005.1	BA.2	2022-01-24	SARS-CoV-2/human/USA/WA-S16397/2022	USA: Washington,King County
+OM362060.1	BA.2	2022-01-24	SARS-CoV-2/human/USA/NY-CDC-LC0466930/2022	USA: New York
+OM354922.1	BA.2	2022-01-24	SARS-CoV-2/human/USA/CA-CDC-STM-X4Q4J65PP/2022	USA: California
+OM349979.1	BA.2	2022-01-24	SARS-CoV-2/human/IND/MH-ICMR-NIV-INSACOG-GSEQ-7029/2021	India
+
+bin/macos/dataformat tsv virus-genome --package raw/variants/SARS-CoV-2-BA.2.20220225.zip | wc -l
+   97503
+
+bin/macos/dataformat tsv virus-genome --package raw/variants/SARS-CoV-2-BA.2.20220225.zip --fields geo-location | grep -v "^Geographic" | cut -f1 -d':' | sort | uniq -c | sort -k1rn
+6896 United Kingdom
+1623 USA
+ 301 Switzerland
+  50 Germany
+  32 Bangladesh
+  30 Denmark
+  25 Slovakia
+  18 South Africa
+  16 Bahrain
+   5 China
+   4 Austria
+   3 Japan
+   1 India
+
+bin/macos/dataformat tsv virus-genome --package raw/variants/SARS-CoV-2-BA.2.20220225.zip --fields accession,virus-pangolin,release-date,isolate-lineage,geo-location | grep Japan
+BS002318.1	BA.2	2022-01-26	hCoV-19/Japan/SZ-NIG-4-C118/2022	Japan:Shizuoka, Hamamatsu
+BS002317.1	BA.2	2022-01-26	hCoV-19/Japan/SZ-NIG-4-C117/2022	Japan:Shizuoka, Hamamatsu
+BS002303.1	BA.2	2022-01-26	hCoV-19/Japan/SZ-NIG-4-C67/2022	Japan:Shizuoka, Hamamatsu
+```
+
 ### Genomes
 
 Download [Coronavirus genomes](https://www.ncbi.nlm.nih.gov/datasets/coronavirus/genomes/) using `datasets`.
