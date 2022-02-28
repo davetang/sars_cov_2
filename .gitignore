@@ -1,4 +1,6 @@
 raw/*.fa
+raw/*.fa.gz
+raw/*.vcf
 raw/variants
 raw/protein
 raw/genome
