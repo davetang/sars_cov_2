@@ -1,23 +1,25 @@
 Table of Contents
 =================
 
-* [README](#readme)
-* [Tools](#tools)
-* [Sequences](#sequences)
-   * [Reference sequence](#reference-sequence)
-   * [Variants](#variants)
-   * [Genomes](#genomes)
-   * [Proteins](#proteins)
-   * [Nucleotide sequences](#nucleotide-sequences)
-* [Identifying variants in lineages](#identifying-variants-in-lineages)
-* [BLAST](#blast)
-* [Parse results](#parse-results)
-* [ClustalW](#clustalw)
-* [SRA](#sra)
-   * [SRR10971381](#srr10971381)
-* [Links](#links)
-* [Appendix](#appendix)
-   * [Entrez Direct Functions](#entrez-direct-functions)
+* [Table of Contents](#table-of-contents)
+   * [README](#readme)
+   * [Tools](#tools)
+   * [Sequences](#sequences)
+      * [Reference sequence](#reference-sequence)
+      * [Variants](#variants)
+         * [Omicron](#omicron)
+      * [Genomes](#genomes)
+      * [Proteins](#proteins)
+      * [Nucleotide sequences](#nucleotide-sequences)
+   * [Identifying variants in lineages](#identifying-variants-in-lineages)
+   * [BLAST](#blast)
+   * [Parse results](#parse-results)
+   * [ClustalW](#clustalw)
+   * [SRA](#sra)
+      * [SRR10971381](#srr10971381)
+   * [Links](#links)
+   * [Appendix](#appendix)
+      * [Entrez Direct Functions](#entrez-direct-functions)
 
 Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
@@ -433,16 +435,11 @@ The [SARS-CoV-2 Delta variant](https://en.wikipedia.org/wiki/SARS-CoV-2_Delta_va
 ```bash
 id=MZ157012
 efetch -db sequences -format fasta -id ${id} | gzip > raw/${id}.fa.gz
-
 gunzip -c raw/GCF_009858895.2_ASM985889v3_genomic.fna.gz raw/MZ157012.fa.gz | gzip > raw/ref_vs_delta.fa.gz
-
 gunzip -c raw/ref_vs_delta.fa.gz | muscle -out raw/ref_vs_delta.aln.fa
-
 snp-sites -v -o raw/ref_vs_delta.vcf raw/ref_vs_delta.aln.fa
-
 cat raw/ref_vs_delta.vcf | sed 's/ID=1/ID=NC_045512.2/;s/^1/NC_045512.2/' > blah
 mv -f blah raw/ref_vs_delta.vcf
-
 java -Xmx8g -jar bin/snpEff/snpEff.jar NC_045512.2 raw/ref_vs_delta.vcf > raw/ref_vs_delta.ann.vcf 
 ```
 
@@ -454,6 +451,105 @@ p.Leu452Arg
 p.Thr478Lys
 p.Asp614Gly
 p.Asp950Asn
+```
+
+The above workflow can be run by using `script/var_to_vcf.sh`; make sure you activate the Conda environment before running the script. We will use the script to generate VCF files for BA.1 (OL815078) and BA.2 (OM364005) variants.
+
+```bash
+script/var_to_vcf.sh -i OL815078
+
+cat raw/ref_vs_OL815078.ann.vcf | perl -nle 'next if /^#/; @s=split(/\|/); next unless $s[3] eq "S"; print $s[10]'
+p.Ala67Val
+p.Thr95Ile
+p.Gly339Asp
+p.Ser371Pro
+p.Ser371Phe
+p.Ser373Pro
+p.Ser375Phe
+p.Lys417Asn
+p.Thr547Lys
+p.Asp614Gly
+p.His655Tyr
+p.Asn679Lys
+p.Pro681His
+p.Ala701Val
+p.Asn764Lys
+p.Asp796Tyr
+p.Asn856Lys
+p.Gln954His
+p.Asn969Lys
+p.Leu981Phe
+p.Asp1146Asp
+
+script/var_to_vcf.sh -i OM364005
+cat raw/ref_vs_OM364005.ann.vcf | perl -nle 'next if /^#/; @s=split(/\|/); next unless $s[3] eq "S"; print $s[10]'
+p.Thr19Ile
+p.Gly142Asp
+p.Val213Gly
+p.Gly339Asp
+p.Ser371Phe
+p.Ser373Pro
+p.Ser375Phe
+p.Thr376Ala
+p.Asp405Asn
+p.Arg408Ser
+p.Lys417Asn
+p.Asn440Lys
+p.Ser477Asn
+p.Thr478Lys
+p.Glu484Ala
+p.Gln493Arg
+p.Gln498Arg
+p.Asn501Tyr
+p.Tyr505His
+p.Asp614Gly
+p.His655Tyr
+p.Asn679Lys
+p.Pro681His
+p.Asn764Lys
+p.Asp796Tyr
+p.Gln954His
+p.Asn969Lys
+p.Asn1023Ser
+p.Asp1146Asp
+```
+
+Spike protein variants specific to BA.1 (OL815078 `<`) and BA.2 (OM364005 `>`).
+
+```bash
+diff <(cat raw/ref_vs_OL815078.ann.vcf | perl -nle 'next if /^#/; @s=split(/\|/); next unless $s[3] eq "S"; print $s[10]') <(cat raw/ref_vs_OM364005.ann.vcf | perl -nle 'next if /^#/; @s=split(/\|/); next unless $s[3] eq "S"; print $s[10]')
+1,2c1,3
+< p.Ala67Val
+< p.Thr95Ile
+---
+> p.Thr19Ile
+> p.Gly142Asp
+> p.Val213Gly
+4d4
+< p.Ser371Pro
+7a8,10
+> p.Thr376Ala
+> p.Asp405Asn
+> p.Arg408Ser
+9c12,19
+< p.Thr547Lys
+---
+> p.Asn440Lys
+> p.Ser477Asn
+> p.Thr478Lys
+> p.Glu484Ala
+> p.Gln493Arg
+> p.Gln498Arg
+> p.Asn501Tyr
+> p.Tyr505His
+14d23
+< p.Ala701Val
+17d25
+< p.Asn856Lys
+20c28
+< p.Leu981Phe
+---
+> p.Asn1023Ser
 ```
 
 [Gamma variant](https://en.wikipedia.org/wiki/SARS-CoV-2_Gamma_variant): This variant of SARS-CoV-2 has been named lineage P.1 and has 17 amino acid substitutions, ten of which are in its spike protein, including these three designated to be of particular concern: N501Y, E484K and K417T.
