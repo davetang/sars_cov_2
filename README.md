@@ -862,16 +862,6 @@ cat SRR10971381.md5sum
 5496488662893a836e23541b84bfb7cd  SRR10971381
 ```
 
-I have uploaded the SRA object SRR10971381 to my web server: https://davetang.org/file/SRR10971381. You can download it from there.
-
-```bash
-wget -c -N https://davetang.org/file/SRR10971381  
-wget -c -N https://davetang.org/file/SRR10971381.md5sum
-
-md5sum -c SRR10971381.md5sum
-SRR10971381: OK
-```
-
 Next use [fastq-dump](https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=toolkit_doc&f=fastq-dump) to convert SRA data into FASTQ.
 
 ```bash
