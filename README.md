@@ -27,26 +27,27 @@ Created by [gh-md-toc](https://github.com/ekalinin/github-markdown-toc)
 
 ![Call Omicron variants](https://github.com/davetang/sars_cov_2/actions/workflows/omicron_variants.yml/badge.svg)
 
-The [Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)](https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome_coronavirus_2) is an RNA virus currently causing the 2019–20 coronavirus pandemic. This repository contains my analysis code and notes for my analysis of SARS-CoV-2. My hope is that some of this work will be useful for researchers currently working on the analysis of SARS-CoV-2.
+The [Severe acute respiratory syndrome coronavirus 2
+(SARS-CoV-2)](https://en.wikipedia.org/wiki/Severe_acute_respiratory_syndrome_coronavirus_2)
+is an RNA virus currently causing the 2019–20 coronavirus pandemic. This
+repository contains code and notes for the analysis of SARS-CoV-2.
 
-For more information see my related blog posts:
+I also wrote some blog posts related to the analyses in this repository.
 
 1. https://davetang.org/muse/2020/03/05/sequence-analysis-sars-cov-2/
+
 2. https://davetang.org/muse/2020/03/06/sequence-analysis-of-sars-cov-2-part-2/
+
 3. https://davetang.org/muse/2020/03/12/sequence-analysis-of-sars-cov-2-part-3/
-4. https://davetang.org/muse/2022/01/26/omicron-variants/ (this analysis workflow is also implemented as a [GitHub Actions workflow](https://github.com/davetang/sars_cov_2/blob/master/.github/workflows/omicron_variants.yml))
+
+4. https://davetang.org/muse/2022/01/26/omicron-variants/ (this analysis
+   workflow is also implemented as a [GitHub Actions
+   workflow](https://github.com/davetang/sars_cov_2/blob/master/.github/workflows/omicron_variants.yml))
 
 ## Tools
 
-I rely on Conda (a lot) to install the tools needed to perform my analyses. I have written a [short introduction to Conda](https://davetang.github.io/reproducible_bioinformatics/conda.html) that may be useful if you have never used it before. Please install [Miniconda](https://docs.conda.io/en/latest/miniconda.html) if you haven't already. Once you have Conda, run the command below to install all the necessary tools.
-
-Install [Mamba](https://github.com/mamba-org/mamba) first.
-
-```bash
-conda install mamba -n base -c conda-forge
-```
-
-Use Mamba to create environment.
+Install [Mambaforge](https://github.com/conda-forge/miniforge#mambaforge) and
+then use `mamba` to create the environment that has all the necessary tools.
 
 ```bash
 mamba env create --file environment.yml
@@ -54,34 +55,29 @@ mamba env create --file environment.yml
 conda activate sars_cov_2
 ```
 
-The [NCBI Datasets project](https://github.com/ncbi/datasets) has developed a command-line tool, `datasets`, that is used to query and download biological sequence data across all domains of life from NCBI databases.
+The [Conda package](https://anaconda.org/bioconda/snpeff) for snpEff is out of
+date and does not download the reference sequences properly. We need to install
+this manually.
 
-```bash
-wget https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/LATEST/linux-amd64/datasets -O bin/datasets
-chmod 755 bin/datasets
-```
-
-[SnpEff](https://pcingola.github.io/SnpEff/).
-
-```bash
-cd bin
+```console
+cd src
 wget https://snpeff.blob.core.windows.net/versions/snpEff_latest_core.zip
 unzip snpEff_latest_core.zip
+
 cd snpEff
 java -jar snpEff.jar download NC_045512.2
 ```
-
-The script `bin/download.sh` will attempt to download `datasets`, `dataformat`, and `snpEff`.
 
 ## Sequences
 
 ### Reference sequence
 
-[Reference sequence](https://www.ncbi.nlm.nih.gov/sars-cov-2/) NC_045512. Download GFF for NC_045512 from https://www.ncbi.nlm.nih.gov/sars-cov-2/.
+[Reference sequence](https://www.ncbi.nlm.nih.gov/sars-cov-2/) NC_045512.
+Download GFF for NC_045512 from https://www.ncbi.nlm.nih.gov/sars-cov-2/.
 
 ```bash
 mkdir tmp && cd tmp
-../bin/macos/datasets download genome accession GCF_009858895.2 --filename GCF_009858895.2.zip --include-gbff --include-gtf
+datasets download genome accession GCF_009858895.2 --filename GCF_009858895.2.zip --include genome,gtf,gbff
 unzip GCF_009858895.2.zip
 
 gzip ncbi_dataset/data/GCF_009858895.2/GCF_009858895.2_ASM985889v3_genomic.fna
